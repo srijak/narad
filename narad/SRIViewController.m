@@ -18,6 +18,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *passwd;
 @property (nonatomic, strong) IBOutlet UITextField *topics;
 
+@property (nonatomic, strong) IBOutlet UITextField *activation_code;
 @property (nonatomic, strong) IBOutlet UITextField *toPublish;
 
 
@@ -73,6 +74,17 @@
   self.napi = [[ApiClient alloc] initWithProtocol:protocol];
   NSLog(@"Initialized thrift client.");
 }
+- (IBAction) activateRegistration:(id)sender{
+ 
+  if (self.napi == nil){
+    [self connectToThrift:nil];
+  }
+  
+  int res = [self.napi activate:self.username.text activation_code:self.activation_code.text];
+  NSLog(@"Result from trying to activate: %d ", res);
+}
+
+
 
 //---------MOsquittoClientDelegate -------
 
