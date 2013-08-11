@@ -23,6 +23,64 @@
 		115D77A917B68C05009A09F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778417B68C05009A09F6 /* Foundation.framework */; };
 		115D77B117B68C05009A09F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 115D77AF17B68C05009A09F6 /* InfoPlist.strings */; };
 		115D77B417B68C05009A09F6 /* naradTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D77B317B68C05009A09F6 /* naradTests.m */; };
+		115D77D817B68C59009A09F6 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77BF17B68C59009A09F6 /* logging_mosq.c */; };
+		115D77D917B68C59009A09F6 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77BF17B68C59009A09F6 /* logging_mosq.c */; };
+		115D77DA17B68C59009A09F6 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C017B68C59009A09F6 /* memory_mosq.c */; };
+		115D77DB17B68C59009A09F6 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C017B68C59009A09F6 /* memory_mosq.c */; };
+		115D77DC17B68C59009A09F6 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C117B68C59009A09F6 /* messages_mosq.c */; };
+		115D77DD17B68C59009A09F6 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C117B68C59009A09F6 /* messages_mosq.c */; };
+		115D77DE17B68C59009A09F6 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C217B68C59009A09F6 /* mosquitto.c */; };
+		115D77DF17B68C59009A09F6 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C217B68C59009A09F6 /* mosquitto.c */; };
+		115D77E017B68C59009A09F6 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C317B68C59009A09F6 /* net_mosq.c */; };
+		115D77E117B68C59009A09F6 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C317B68C59009A09F6 /* net_mosq.c */; };
+		115D77E217B68C59009A09F6 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C417B68C59009A09F6 /* read_handle_client.c */; };
+		115D77E317B68C59009A09F6 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C417B68C59009A09F6 /* read_handle_client.c */; };
+		115D77E417B68C59009A09F6 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C517B68C59009A09F6 /* read_handle_shared.c */; };
+		115D77E517B68C59009A09F6 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C517B68C59009A09F6 /* read_handle_shared.c */; };
+		115D77E617B68C59009A09F6 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C617B68C59009A09F6 /* read_handle.c */; };
+		115D77E717B68C59009A09F6 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C617B68C59009A09F6 /* read_handle.c */; };
+		115D77E817B68C59009A09F6 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C717B68C59009A09F6 /* send_client_mosq.c */; };
+		115D77E917B68C59009A09F6 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C717B68C59009A09F6 /* send_client_mosq.c */; };
+		115D77EA17B68C59009A09F6 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C817B68C59009A09F6 /* send_mosq.c */; };
+		115D77EB17B68C59009A09F6 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C817B68C59009A09F6 /* send_mosq.c */; };
+		115D77EC17B68C59009A09F6 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C917B68C59009A09F6 /* thread_mosq.c */; };
+		115D77ED17B68C59009A09F6 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77C917B68C59009A09F6 /* thread_mosq.c */; };
+		115D77EE17B68C59009A09F6 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77CA17B68C59009A09F6 /* util_mosq.c */; };
+		115D77EF17B68C59009A09F6 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77CA17B68C59009A09F6 /* util_mosq.c */; };
+		115D77F017B68C59009A09F6 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77CB17B68C59009A09F6 /* will_mosq.c */; };
+		115D77F117B68C59009A09F6 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 115D77CB17B68C59009A09F6 /* will_mosq.c */; };
+		115D77F617B68C73009A09F6 /* MosquittoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D77F317B68C73009A09F6 /* MosquittoClient.m */; };
+		115D77F717B68C73009A09F6 /* MosquittoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D77F317B68C73009A09F6 /* MosquittoClient.m */; };
+		115D77F817B68C73009A09F6 /* MosquittoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D77F517B68C73009A09F6 /* MosquittoMessage.m */; };
+		115D77F917B68C73009A09F6 /* MosquittoMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D77F517B68C73009A09F6 /* MosquittoMessage.m */; };
+		115D785D17B73C4F009A09F6 /* TBinaryProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D783C17B73C4F009A09F6 /* TBinaryProtocol.m */; };
+		115D785E17B73C4F009A09F6 /* TBinaryProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D783C17B73C4F009A09F6 /* TBinaryProtocol.m */; };
+		115D785F17B73C4F009A09F6 /* TProtocolException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D783F17B73C4F009A09F6 /* TProtocolException.m */; };
+		115D786017B73C4F009A09F6 /* TProtocolException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D783F17B73C4F009A09F6 /* TProtocolException.m */; };
+		115D786117B73C4F009A09F6 /* TProtocolUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784217B73C4F009A09F6 /* TProtocolUtil.m */; };
+		115D786217B73C4F009A09F6 /* TProtocolUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784217B73C4F009A09F6 /* TProtocolUtil.m */; };
+		115D786317B73C4F009A09F6 /* TSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784517B73C4F009A09F6 /* TSocketServer.m */; };
+		115D786417B73C4F009A09F6 /* TSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784517B73C4F009A09F6 /* TSocketServer.m */; };
+		115D786517B73C4F009A09F6 /* TApplicationException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784717B73C4F009A09F6 /* TApplicationException.m */; };
+		115D786617B73C4F009A09F6 /* TApplicationException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784717B73C4F009A09F6 /* TApplicationException.m */; };
+		115D786717B73C4F009A09F6 /* TException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784917B73C4F009A09F6 /* TException.m */; };
+		115D786817B73C4F009A09F6 /* TException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784917B73C4F009A09F6 /* TException.m */; };
+		115D786917B73C4F009A09F6 /* THTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784F17B73C4F009A09F6 /* THTTPClient.m */; };
+		115D786A17B73C4F009A09F6 /* THTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D784F17B73C4F009A09F6 /* THTTPClient.m */; };
+		115D786B17B73C4F009A09F6 /* TMemoryBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785117B73C4F009A09F6 /* TMemoryBuffer.m */; };
+		115D786C17B73C4F009A09F6 /* TMemoryBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785117B73C4F009A09F6 /* TMemoryBuffer.m */; };
+		115D786D17B73C4F009A09F6 /* TNSFileHandleTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785317B73C4F009A09F6 /* TNSFileHandleTransport.m */; };
+		115D786E17B73C4F009A09F6 /* TNSFileHandleTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785317B73C4F009A09F6 /* TNSFileHandleTransport.m */; };
+		115D786F17B73C4F009A09F6 /* TNSStreamTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785517B73C4F009A09F6 /* TNSStreamTransport.m */; };
+		115D787017B73C4F009A09F6 /* TNSStreamTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785517B73C4F009A09F6 /* TNSStreamTransport.m */; };
+		115D787117B73C4F009A09F6 /* TSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785717B73C4F009A09F6 /* TSocketClient.m */; };
+		115D787217B73C4F009A09F6 /* TSocketClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785717B73C4F009A09F6 /* TSocketClient.m */; };
+		115D787317B73C4F009A09F6 /* TTransportException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785A17B73C4F009A09F6 /* TTransportException.m */; };
+		115D787417B73C4F009A09F6 /* TTransportException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785A17B73C4F009A09F6 /* TTransportException.m */; };
+		115D787517B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */; };
+		115D787617B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */; };
+		115D787A17B73C94009A09F6 /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D787917B73C94009A09F6 /* services.m */; };
+		115D787B17B73C94009A09F6 /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D787917B73C94009A09F6 /* services.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +116,70 @@
 		115D77B017B68C05009A09F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		115D77B217B68C05009A09F6 /* naradTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = naradTests.h; sourceTree = "<group>"; };
 		115D77B317B68C05009A09F6 /* naradTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = naradTests.m; sourceTree = "<group>"; };
+		115D77BE17B68C59009A09F6 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		115D77BF17B68C59009A09F6 /* logging_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = logging_mosq.c; sourceTree = "<group>"; };
+		115D77C017B68C59009A09F6 /* memory_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = memory_mosq.c; sourceTree = "<group>"; };
+		115D77C117B68C59009A09F6 /* messages_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = messages_mosq.c; sourceTree = "<group>"; };
+		115D77C217B68C59009A09F6 /* mosquitto.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mosquitto.c; sourceTree = "<group>"; };
+		115D77C317B68C59009A09F6 /* net_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = net_mosq.c; sourceTree = "<group>"; };
+		115D77C417B68C59009A09F6 /* read_handle_client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_client.c; sourceTree = "<group>"; };
+		115D77C517B68C59009A09F6 /* read_handle_shared.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle_shared.c; sourceTree = "<group>"; };
+		115D77C617B68C59009A09F6 /* read_handle.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = read_handle.c; sourceTree = "<group>"; };
+		115D77C717B68C59009A09F6 /* send_client_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_client_mosq.c; sourceTree = "<group>"; };
+		115D77C817B68C59009A09F6 /* send_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = send_mosq.c; sourceTree = "<group>"; };
+		115D77C917B68C59009A09F6 /* thread_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = thread_mosq.c; sourceTree = "<group>"; };
+		115D77CA17B68C59009A09F6 /* util_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = util_mosq.c; sourceTree = "<group>"; };
+		115D77CB17B68C59009A09F6 /* will_mosq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = will_mosq.c; sourceTree = "<group>"; };
+		115D77CC17B68C59009A09F6 /* dummypthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummypthread.h; sourceTree = "<group>"; };
+		115D77CD17B68C59009A09F6 /* logging_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging_mosq.h; sourceTree = "<group>"; };
+		115D77CE17B68C59009A09F6 /* memory_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_mosq.h; sourceTree = "<group>"; };
+		115D77CF17B68C59009A09F6 /* messages_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messages_mosq.h; sourceTree = "<group>"; };
+		115D77D017B68C59009A09F6 /* mosquitto_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto_internal.h; sourceTree = "<group>"; };
+		115D77D117B68C59009A09F6 /* mosquitto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mosquitto.h; sourceTree = "<group>"; };
+		115D77D217B68C59009A09F6 /* mqtt3_protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mqtt3_protocol.h; sourceTree = "<group>"; };
+		115D77D317B68C59009A09F6 /* net_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = net_mosq.h; sourceTree = "<group>"; };
+		115D77D417B68C59009A09F6 /* read_handle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_handle.h; sourceTree = "<group>"; };
+		115D77D517B68C59009A09F6 /* send_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = send_mosq.h; sourceTree = "<group>"; };
+		115D77D617B68C59009A09F6 /* util_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util_mosq.h; sourceTree = "<group>"; };
+		115D77D717B68C59009A09F6 /* will_mosq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = will_mosq.h; sourceTree = "<group>"; };
+		115D77F217B68C73009A09F6 /* MosquittoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoClient.h; sourceTree = "<group>"; };
+		115D77F317B68C73009A09F6 /* MosquittoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoClient.m; sourceTree = "<group>"; };
+		115D77F417B68C73009A09F6 /* MosquittoMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MosquittoMessage.h; sourceTree = "<group>"; };
+		115D77F517B68C73009A09F6 /* MosquittoMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MosquittoMessage.m; sourceTree = "<group>"; };
+		115D783B17B73C4F009A09F6 /* TBinaryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBinaryProtocol.h; sourceTree = "<group>"; };
+		115D783C17B73C4F009A09F6 /* TBinaryProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBinaryProtocol.m; sourceTree = "<group>"; };
+		115D783D17B73C4F009A09F6 /* TProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProtocol.h; sourceTree = "<group>"; };
+		115D783E17B73C4F009A09F6 /* TProtocolException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProtocolException.h; sourceTree = "<group>"; };
+		115D783F17B73C4F009A09F6 /* TProtocolException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TProtocolException.m; sourceTree = "<group>"; };
+		115D784017B73C4F009A09F6 /* TProtocolFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProtocolFactory.h; sourceTree = "<group>"; };
+		115D784117B73C4F009A09F6 /* TProtocolUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProtocolUtil.h; sourceTree = "<group>"; };
+		115D784217B73C4F009A09F6 /* TProtocolUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TProtocolUtil.m; sourceTree = "<group>"; };
+		115D784417B73C4F009A09F6 /* TSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSocketServer.h; sourceTree = "<group>"; };
+		115D784517B73C4F009A09F6 /* TSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSocketServer.m; sourceTree = "<group>"; };
+		115D784617B73C4F009A09F6 /* TApplicationException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TApplicationException.h; sourceTree = "<group>"; };
+		115D784717B73C4F009A09F6 /* TApplicationException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TApplicationException.m; sourceTree = "<group>"; };
+		115D784817B73C4F009A09F6 /* TException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TException.h; sourceTree = "<group>"; };
+		115D784917B73C4F009A09F6 /* TException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TException.m; sourceTree = "<group>"; };
+		115D784A17B73C4F009A09F6 /* TObjective-C.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TObjective-C.h"; sourceTree = "<group>"; };
+		115D784B17B73C4F009A09F6 /* TProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProcessor.h; sourceTree = "<group>"; };
+		115D784C17B73C4F009A09F6 /* TProcessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TProcessorFactory.h; sourceTree = "<group>"; };
+		115D784E17B73C4F009A09F6 /* THTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THTTPClient.h; sourceTree = "<group>"; };
+		115D784F17B73C4F009A09F6 /* THTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTTPClient.m; sourceTree = "<group>"; };
+		115D785017B73C4F009A09F6 /* TMemoryBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMemoryBuffer.h; sourceTree = "<group>"; };
+		115D785117B73C4F009A09F6 /* TMemoryBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMemoryBuffer.m; sourceTree = "<group>"; };
+		115D785217B73C4F009A09F6 /* TNSFileHandleTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSFileHandleTransport.h; sourceTree = "<group>"; };
+		115D785317B73C4F009A09F6 /* TNSFileHandleTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSFileHandleTransport.m; sourceTree = "<group>"; };
+		115D785417B73C4F009A09F6 /* TNSStreamTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNSStreamTransport.h; sourceTree = "<group>"; };
+		115D785517B73C4F009A09F6 /* TNSStreamTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNSStreamTransport.m; sourceTree = "<group>"; };
+		115D785617B73C4F009A09F6 /* TSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSocketClient.h; sourceTree = "<group>"; };
+		115D785717B73C4F009A09F6 /* TSocketClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSocketClient.m; sourceTree = "<group>"; };
+		115D785817B73C4F009A09F6 /* TTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTransport.h; sourceTree = "<group>"; };
+		115D785917B73C4F009A09F6 /* TTransportException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTransportException.h; sourceTree = "<group>"; };
+		115D785A17B73C4F009A09F6 /* TTransportException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTransportException.m; sourceTree = "<group>"; };
+		115D785B17B73C4F009A09F6 /* TSharedProcessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSharedProcessorFactory.h; sourceTree = "<group>"; };
+		115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSharedProcessorFactory.m; sourceTree = "<group>"; };
+		115D787817B73C94009A09F6 /* services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = services.h; sourceTree = "<group>"; };
+		115D787917B73C94009A09F6 /* services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = services.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +239,17 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				115D787717B73C94009A09F6 /* gen-cocoa */,
+				115D783917B73C4F009A09F6 /* thrift */,
+				115D77BD17B68C24009A09F6 /* libmosquitto */,
 				115D779117B68C05009A09F6 /* SRIAppDelegate.h */,
 				115D779217B68C05009A09F6 /* SRIAppDelegate.m */,
 				115D779A17B68C05009A09F6 /* MainStoryboard.storyboard */,
 				115D779D17B68C05009A09F6 /* SRIViewController.h */,
+				115D77F217B68C73009A09F6 /* MosquittoClient.h */,
+				115D77F317B68C73009A09F6 /* MosquittoClient.m */,
+				115D77F417B68C73009A09F6 /* MosquittoMessage.h */,
+				115D77F517B68C73009A09F6 /* MosquittoMessage.m */,
 				115D779E17B68C05009A09F6 /* SRIViewController.m */,
 				115D778917B68C05009A09F6 /* Supporting Files */,
 			);
@@ -158,6 +287,113 @@
 				115D77AF17B68C05009A09F6 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		115D77BD17B68C24009A09F6 /* libmosquitto */ = {
+			isa = PBXGroup;
+			children = (
+				115D77BE17B68C59009A09F6 /* config.h */,
+				115D77BF17B68C59009A09F6 /* logging_mosq.c */,
+				115D77C017B68C59009A09F6 /* memory_mosq.c */,
+				115D77C117B68C59009A09F6 /* messages_mosq.c */,
+				115D77C217B68C59009A09F6 /* mosquitto.c */,
+				115D77C317B68C59009A09F6 /* net_mosq.c */,
+				115D77C417B68C59009A09F6 /* read_handle_client.c */,
+				115D77C517B68C59009A09F6 /* read_handle_shared.c */,
+				115D77C617B68C59009A09F6 /* read_handle.c */,
+				115D77C717B68C59009A09F6 /* send_client_mosq.c */,
+				115D77C817B68C59009A09F6 /* send_mosq.c */,
+				115D77C917B68C59009A09F6 /* thread_mosq.c */,
+				115D77CA17B68C59009A09F6 /* util_mosq.c */,
+				115D77CB17B68C59009A09F6 /* will_mosq.c */,
+				115D77CC17B68C59009A09F6 /* dummypthread.h */,
+				115D77CD17B68C59009A09F6 /* logging_mosq.h */,
+				115D77CE17B68C59009A09F6 /* memory_mosq.h */,
+				115D77CF17B68C59009A09F6 /* messages_mosq.h */,
+				115D77D017B68C59009A09F6 /* mosquitto_internal.h */,
+				115D77D117B68C59009A09F6 /* mosquitto.h */,
+				115D77D217B68C59009A09F6 /* mqtt3_protocol.h */,
+				115D77D317B68C59009A09F6 /* net_mosq.h */,
+				115D77D417B68C59009A09F6 /* read_handle.h */,
+				115D77D517B68C59009A09F6 /* send_mosq.h */,
+				115D77D617B68C59009A09F6 /* util_mosq.h */,
+				115D77D717B68C59009A09F6 /* will_mosq.h */,
+			);
+			name = libmosquitto;
+			sourceTree = "<group>";
+		};
+		115D783917B73C4F009A09F6 /* thrift */ = {
+			isa = PBXGroup;
+			children = (
+				115D783A17B73C4F009A09F6 /* protocol */,
+				115D784317B73C4F009A09F6 /* server */,
+				115D784617B73C4F009A09F6 /* TApplicationException.h */,
+				115D784717B73C4F009A09F6 /* TApplicationException.m */,
+				115D784817B73C4F009A09F6 /* TException.h */,
+				115D784917B73C4F009A09F6 /* TException.m */,
+				115D784A17B73C4F009A09F6 /* TObjective-C.h */,
+				115D784B17B73C4F009A09F6 /* TProcessor.h */,
+				115D784C17B73C4F009A09F6 /* TProcessorFactory.h */,
+				115D784D17B73C4F009A09F6 /* transport */,
+				115D785B17B73C4F009A09F6 /* TSharedProcessorFactory.h */,
+				115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */,
+			);
+			name = thrift;
+			path = src;
+			sourceTree = "<group>";
+		};
+		115D783A17B73C4F009A09F6 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				115D783B17B73C4F009A09F6 /* TBinaryProtocol.h */,
+				115D783C17B73C4F009A09F6 /* TBinaryProtocol.m */,
+				115D783D17B73C4F009A09F6 /* TProtocol.h */,
+				115D783E17B73C4F009A09F6 /* TProtocolException.h */,
+				115D783F17B73C4F009A09F6 /* TProtocolException.m */,
+				115D784017B73C4F009A09F6 /* TProtocolFactory.h */,
+				115D784117B73C4F009A09F6 /* TProtocolUtil.h */,
+				115D784217B73C4F009A09F6 /* TProtocolUtil.m */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
+		115D784317B73C4F009A09F6 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				115D784417B73C4F009A09F6 /* TSocketServer.h */,
+				115D784517B73C4F009A09F6 /* TSocketServer.m */,
+			);
+			path = server;
+			sourceTree = "<group>";
+		};
+		115D784D17B73C4F009A09F6 /* transport */ = {
+			isa = PBXGroup;
+			children = (
+				115D784E17B73C4F009A09F6 /* THTTPClient.h */,
+				115D784F17B73C4F009A09F6 /* THTTPClient.m */,
+				115D785017B73C4F009A09F6 /* TMemoryBuffer.h */,
+				115D785117B73C4F009A09F6 /* TMemoryBuffer.m */,
+				115D785217B73C4F009A09F6 /* TNSFileHandleTransport.h */,
+				115D785317B73C4F009A09F6 /* TNSFileHandleTransport.m */,
+				115D785417B73C4F009A09F6 /* TNSStreamTransport.h */,
+				115D785517B73C4F009A09F6 /* TNSStreamTransport.m */,
+				115D785617B73C4F009A09F6 /* TSocketClient.h */,
+				115D785717B73C4F009A09F6 /* TSocketClient.m */,
+				115D785817B73C4F009A09F6 /* TTransport.h */,
+				115D785917B73C4F009A09F6 /* TTransportException.h */,
+				115D785A17B73C4F009A09F6 /* TTransportException.m */,
+			);
+			path = transport;
+			sourceTree = "<group>";
+		};
+		115D787717B73C94009A09F6 /* gen-cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				115D787817B73C94009A09F6 /* services.h */,
+				115D787917B73C94009A09F6 /* services.m */,
+			);
+			name = "gen-cocoa";
+			path = "../../../nordbe/src/rpc/gen-cocoa";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +510,35 @@
 				115D778F17B68C05009A09F6 /* main.m in Sources */,
 				115D779317B68C05009A09F6 /* SRIAppDelegate.m in Sources */,
 				115D779F17B68C05009A09F6 /* SRIViewController.m in Sources */,
+				115D77D817B68C59009A09F6 /* logging_mosq.c in Sources */,
+				115D77DA17B68C59009A09F6 /* memory_mosq.c in Sources */,
+				115D77DC17B68C59009A09F6 /* messages_mosq.c in Sources */,
+				115D77DE17B68C59009A09F6 /* mosquitto.c in Sources */,
+				115D77E017B68C59009A09F6 /* net_mosq.c in Sources */,
+				115D77E217B68C59009A09F6 /* read_handle_client.c in Sources */,
+				115D77E417B68C59009A09F6 /* read_handle_shared.c in Sources */,
+				115D77E617B68C59009A09F6 /* read_handle.c in Sources */,
+				115D77E817B68C59009A09F6 /* send_client_mosq.c in Sources */,
+				115D77EA17B68C59009A09F6 /* send_mosq.c in Sources */,
+				115D77EC17B68C59009A09F6 /* thread_mosq.c in Sources */,
+				115D77EE17B68C59009A09F6 /* util_mosq.c in Sources */,
+				115D77F017B68C59009A09F6 /* will_mosq.c in Sources */,
+				115D77F617B68C73009A09F6 /* MosquittoClient.m in Sources */,
+				115D77F817B68C73009A09F6 /* MosquittoMessage.m in Sources */,
+				115D785D17B73C4F009A09F6 /* TBinaryProtocol.m in Sources */,
+				115D785F17B73C4F009A09F6 /* TProtocolException.m in Sources */,
+				115D786117B73C4F009A09F6 /* TProtocolUtil.m in Sources */,
+				115D786317B73C4F009A09F6 /* TSocketServer.m in Sources */,
+				115D786517B73C4F009A09F6 /* TApplicationException.m in Sources */,
+				115D786717B73C4F009A09F6 /* TException.m in Sources */,
+				115D786917B73C4F009A09F6 /* THTTPClient.m in Sources */,
+				115D786B17B73C4F009A09F6 /* TMemoryBuffer.m in Sources */,
+				115D786D17B73C4F009A09F6 /* TNSFileHandleTransport.m in Sources */,
+				115D786F17B73C4F009A09F6 /* TNSStreamTransport.m in Sources */,
+				115D787117B73C4F009A09F6 /* TSocketClient.m in Sources */,
+				115D787317B73C4F009A09F6 /* TTransportException.m in Sources */,
+				115D787517B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */,
+				115D787A17B73C94009A09F6 /* services.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +547,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				115D77B417B68C05009A09F6 /* naradTests.m in Sources */,
+				115D77D917B68C59009A09F6 /* logging_mosq.c in Sources */,
+				115D77DB17B68C59009A09F6 /* memory_mosq.c in Sources */,
+				115D77DD17B68C59009A09F6 /* messages_mosq.c in Sources */,
+				115D77DF17B68C59009A09F6 /* mosquitto.c in Sources */,
+				115D77E117B68C59009A09F6 /* net_mosq.c in Sources */,
+				115D77E317B68C59009A09F6 /* read_handle_client.c in Sources */,
+				115D77E517B68C59009A09F6 /* read_handle_shared.c in Sources */,
+				115D77E717B68C59009A09F6 /* read_handle.c in Sources */,
+				115D77E917B68C59009A09F6 /* send_client_mosq.c in Sources */,
+				115D77EB17B68C59009A09F6 /* send_mosq.c in Sources */,
+				115D77ED17B68C59009A09F6 /* thread_mosq.c in Sources */,
+				115D77EF17B68C59009A09F6 /* util_mosq.c in Sources */,
+				115D77F117B68C59009A09F6 /* will_mosq.c in Sources */,
+				115D77F717B68C73009A09F6 /* MosquittoClient.m in Sources */,
+				115D77F917B68C73009A09F6 /* MosquittoMessage.m in Sources */,
+				115D785E17B73C4F009A09F6 /* TBinaryProtocol.m in Sources */,
+				115D786017B73C4F009A09F6 /* TProtocolException.m in Sources */,
+				115D786217B73C4F009A09F6 /* TProtocolUtil.m in Sources */,
+				115D786417B73C4F009A09F6 /* TSocketServer.m in Sources */,
+				115D786617B73C4F009A09F6 /* TApplicationException.m in Sources */,
+				115D786817B73C4F009A09F6 /* TException.m in Sources */,
+				115D786A17B73C4F009A09F6 /* THTTPClient.m in Sources */,
+				115D786C17B73C4F009A09F6 /* TMemoryBuffer.m in Sources */,
+				115D786E17B73C4F009A09F6 /* TNSFileHandleTransport.m in Sources */,
+				115D787017B73C4F009A09F6 /* TNSStreamTransport.m in Sources */,
+				115D787217B73C4F009A09F6 /* TSocketClient.m in Sources */,
+				115D787417B73C4F009A09F6 /* TTransportException.m in Sources */,
+				115D787617B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */,
+				115D787B17B73C94009A09F6 /* services.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +620,7 @@
 		115D77B517B68C05009A09F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -348,7 +642,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					libmosquitto,
+					"gen-cocoa/**",
+					"thrift/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -357,7 +657,7 @@
 		115D77B617B68C05009A09F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -372,7 +672,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					libmosquitto,
+					"gen-cocoa/**",
+					"thrift/**",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -384,7 +690,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "narad/narad-Prefix.pch";
+				HEADER_SEARCH_PATHS = libmosquitto;
 				INFOPLIST_FILE = "narad/narad-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,7 +703,9 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "narad/narad-Prefix.pch";
+				HEADER_SEARCH_PATHS = libmosquitto;
 				INFOPLIST_FILE = "narad/narad-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
