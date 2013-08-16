@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1139D8F317BDC04900564087 /* SRIConversationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F217BDC04800564087 /* SRIConversationEntity.m */; };
+		1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F517BDC04900564087 /* SRIUserEntity.m */; };
+		1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F817BDC04A00564087 /* SRIMessageEntity.m */; };
 		115D778317B68C05009A09F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778217B68C05009A09F6 /* UIKit.framework */; };
 		115D778517B68C05009A09F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778417B68C05009A09F6 /* Foundation.framework */; };
 		115D778717B68C05009A09F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778617B68C05009A09F6 /* CoreGraphics.framework */; };
@@ -85,12 +88,8 @@
 		11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981917B859EA00BF7647 /* RHCoreDataTableViewController.m */; };
 		11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981B17B859EA00BF7647 /* RHManagedObject.m */; };
 		11A5982117B859EA00BF7647 /* RHManagedObjectContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981D17B859EA00BF7647 /* RHManagedObjectContextManager.m */; };
-		11A5982917B85A2800BF7647 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5982417B85A2800BF7647 /* Employee.m */; };
 		11A5982E17B85AFB00BF7647 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A5982D17B85AFB00BF7647 /* CoreData.framework */; };
 		11A5983117B85B8900BF7647 /* Narad.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 11A5983017B85B8900BF7647 /* Narad.xcdatamodel */; };
-		11A5983D17B85F1700BF7647 /* SRIConversationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5983C17B85F1700BF7647 /* SRIConversationEntity.m */; };
-		11A5984017B85F1700BF7647 /* SRIMessageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5983F17B85F1700BF7647 /* SRIMessageEntity.m */; };
-		11A5984317B85F1700BF7647 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5984217B85F1700BF7647 /* SRIUserEntity.m */; };
 		11A5984617B85FBD00BF7647 /* SRIConversation.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5984517B85FBD00BF7647 /* SRIConversation.m */; };
 		11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28C17B8618900550B9D /* SRIMessage.m */; };
 		11EBF29017B861AC00550B9D /* SRIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28F17B861AC00550B9D /* SRIUser.m */; };
@@ -107,6 +106,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1139D8F117BDC04800564087 /* SRIConversationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationEntity.h; sourceTree = "<group>"; };
+		1139D8F217BDC04800564087 /* SRIConversationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationEntity.m; sourceTree = "<group>"; };
+		1139D8F417BDC04900564087 /* SRIUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUserEntity.h; sourceTree = "<group>"; };
+		1139D8F517BDC04900564087 /* SRIUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIUserEntity.m; sourceTree = "<group>"; };
+		1139D8F717BDC04A00564087 /* SRIMessageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessageEntity.h; sourceTree = "<group>"; };
+		1139D8F817BDC04A00564087 /* SRIMessageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessageEntity.m; sourceTree = "<group>"; };
 		115D777F17B68C05009A09F6 /* narad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = narad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115D778217B68C05009A09F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		115D778417B68C05009A09F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -201,16 +206,8 @@
 		11A5981B17B859EA00BF7647 /* RHManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHManagedObject.m; sourceTree = "<group>"; };
 		11A5981C17B859EA00BF7647 /* RHManagedObjectContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHManagedObjectContextManager.h; sourceTree = "<group>"; };
 		11A5981D17B859EA00BF7647 /* RHManagedObjectContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHManagedObjectContextManager.m; sourceTree = "<group>"; };
-		11A5982317B85A2800BF7647 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
-		11A5982417B85A2800BF7647 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		11A5982D17B85AFB00BF7647 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		11A5983017B85B8900BF7647 /* Narad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Narad.xcdatamodel; sourceTree = "<group>"; };
-		11A5983B17B85F1700BF7647 /* SRIConversationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationEntity.h; sourceTree = "<group>"; };
-		11A5983C17B85F1700BF7647 /* SRIConversationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationEntity.m; sourceTree = "<group>"; };
-		11A5983E17B85F1700BF7647 /* SRIMessageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessageEntity.h; sourceTree = "<group>"; };
-		11A5983F17B85F1700BF7647 /* SRIMessageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessageEntity.m; sourceTree = "<group>"; };
-		11A5984117B85F1700BF7647 /* SRIUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUserEntity.h; sourceTree = "<group>"; };
-		11A5984217B85F1700BF7647 /* SRIUserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIUserEntity.m; sourceTree = "<group>"; };
 		11A5984417B85FBD00BF7647 /* SRIConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversation.h; sourceTree = "<group>"; };
 		11A5984517B85FBD00BF7647 /* SRIConversation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversation.m; sourceTree = "<group>"; };
 		11EBF28B17B8618900550B9D /* SRIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessage.h; sourceTree = "<group>"; };
@@ -455,19 +452,17 @@
 			isa = PBXGroup;
 			children = (
 				11A5982217B859F300BF7647 /* RHManagedObject */,
-				11A5982317B85A2800BF7647 /* Employee.h */,
-				11A5982417B85A2800BF7647 /* Employee.m */,
 				11A5983017B85B8900BF7647 /* Narad.xcdatamodel */,
-				11A5984117B85F1700BF7647 /* SRIUserEntity.h */,
-				11A5984217B85F1700BF7647 /* SRIUserEntity.m */,
-				11A5983E17B85F1700BF7647 /* SRIMessageEntity.h */,
-				11A5983F17B85F1700BF7647 /* SRIMessageEntity.m */,
+				1139D8F717BDC04A00564087 /* SRIMessageEntity.h */,
+				1139D8F817BDC04A00564087 /* SRIMessageEntity.m */,
+				1139D8F417BDC04900564087 /* SRIUserEntity.h */,
+				1139D8F517BDC04900564087 /* SRIUserEntity.m */,
+				1139D8F117BDC04800564087 /* SRIConversationEntity.h */,
+				1139D8F217BDC04800564087 /* SRIConversationEntity.m */,
 				11EBF28B17B8618900550B9D /* SRIMessage.h */,
 				11EBF28C17B8618900550B9D /* SRIMessage.m */,
 				11EBF28E17B861AC00550B9D /* SRIUser.h */,
 				11EBF28F17B861AC00550B9D /* SRIUser.m */,
-				11A5983B17B85F1700BF7647 /* SRIConversationEntity.h */,
-				11A5983C17B85F1700BF7647 /* SRIConversationEntity.m */,
 				11A5984417B85FBD00BF7647 /* SRIConversation.h */,
 				11A5984517B85FBD00BF7647 /* SRIConversation.m */,
 			);
@@ -621,14 +616,13 @@
 				11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */,
 				11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */,
 				11A5982117B859EA00BF7647 /* RHManagedObjectContextManager.m in Sources */,
-				11A5982917B85A2800BF7647 /* Employee.m in Sources */,
 				11A5983117B85B8900BF7647 /* Narad.xcdatamodel in Sources */,
-				11A5983D17B85F1700BF7647 /* SRIConversationEntity.m in Sources */,
-				11A5984017B85F1700BF7647 /* SRIMessageEntity.m in Sources */,
-				11A5984317B85F1700BF7647 /* SRIUserEntity.m in Sources */,
 				11A5984617B85FBD00BF7647 /* SRIConversation.m in Sources */,
 				11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */,
 				11EBF29017B861AC00550B9D /* SRIUser.m in Sources */,
+				1139D8F317BDC04900564087 /* SRIConversationEntity.m in Sources */,
+				1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */,
+				1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

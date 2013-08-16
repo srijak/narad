@@ -2,20 +2,19 @@
 //  SRIMessageEntity.m
 //  narad
 //
-//  Created by srjk on 8/11/13.
+//  Created by srjk on 8/15/13.
 //  Copyright (c) 2013 srjk. All rights reserved.
 //
 
 #import "SRIMessageEntity.h"
-#import "SRIConversationEntity.h"
-#import "SRIUserEntity.h"
 
 
 @implementation SRIMessageEntity
 
-@dynamic sentDate;
+@dynamic timestamp;
 @dynamic text;
-@dynamic author;
-@dynamic conversation;
+@dynamic message_id;
+@dynamic user_id;
+@dynamic topic_id;
 
 @end

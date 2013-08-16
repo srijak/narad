@@ -221,7 +221,7 @@
  */
 -(NSManagedObjectModel *)managedObjectModel {
 	if (managedObjectModel == nil) {
-		NSString *modelPath = [[NSBundle mainBundle] pathForResource:self.modelName ofType:@"momd"];
+		NSString *modelPath = [[NSBundle mainBundle] pathForResource:self.modelName ofType:@"mom"];
 		NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
 		
 		self.managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -288,6 +288,7 @@
 			
 			NSURL *storeURL = [self storeURL];
 			NSError *error = nil;
+      [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
 			
 			self.persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
 			

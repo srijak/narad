@@ -12,6 +12,7 @@
 #import <TSocketClient.h>
 #import <TBinaryProtocol.h>
 #import "services.h"
+#import "SRIMessage.h"
 
 @interface SRIViewController ()<MosquittoClientDelegate>
 @property (nonatomic, strong) UITextField IBOutlet  *username;
@@ -85,7 +86,25 @@
   
   NSLog(@"Result from trying to activate: %d ", res);
 }
-
+- (IBAction) createMsg:(id)sender{
+  
+ /* @property (nonatomic) NSTimeInterval sentDate;
+  @property (nonatomic, retain) NSString * text;
+  @property (nonatomic, retain) NSString * messageID;
+  @property (nonatomic, retain) SRIUserEntity *author;
+  @property (nonatomic, retain) SRIConversationEntity *conversation;
+*/
+  
+  SRIMessage *s = [SRIMessage newEntity];
+  [s setTimestamp:@123];
+  [s setText:@"John"];
+  [s setMessage_id:@"123:234:12312"];
+  [s setUser_id:@1];
+  
+  
+  [SRIMessage commit];
+  NSLog(@"Creted msg through coredata.");
+}
 
 
 //---------MOsquittoClientDelegate -------

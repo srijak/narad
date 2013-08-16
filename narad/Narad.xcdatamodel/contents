@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="SRIConversation" representedClassName="SRIConversation">
+    <entity name="SRIConversationEntity" representedClassName="SRIConversation">
         <attribute name="draft" optional="YES" attributeType="String" minValueString="1">
             <userInfo/>
         </attribute>
-        <attribute name="lastMessageSentDate" attributeType="Date" indexed="YES">
+        <attribute name="lastMessageSent" attributeType="Integer 32" defaultValueString="0" indexed="YES">
             <userInfo/>
         </attribute>
         <attribute name="lastMessageText" optional="YES" attributeType="String" minValueString="1">
             <userInfo/>
         </attribute>
-        <attribute name="messagesLength" attributeType="Integer 32" defaultValueString="0">
+        <attribute name="messagesLength" attributeType="Integer 16" defaultValueString="0">
             <userInfo/>
         </attribute>
         <attribute name="title" attributeType="String" minValueString="1">
@@ -20,41 +20,31 @@
         <attribute name="unreadMessagesCount" attributeType="Integer 16" defaultValueString="0">
             <userInfo/>
         </attribute>
-        <relationship name="messages" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SRIMessage" inverseName="conversation" inverseEntity="SRIMessage">
-            <userInfo/>
-        </relationship>
-        <relationship name="users" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="SRIUser" inverseName="conversations" inverseEntity="SRIUser">
-            <userInfo/>
-        </relationship>
         <userInfo/>
     </entity>
-    <entity name="SRIMessage" representedClassName="SRIMessage">
-        <attribute name="sentDate" attributeType="Date" indexed="YES">
-            <userInfo/>
-        </attribute>
+    <entity name="SRIMessageEntity" representedClassName="SRIMessage">
+        <attribute name="message_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" attributeType="String" minValueString="1">
             <userInfo/>
         </attribute>
-        <relationship name="author" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SRIUser" inverseName="messages" inverseEntity="SRIUser" syncable="YES"/>
-        <relationship name="conversation" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SRIConversation" inverseName="messages" inverseEntity="SRIConversation">
+        <attribute name="timestamp" attributeType="Integer 32" defaultValueString="0" indexed="YES">
             <userInfo/>
-        </relationship>
+        </attribute>
+        <attribute name="topic_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <userInfo/>
     </entity>
-    <entity name="SRIUser" representedClassName="SRIUser">
+    <entity name="SRIUserEntity" representedClassName="SRIUser">
         <attribute name="name" optional="YES" attributeType="String" minValueString="1">
             <userInfo/>
         </attribute>
-        <attribute name="userID" attributeType="String" minValueString="1" indexed="YES" syncable="YES"/>
-        <relationship name="conversations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SRIConversation" inverseName="users" inverseEntity="SRIConversation">
-            <userInfo/>
-        </relationship>
-        <relationship name="messages" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SRIMessage" inverseName="author" inverseEntity="SRIMessage" syncable="YES"/>
+        <attribute name="topic_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="user_id" attributeType="Integer 64" minValueString="1" defaultValueString="0" indexed="YES" syncable="YES"/>
         <userInfo/>
     </entity>
     <elements>
-        <element name="SRIConversation" positionX="0" positionY="0" width="128" height="178"/>
-        <element name="SRIMessage" positionX="0" positionY="0" width="128" height="103"/>
-        <element name="SRIUser" positionX="0" positionY="0" width="128" height="103"/>
+        <element name="SRIConversationEntity" positionX="0" positionY="0" width="128" height="150"/>
+        <element name="SRIMessageEntity" positionX="0" positionY="0" width="128" height="120"/>
+        <element name="SRIUserEntity" positionX="0" positionY="0" width="128" height="90"/>
     </elements>
 </model>
