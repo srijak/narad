@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1107F48817C8096300A09128 /* SRIInitialSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F48717C8096300A09128 /* SRIInitialSlidingViewController.m */; };
+		1107F48B17C80ABD00A09128 /* SRIMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F48A17C80ABD00A09128 /* SRIMessagesViewController.m */; };
+		1107F48E17C80B5C00A09128 /* SRIMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F48D17C80B5C00A09128 /* SRIMenuViewController.m */; };
+		1107F49117C80C7300A09128 /* SRIRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F49017C80C7200A09128 /* SRIRightViewController.m */; };
+		1107F49417C8107C00A09128 /* SRINavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */; };
 		110FFC6B17C30B8700CA056D /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */; };
 		1139D8F317BDC04900564087 /* SRIConversationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F217BDC04800564087 /* SRIConversationEntity.m */; };
 		1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F517BDC04900564087 /* SRIUserEntity.m */; };
@@ -112,7 +117,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "libReactiveCocoa-iOS.a"; path = "ReactiveCocoa/ReactiveCocoaFramework/build/Release-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
+		1107F48617C8096300A09128 /* SRIInitialSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIInitialSlidingViewController.h; sourceTree = "<group>"; };
+		1107F48717C8096300A09128 /* SRIInitialSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIInitialSlidingViewController.m; sourceTree = "<group>"; };
+		1107F48917C80ABD00A09128 /* SRIMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessagesViewController.h; sourceTree = "<group>"; };
+		1107F48A17C80ABD00A09128 /* SRIMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessagesViewController.m; sourceTree = "<group>"; };
+		1107F48C17C80B5C00A09128 /* SRIMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMenuViewController.h; sourceTree = "<group>"; };
+		1107F48D17C80B5C00A09128 /* SRIMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMenuViewController.m; sourceTree = "<group>"; };
+		1107F48F17C80C7200A09128 /* SRIRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIRightViewController.h; sourceTree = "<group>"; };
+		1107F49017C80C7200A09128 /* SRIRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIRightViewController.m; sourceTree = "<group>"; };
+		1107F49217C8107B00A09128 /* SRINavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRINavigationTopViewController.h; sourceTree = "<group>"; };
+		1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINavigationTopViewController.m; sourceTree = "<group>"; };
+		110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libReactiveCocoa-iOS.a"; path = "ReactiveCocoa/ReactiveCocoaFramework/build/Release-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
 		1139D8F117BDC04800564087 /* SRIConversationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationEntity.h; sourceTree = "<group>"; };
 		1139D8F217BDC04800564087 /* SRIConversationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationEntity.m; sourceTree = "<group>"; };
 		1139D8F417BDC04900564087 /* SRIUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUserEntity.h; sourceTree = "<group>"; };
@@ -318,6 +333,16 @@
 				115D77F517B68C73009A09F6 /* MosquittoMessage.m */,
 				115D779E17B68C05009A09F6 /* SRIViewController.m */,
 				115D778917B68C05009A09F6 /* Supporting Files */,
+				1107F48617C8096300A09128 /* SRIInitialSlidingViewController.h */,
+				1107F48717C8096300A09128 /* SRIInitialSlidingViewController.m */,
+				1107F48917C80ABD00A09128 /* SRIMessagesViewController.h */,
+				1107F48A17C80ABD00A09128 /* SRIMessagesViewController.m */,
+				1107F48C17C80B5C00A09128 /* SRIMenuViewController.h */,
+				1107F48D17C80B5C00A09128 /* SRIMenuViewController.m */,
+				1107F48F17C80C7200A09128 /* SRIRightViewController.h */,
+				1107F49017C80C7200A09128 /* SRIRightViewController.m */,
+				1107F49217C8107B00A09128 /* SRINavigationTopViewController.h */,
+				1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */,
 			);
 			path = narad;
 			sourceTree = "<group>";
@@ -687,6 +712,11 @@
 				11BC549D17C2C187001CCDD7 /* SRISingleton.m in Sources */,
 				11BC54A017C2C272001CCDD7 /* SRICredentialsManager.m in Sources */,
 				11BCF1C917C2EF4E00CC2324 /* DirectMsgsViewController.m in Sources */,
+				1107F48817C8096300A09128 /* SRIInitialSlidingViewController.m in Sources */,
+				1107F48B17C80ABD00A09128 /* SRIMessagesViewController.m in Sources */,
+				1107F48E17C80B5C00A09128 /* SRIMenuViewController.m in Sources */,
+				1107F49117C80C7300A09128 /* SRIRightViewController.m in Sources */,
+				1107F49417C8107C00A09128 /* SRINavigationTopViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
