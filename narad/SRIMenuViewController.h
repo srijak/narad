@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
 
-@interface SRIMenuViewController : UIViewController <UITableViewDataSource, UITabBarControllerDelegate>
+@interface SRIMenuViewController : UITableViewController <UITableViewDataSource, UITabBarControllerDelegate>
 
 @end

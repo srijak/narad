@@ -7,6 +7,7 @@
 //
 
 #import "SRIMenuViewController.h"
+#import "UIColor+FlatUI.h"
 
 @interface SRIMenuViewController ()
 @property (nonatomic, strong) NSArray *menuItems;
@@ -17,7 +18,11 @@
 
 - (void)awakeFromNib
 {
-  self.menuItems = [NSArray arrayWithObjects:@"First", @"Second", @"Third", @"Navigation", nil];
+  self.menuItems = @[
+                     @{@"title": @"Messages", @"ctr": @"Messages"},
+                     
+                     @{@"title": @"Contacts", @"ctr": @"Contacts"}
+                     ];
 }
 
 - (void)viewDidLoad
@@ -41,16 +46,22 @@
   UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
   if (cell == nil) {
     cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    UIView *bgColorView = [[UIView alloc] init];
+    bgColorView.backgroundColor = [UIColor colorFromHexCode:@"1ABC9C"];
+    bgColorView.layer.cornerRadius = 0;
+    bgColorView.layer.masksToBounds = YES;
+    cell.selectedBackgroundView = bgColorView;
   }
   
-  cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row];
+  
+  cell.textLabel.text = [self.menuItems objectAtIndex:indexPath.row][@"title"];
   
   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  NSString *identifier = [NSString stringWithFormat:@"%@Top", [self.menuItems objectAtIndex:indexPath.row]];
+  NSString *identifier = [self.menuItems objectAtIndex:indexPath.row][@"ctr"];
   
   UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
   

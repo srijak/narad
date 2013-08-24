@@ -22,6 +22,10 @@
 {
   [super viewWillAppear:animated];
   
+  
+  UIImage *barButtonImage = [[UIImage imageNamed:@"menu_btn"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
+
+  
   if (![self.slidingViewController.underLeftViewController isKindOfClass:[SRIMenuViewController class]]) {
     self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
