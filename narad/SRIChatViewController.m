@@ -7,6 +7,7 @@
 //
 
 #import "SRIChatViewController.h"
+#import "SRIRightViewController.h"
 
 @interface SRIChatViewController ()<AMBubbleTableDataSource, AMBubbleTableDelegate>
 
@@ -24,9 +25,20 @@
     }
     return self;
 }
+- (IBAction)revealUnderRight:(id)sender
+{
+  self.slidingViewController.anchorRightRevealAmount = 100.0f;
+  [self.slidingViewController anchorTopViewTo:ECLeft];
+  
+}
 
 - (void)viewDidLoad
 {
+  // cliding menu setup
+ if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIRightViewController class]]) {
+   self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Right"];
+   }
+
   // Bubble Table setup
    NSLog(@"Loading conversation with topid_id: %@", self.topic_id);
   

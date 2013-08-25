@@ -7,8 +7,11 @@
 //
 
 #import "AMBubbleTableViewController.h"
+#import <ECSlidingViewController/ECSlidingViewController.h>
 
 @interface SRIChatViewController : AMBubbleTableViewController
 
 @property (nonatomic, retain) NSNumber * topic_id;
+
+- (IBAction)revealUnderRight:(id)sender;
 @end

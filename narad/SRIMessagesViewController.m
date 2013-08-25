@@ -39,11 +39,8 @@
   if (![self.slidingViewController.underLeftViewController isKindOfClass:[SRIMenuViewController class]]) {
     self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
   }
+  self.slidingViewController.underRightViewController = nil;
   
-/*  if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIRightViewController class]]) {
-    self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Right"];
-  }
-  */
   [self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
 
