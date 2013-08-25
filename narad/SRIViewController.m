@@ -81,7 +81,7 @@
     [self connectToThrift:nil];
   }
   
-  int res = [self.napi activate:self.username.text activation_code:self.activation_code.text];
+  int res = [self.napi activate:self.username.text activation_payload:self.activation_code.text];
  //TODO: Generate and send the client's public key to the server here for SSL communications for here on out?
   
   NSLog(@"Result from trying to activate: %d ", res);

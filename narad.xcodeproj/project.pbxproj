@@ -88,8 +88,6 @@
 		115D787417B73C4F009A09F6 /* TTransportException.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785A17B73C4F009A09F6 /* TTransportException.m */; };
 		115D787517B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */; };
 		115D787617B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */; };
-		115D787A17B73C94009A09F6 /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D787917B73C94009A09F6 /* services.m */; };
-		115D787B17B73C94009A09F6 /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 115D787917B73C94009A09F6 /* services.m */; };
 		1181043817C932A600F2B3CB /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1181042E17C932A600F2B3CB /* OpenSans-SemiboldItalic.ttf */; };
 		1181043917C932A600F2B3CB /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1181042F17C932A600F2B3CB /* OpenSans-Semibold.ttf */; };
 		1181043A17C932A600F2B3CB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1181043017C932A600F2B3CB /* OpenSans-Regular.ttf */; };
@@ -104,6 +102,12 @@
 		1181044917C93A5000F2B3CB /* menu_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1181044817C93A5000F2B3CB /* menu_btn.png */; };
 		1181044B17C93E2900F2B3CB /* plus_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1181044A17C93E2800F2B3CB /* plus_btn.png */; };
 		1181044E17C940DF00F2B3CB /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181044D17C940DE00F2B3CB /* UIColor+FlatUI.m */; };
+		1181045317CA3EE400F2B3CB /* CountryCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1181045217CA3EE400F2B3CB /* CountryCodes.plist */; };
+		1181045617CA405700F2B3CB /* SRIVerificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181045517CA405600F2B3CB /* SRIVerificationViewController.m */; };
+		1181045C17CA469F00F2B3CB /* SRIWaitingVerificationCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181045B17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.m */; };
+		1181045E17CA49F200F2B3CB /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1181045D17CA49F200F2B3CB /* back_btn.png */; };
+		1181046117CA593F00F2B3CB /* SRIRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046017CA593E00F2B3CB /* SRIRoot.m */; };
+		1181046417CA6D5800F2B3CB /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046317CA6D5800F2B3CB /* services.m */; };
 		11A5981E17B859EA00BF7647 /* RHCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981717B859EA00BF7647 /* RHCoreDataCollectionViewController.m */; };
 		11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981917B859EA00BF7647 /* RHCoreDataTableViewController.m */; };
 		11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981B17B859EA00BF7647 /* RHManagedObject.m */; };
@@ -232,8 +236,6 @@
 		115D785A17B73C4F009A09F6 /* TTransportException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTransportException.m; sourceTree = "<group>"; };
 		115D785B17B73C4F009A09F6 /* TSharedProcessorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSharedProcessorFactory.h; sourceTree = "<group>"; };
 		115D785C17B73C4F009A09F6 /* TSharedProcessorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSharedProcessorFactory.m; sourceTree = "<group>"; };
-		115D787817B73C94009A09F6 /* services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = services.h; sourceTree = "<group>"; };
-		115D787917B73C94009A09F6 /* services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = services.m; sourceTree = "<group>"; };
 		1181042E17C932A600F2B3CB /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		1181042F17C932A600F2B3CB /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		1181043017C932A600F2B3CB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -249,6 +251,16 @@
 		1181044A17C93E2800F2B3CB /* plus_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_btn.png; sourceTree = "<group>"; };
 		1181044C17C940DE00F2B3CB /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
 		1181044D17C940DE00F2B3CB /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		1181045217CA3EE400F2B3CB /* CountryCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CountryCodes.plist; sourceTree = "<group>"; };
+		1181045417CA405600F2B3CB /* SRIVerificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIVerificationViewController.h; sourceTree = "<group>"; };
+		1181045517CA405600F2B3CB /* SRIVerificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIVerificationViewController.m; sourceTree = "<group>"; };
+		1181045A17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIWaitingVerificationCodeViewController.h; sourceTree = "<group>"; };
+		1181045B17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIWaitingVerificationCodeViewController.m; sourceTree = "<group>"; };
+		1181045D17CA49F200F2B3CB /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
+		1181045F17CA593D00F2B3CB /* SRIRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIRoot.h; sourceTree = "<group>"; };
+		1181046017CA593E00F2B3CB /* SRIRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIRoot.m; sourceTree = "<group>"; };
+		1181046217CA6D5800F2B3CB /* services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = services.h; sourceTree = "<group>"; };
+		1181046317CA6D5800F2B3CB /* services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = services.m; sourceTree = "<group>"; };
 		11A5981617B859EA00BF7647 /* RHCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		11A5981717B859EA00BF7647 /* RHCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		11A5981817B859EA00BF7647 /* RHCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -349,8 +361,8 @@
 				115D787717B73C94009A09F6 /* gen-cocoa */,
 				115D783917B73C4F009A09F6 /* thrift */,
 				115D77BD17B68C24009A09F6 /* libmosquitto */,
-				115D779117B68C05009A09F6 /* SRIAppDelegate.h */,
 				115D779217B68C05009A09F6 /* SRIAppDelegate.m */,
+				115D779117B68C05009A09F6 /* SRIAppDelegate.h */,
 				11BC549B17C2C187001CCDD7 /* SRISingleton.h */,
 				11BCF1C717C2EF4E00CC2324 /* DirectMsgsViewController.h */,
 				11BCF1C817C2EF4E00CC2324 /* DirectMsgsViewController.m */,
@@ -372,11 +384,13 @@
 		115D778917B68C05009A09F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1181045217CA3EE400F2B3CB /* CountryCodes.plist */,
 				1181044A17C93E2800F2B3CB /* plus_btn.png */,
 				1181042C17C9328D00F2B3CB /* Assets */,
 				115D778A17B68C05009A09F6 /* narad-Info.plist */,
 				1181044817C93A5000F2B3CB /* menu_btn.png */,
 				1181044217C9340500F2B3CB /* nav_bg.png */,
+				1181045D17CA49F200F2B3CB /* back_btn.png */,
 				115D778B17B68C05009A09F6 /* InfoPlist.strings */,
 				115D778E17B68C05009A09F6 /* main.m */,
 				115D779017B68C05009A09F6 /* narad-Prefix.pch */,
@@ -506,8 +520,8 @@
 		115D787717B73C94009A09F6 /* gen-cocoa */ = {
 			isa = PBXGroup;
 			children = (
-				115D787817B73C94009A09F6 /* services.h */,
-				115D787917B73C94009A09F6 /* services.m */,
+				1181046217CA6D5800F2B3CB /* services.h */,
+				1181046317CA6D5800F2B3CB /* services.m */,
 			);
 			name = "gen-cocoa";
 			path = "../../../nordbe/src/rpc/gen-cocoa";
@@ -526,6 +540,12 @@
 				1107F49017C80C7200A09128 /* SRIRightViewController.m */,
 				1107F49217C8107B00A09128 /* SRINavigationTopViewController.h */,
 				1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */,
+				1181045417CA405600F2B3CB /* SRIVerificationViewController.h */,
+				1181045517CA405600F2B3CB /* SRIVerificationViewController.m */,
+				1181045A17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.h */,
+				1181045B17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.m */,
+				1181045F17CA593D00F2B3CB /* SRIRoot.h */,
+				1181046017CA593E00F2B3CB /* SRIRoot.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -683,6 +703,8 @@
 				1181044317C9340500F2B3CB /* nav_bg.png in Resources */,
 				1181044917C93A5000F2B3CB /* menu_btn.png in Resources */,
 				1181044B17C93E2900F2B3CB /* plus_btn.png in Resources */,
+				1181045317CA3EE400F2B3CB /* CountryCodes.plist in Resources */,
+				1181045E17CA49F200F2B3CB /* back_btn.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +800,6 @@
 				115D787117B73C4F009A09F6 /* TSocketClient.m in Sources */,
 				115D787317B73C4F009A09F6 /* TTransportException.m in Sources */,
 				115D787517B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */,
-				115D787A17B73C94009A09F6 /* services.m in Sources */,
 				11A5981E17B859EA00BF7647 /* RHCoreDataCollectionViewController.m in Sources */,
 				11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */,
 				11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */,
@@ -799,6 +820,10 @@
 				1107F49117C80C7300A09128 /* SRIRightViewController.m in Sources */,
 				1107F49417C8107C00A09128 /* SRINavigationTopViewController.m in Sources */,
 				1181044E17C940DF00F2B3CB /* UIColor+FlatUI.m in Sources */,
+				1181045617CA405700F2B3CB /* SRIVerificationViewController.m in Sources */,
+				1181045C17CA469F00F2B3CB /* SRIWaitingVerificationCodeViewController.m in Sources */,
+				1181046117CA593F00F2B3CB /* SRIRoot.m in Sources */,
+				1181046417CA6D5800F2B3CB /* services.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,7 +860,6 @@
 				115D787217B73C4F009A09F6 /* TSocketClient.m in Sources */,
 				115D787417B73C4F009A09F6 /* TTransportException.m in Sources */,
 				115D787617B73C4F009A09F6 /* TSharedProcessorFactory.m in Sources */,
-				115D787B17B73C94009A09F6 /* services.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

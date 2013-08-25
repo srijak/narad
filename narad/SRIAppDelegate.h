@@ -7,9 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MosquittoClient.h"
 
-@interface SRIAppDelegate : UIResponder <UIApplicationDelegate>
+#import <TSocketClient.h>
+#import <TBinaryProtocol.h>
+#import "services.h"
+#import "SRIMessage.h"
+
+@interface SRIAppDelegate : UIResponder <UIApplicationDelegate,MosquittoClientDelegate>
+
+@property (nonatomic, strong) MosquittoClient *mosquittoClient;
+
+@property (nonatomic, strong) ApiClient *napi;
 
 @property (strong, nonatomic) UIWindow *window;
 
+-(void) connectToApi;
+-(void) connectToMqtt;
 @end

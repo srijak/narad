@@ -24,9 +24,53 @@
                                                          UITextAttributeTextShadowOffset,
                                                          [UIFont fontWithName:@"OpenSans" size:21.0], UITextAttributeFont, nil]];
   
-    return YES;
+  UIImage *backButtonImage = [[UIImage imageNamed:@"back_btn"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
+  [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, -1000) forBarMetrics:UIBarMetricsDefault];
+  [self connectToApi];
+  
+  
+  // Connect to mqtt only after we login to the main server.
+  //[self connectToMqtt];
+  
+  return YES;
 }
-							
+
+-(void) connectToApi{
+  NSLog(@"Would try to connect to api");
+  if (self.napi){
+    self.napi = nil;
+  }
+  // Talk to a server via socket, using a binary protocol
+  TSocketClient *transport = [[TSocketClient alloc] initWithHostname:@"localhost" port:19900];
+  TBinaryProtocol *protocol = [[TBinaryProtocol alloc] initWithTransport:transport strictRead:YES strictWrite:YES];
+  self.napi = [[ApiClient alloc] initWithProtocol:protocol];
+  NSLog(@"Initialized thrift client.");
+  
+  //TODO: Now get initial data from server.
+  // -- prolly will get:
+  //         state: login failure? waiting on activation? etcs.
+  //         subscription topics for groups
+  //         subscription topics for users
+
+}
+
+-(void) connectToMqtt{
+  NSLog(@"Would try to connect to mqtt");
+  if ([self mosquittoClient]){
+    [self.mosquittoClient disconnect];
+    self.mosquittoClient = nil;
+  }
+  
+  self.mosquittoClient = [[MosquittoClient alloc] initWithClientId:@"testIos"];
+  
+  [self.mosquittoClient setDelegate:self];
+  self.mosquittoClient.username = @"5405536232";
+  self.mosquittoClient.password = @"a";
+  self.mosquittoClient.port = 11883;
+  [self.mosquittoClient connectToHost:@"localhost"];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
   // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -52,6 +96,34 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+
+
+
+//---------MOsquittoClientDelegate -------
+
+- (void) didConnect: (NSUInteger)code{
+  NSLog(@"MQTT: didConnect: %d", code);
+}
+- (void) didDisconnect {
+  NSLog(@"MQTT: DISCONNECTED");
+}
+- (void) didPublish: (NSUInteger)messageId{
+  NSLog(@"MQTT: PUBLISHED: %d", messageId);
+}
+
+
+- (void) didReceiveMessage: (MosquittoMessage*)mosq_msg{
+  NSLog(@"MQTT: RECV: %@\t%@", mosq_msg.topic, mosq_msg.payload);
+}
+
+- (void) didSubscribe: (NSUInteger)messageId grantedQos:(NSArray*)qos{
+  NSLog(@"MQTT: SUBSCRIBED");
+}
+- (void) didUnsubscribe: (NSUInteger)messageId{
+  NSLog(@"MQTT: UNSUBSCRIBED");
 }
 
 @end
