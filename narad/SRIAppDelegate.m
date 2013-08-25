@@ -7,6 +7,7 @@
 //
 
 #import "SRIAppDelegate.h"
+#import "SRIConversation.h"
 
 @implementation SRIAppDelegate
 
@@ -46,13 +47,6 @@
   TBinaryProtocol *protocol = [[TBinaryProtocol alloc] initWithTransport:transport strictRead:YES strictWrite:YES];
   self.napi = [[ApiClient alloc] initWithProtocol:protocol];
   NSLog(@"Initialized thrift client.");
-  
-  //TODO: Now get initial data from server.
-  // -- prolly will get:
-  //         state: login failure? waiting on activation? etcs.
-  //         subscription topics for groups
-  //         subscription topics for users
-
 }
 
 -(void) connectToMqtt{
@@ -69,6 +63,53 @@
   self.mosquittoClient.password = @"a";
   self.mosquittoClient.port = 11883;
   [self.mosquittoClient connectToHost:@"localhost"];
+}
+
+
+-(void) initializeApp{
+  // this needs to show the messages view.
+  //  login to various things.
+  // Note that logging in shouldn't block viewing current messages/groups.
+  
+  // FOR DEBUGGING. Create a bunch of messages in groups.
+ 
+  
+  for ( int i = 0; i < 40; i++){
+    SRIMessage *s = [SRIMessage newEntity];
+    [s setTimestamp:@123];
+    [s setText:@"John"];
+    [s setMessage_id:@"123:234:12312"];
+    s.user_id = [NSNumber numberWithInt:(i%5)];
+    s.topic_id = [NSNumber numberWithInt:(i%12)];
+    
+    [SRIMessage commit];
+  }
+  
+  
+  for ( int i = 0; i < 200; i++){
+    SRIConversation *s = [SRIConversation newEntity];
+    s.topic_id = [NSNumber numberWithInt:(i%12)];
+    s.title = [NSString stringWithFormat:@"Convo %@", s.topic_id];
+    s.lastMessageText = @"When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum";
+    s.lastMessageSent = [NSNumber numberWithInt:(1231231233 + (1000 * i))];
+    
+    [SRIConversation commit];
+  }
+  
+
+  // END OF DEBUG LOAD
+  
+  // Now get initial data from server.
+  // -- prolly will get:
+  //         state: login failure? waiting on activation? etcs.
+  //         subscription topics for groups
+  //         subscription topics for users
+
+  
+  
+  // Connect to mqtt and
+  //   subscribe to the topics we care about.
+  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

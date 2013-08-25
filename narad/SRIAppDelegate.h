@@ -23,5 +23,6 @@
 @property (strong, nonatomic) UIWindow *window;
 
 -(void) connectToApi;
--(void) connectToMqtt;
+-(void) initializeApp;
+
 @end

@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
+#import "RHCoreDataTableViewController.h"
 
-@interface SRIMessagesViewController : UIViewController
+
+@interface SRIMessagesViewController : RHCoreDataTableViewController
+
+@property (nonatomic, strong) NSArray *groups;
+
+@property (nonatomic, strong) IBOutlet UITableView* tableView;
 
 - (IBAction)revealMenu:(id)sender;
 - (IBAction)revealUnderRight:(id)sender;

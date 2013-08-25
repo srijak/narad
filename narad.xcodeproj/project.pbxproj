@@ -108,6 +108,8 @@
 		1181045E17CA49F200F2B3CB /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1181045D17CA49F200F2B3CB /* back_btn.png */; };
 		1181046117CA593F00F2B3CB /* SRIRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046017CA593E00F2B3CB /* SRIRoot.m */; };
 		1181046417CA6D5800F2B3CB /* services.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046317CA6D5800F2B3CB /* services.m */; };
+		1181046717CA884D00F2B3CB /* SRIConversationTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046617CA884A00F2B3CB /* SRIConversationTopCell.m */; };
+		1181046C17CAB13B00F2B3CB /* SRIChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1181046B17CAB13A00F2B3CB /* SRIChatViewController.m */; };
 		11A5981E17B859EA00BF7647 /* RHCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981717B859EA00BF7647 /* RHCoreDataCollectionViewController.m */; };
 		11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981917B859EA00BF7647 /* RHCoreDataTableViewController.m */; };
 		11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A5981B17B859EA00BF7647 /* RHManagedObject.m */; };
@@ -261,6 +263,10 @@
 		1181046017CA593E00F2B3CB /* SRIRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIRoot.m; sourceTree = "<group>"; };
 		1181046217CA6D5800F2B3CB /* services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = services.h; sourceTree = "<group>"; };
 		1181046317CA6D5800F2B3CB /* services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = services.m; sourceTree = "<group>"; };
+		1181046517CA884800F2B3CB /* SRIConversationTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationTopCell.h; sourceTree = "<group>"; };
+		1181046617CA884A00F2B3CB /* SRIConversationTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationTopCell.m; sourceTree = "<group>"; };
+		1181046A17CAB13A00F2B3CB /* SRIChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIChatViewController.h; sourceTree = "<group>"; };
+		1181046B17CAB13A00F2B3CB /* SRIChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIChatViewController.m; sourceTree = "<group>"; };
 		11A5981617B859EA00BF7647 /* RHCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoreDataCollectionViewController.h; sourceTree = "<group>"; };
 		11A5981717B859EA00BF7647 /* RHCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		11A5981817B859EA00BF7647 /* RHCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -377,6 +383,8 @@
 				115D77F517B68C73009A09F6 /* MosquittoMessage.m */,
 				115D779E17B68C05009A09F6 /* SRIViewController.m */,
 				115D778917B68C05009A09F6 /* Supporting Files */,
+				1181046517CA884800F2B3CB /* SRIConversationTopCell.h */,
+				1181046617CA884A00F2B3CB /* SRIConversationTopCell.m */,
 			);
 			path = narad;
 			sourceTree = "<group>";
@@ -546,6 +554,8 @@
 				1181045B17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.m */,
 				1181045F17CA593D00F2B3CB /* SRIRoot.h */,
 				1181046017CA593E00F2B3CB /* SRIRoot.m */,
+				1181046A17CAB13A00F2B3CB /* SRIChatViewController.h */,
+				1181046B17CAB13A00F2B3CB /* SRIChatViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -824,6 +834,8 @@
 				1181045C17CA469F00F2B3CB /* SRIWaitingVerificationCodeViewController.m in Sources */,
 				1181046117CA593F00F2B3CB /* SRIRoot.m in Sources */,
 				1181046417CA6D5800F2B3CB /* services.m in Sources */,
+				1181046717CA884D00F2B3CB /* SRIConversationTopCell.m in Sources */,
+				1181046C17CAB13B00F2B3CB /* SRIChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
