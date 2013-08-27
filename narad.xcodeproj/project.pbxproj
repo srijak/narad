@@ -13,6 +13,12 @@
 		1107F49117C80C7300A09128 /* SRIRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F49017C80C7200A09128 /* SRIRightViewController.m */; };
 		1107F49417C8107C00A09128 /* SRINavigationTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */; };
 		110FFC6B17C30B8700CA056D /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */; };
+		113937B017CC20490061CF3E /* SRIBubbleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937AF17CC20490061CF3E /* SRIBubbleColor.m */; };
+		113937B317CC206D0061CF3E /* SRIContactBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937B217CC206D0061CF3E /* SRIContactBubble.m */; };
+		113937B917CC223A0061CF3E /* SRIContactPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937B817CC223A0061CF3E /* SRIContactPickerView.m */; };
+		113937BC17CC239F0061CF3E /* SRIContactPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */; };
+		113937BE17CC2CB20061CF3E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113937BD17CC2CB20061CF3E /* AddressBook.framework */; };
+		113937C017CC32950061CF3E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113937BF17CC32950061CF3E /* AddressBookUI.framework */; };
 		1139D8F317BDC04900564087 /* SRIConversationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F217BDC04800564087 /* SRIConversationEntity.m */; };
 		1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F517BDC04900564087 /* SRIUserEntity.m */; };
 		1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F817BDC04A00564087 /* SRIMessageEntity.m */; };
@@ -148,6 +154,16 @@
 		1107F49217C8107B00A09128 /* SRINavigationTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRINavigationTopViewController.h; sourceTree = "<group>"; };
 		1107F49317C8107B00A09128 /* SRINavigationTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINavigationTopViewController.m; sourceTree = "<group>"; };
 		110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libReactiveCocoa-iOS.a"; path = "ReactiveCocoa/ReactiveCocoaFramework/build/Release-iphoneos/libReactiveCocoa-iOS.a"; sourceTree = "<group>"; };
+		113937AE17CC20490061CF3E /* SRIBubbleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIBubbleColor.h; sourceTree = "<group>"; };
+		113937AF17CC20490061CF3E /* SRIBubbleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIBubbleColor.m; sourceTree = "<group>"; };
+		113937B117CC206D0061CF3E /* SRIContactBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIContactBubble.h; sourceTree = "<group>"; };
+		113937B217CC206D0061CF3E /* SRIContactBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIContactBubble.m; sourceTree = "<group>"; };
+		113937B717CC223A0061CF3E /* SRIContactPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIContactPickerView.h; sourceTree = "<group>"; };
+		113937B817CC223A0061CF3E /* SRIContactPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIContactPickerView.m; sourceTree = "<group>"; };
+		113937BA17CC239F0061CF3E /* SRIContactPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIContactPickerViewController.h; sourceTree = "<group>"; };
+		113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIContactPickerViewController.m; sourceTree = "<group>"; };
+		113937BD17CC2CB20061CF3E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		113937BF17CC32950061CF3E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		1139D8F117BDC04800564087 /* SRIConversationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationEntity.h; sourceTree = "<group>"; };
 		1139D8F217BDC04800564087 /* SRIConversationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationEntity.m; sourceTree = "<group>"; };
 		1139D8F417BDC04900564087 /* SRIUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUserEntity.h; sourceTree = "<group>"; };
@@ -299,6 +315,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				113937C017CC32950061CF3E /* AddressBookUI.framework in Frameworks */,
+				113937BE17CC2CB20061CF3E /* AddressBook.framework in Frameworks */,
 				110FFC6B17C30B8700CA056D /* libReactiveCocoa-iOS.a in Frameworks */,
 				11BC54A217C2C450001CCDD7 /* Security.framework in Frameworks */,
 				11A5982E17B85AFB00BF7647 /* CoreData.framework in Frameworks */,
@@ -322,11 +340,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113937AA17CC1FEF0061CF3E /* contactpicker */ = {
+			isa = PBXGroup;
+			children = (
+				113937AE17CC20490061CF3E /* SRIBubbleColor.h */,
+				113937AF17CC20490061CF3E /* SRIBubbleColor.m */,
+				113937B117CC206D0061CF3E /* SRIContactBubble.h */,
+				113937B217CC206D0061CF3E /* SRIContactBubble.m */,
+				113937B717CC223A0061CF3E /* SRIContactPickerView.h */,
+				113937B817CC223A0061CF3E /* SRIContactPickerView.m */,
+				113937BA17CC239F0061CF3E /* SRIContactPickerViewController.h */,
+				113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */,
+			);
+			name = contactpicker;
+			sourceTree = "<group>";
+		};
 		115D777617B68C05009A09F6 = {
 			isa = PBXGroup;
 			children = (
+				113937BF17CC32950061CF3E /* AddressBookUI.framework */,
 				110FFC6A17C30B8700CA056D /* libReactiveCocoa-iOS.a */,
-				11BC54A117C2C450001CCDD7 /* Security.framework */,
 				115D778817B68C05009A09F6 /* narad */,
 				115D77AC17B68C05009A09F6 /* naradTests */,
 				115D778117B68C05009A09F6 /* Frameworks */,
@@ -347,6 +380,8 @@
 		115D778117B68C05009A09F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				11BC54A117C2C450001CCDD7 /* Security.framework */,
+				113937BD17CC2CB20061CF3E /* AddressBook.framework */,
 				11A5982D17B85AFB00BF7647 /* CoreData.framework */,
 				115D778217B68C05009A09F6 /* UIKit.framework */,
 				115D778417B68C05009A09F6 /* Foundation.framework */,
@@ -360,6 +395,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				113937AA17CC1FEF0061CF3E /* contactpicker */,
 				1181044C17C940DE00F2B3CB /* UIColor+FlatUI.h */,
 				1181044D17C940DE00F2B3CB /* UIColor+FlatUI.m */,
 				1181042917C92A3500F2B3CB /* Controllers */,
@@ -836,6 +872,10 @@
 				1181046417CA6D5800F2B3CB /* services.m in Sources */,
 				1181046717CA884D00F2B3CB /* SRIConversationTopCell.m in Sources */,
 				1181046C17CAB13B00F2B3CB /* SRIChatViewController.m in Sources */,
+				113937B017CC20490061CF3E /* SRIBubbleColor.m in Sources */,
+				113937B317CC206D0061CF3E /* SRIContactBubble.m in Sources */,
+				113937B917CC223A0061CF3E /* SRIContactPickerView.m in Sources */,
+				113937BC17CC239F0061CF3E /* SRIContactPickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

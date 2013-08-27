@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cDi-YM-woI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nLv-MK-6eJ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -349,6 +349,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7A-IP-35p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1264" y="-1362"/>
+        </scene>
+        <!--Contact Picker View Controller-->
+        <scene sceneID="jI7-xt-lly">
+            <objects>
+                <viewController id="nLv-MK-6eJ" customClass="SRIContactPickerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YYC-Js-tdL">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Smd-j2-92k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="-2273"/>
         </scene>
         <!--Initial Sliding View Controller-->
         <scene sceneID="30p-m8-9NF">
@@ -724,6 +738,19 @@ coloured comic supplement.</string>
                 <relationship kind="action" name="revealUnderRight:"/>
             </relationships>
         </class>
+        <class className="SRIContactPickerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+        <class className="SRIContactPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contactPickerView" candidateClass="SRIContactPickerView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="SRIConversationTopCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIConversationTopCell.h"/>
             <relationships>
@@ -766,10 +793,17 @@ coloured comic supplement.</string>
         <class className="SRIViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIViewController.h"/>
             <relationships>
+                <relationship kind="action" name="activateRegistration:"/>
+                <relationship kind="action" name="connectButton:"/>
+                <relationship kind="action" name="connectToThrift:"/>
+                <relationship kind="action" name="createMsg:"/>
+                <relationship kind="action" name="publish:"/>
+                <relationship kind="action" name="subscribe:"/>
                 <relationship kind="outlet" name="activation_code" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwd" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="toPublish" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="topics" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="SRIWaitingVerificationCodeViewController" superclassName="UIViewController">
