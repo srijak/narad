@@ -103,8 +103,16 @@
   ABRecordID abRecordID = [user intValue];
   
   ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
+  CFDataRef imageData = ABPersonCopyImageData(abPerson);
+  //  CFRelease(imageData); <<-- TODO: is this required?
   
   cell.name.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
+  // TODO: VERIFY IMAGE SETTING WORKS.
+  if (imageData != nil){
+    [cell.avatar setImage: [UIImage imageWithData:CFBridgingRelease(imageData)]];
+  }else{
+    [cell.avatar setImage:[UIImage imageNamed: @"contact_picker_cell_def_avatar.png"]];
+  }
   
   if ([self.selectedContacts containsObject:user]){
     UIImage *image = [UIImage imageNamed: @"contact_picker_cell_sel.png"];
@@ -159,7 +167,6 @@
     
     	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF beginswith[cd] %@)", textViewText];
     
-    NSMutableArray* ns = [[NSMutableArray alloc] init];
     for (id record in self.contacts)
     {
       ABRecordRef person = (__bridge ABRecordRef)record;
