@@ -139,7 +139,6 @@
     [self.contactPickerView removeContact:user];
   } else {
     // Contact has not been selected, add it to SRIContactPickerView
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     [self.selectedContacts addObject:user];
     
     ABRecordID abRecordID = [user intValue];
