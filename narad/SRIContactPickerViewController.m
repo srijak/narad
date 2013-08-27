@@ -8,6 +8,7 @@
 
 
 #import "SRIContactPickerViewController.h"
+#import "SRIContactPickerCell.h"
 
 @interface SRIContactPickerViewController ()
 
@@ -60,7 +61,9 @@
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.tableView setAllowsSelection:YES];
+  [self.tableView registerNib:[UINib nibWithNibName:@"ContactPickerCell" bundle:nil] forCellReuseIdentifier:@"ContactPickerCell"];
   [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
+
 }
 
 
@@ -88,12 +91,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  NSString *cellIdentifier = @"ContactCell";
   
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-  if (cell == nil){
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-  }
+  
+  SRIContactPickerCell *cell = (SRIContactPickerCell *)[self.tableView
+                                                            dequeueReusableCellWithIdentifier:@"ContactPickerCell"];
+  
+	
   
   NSNumber * user = [self.filteredContacts objectAtIndex:indexPath.row] ;
   
@@ -101,14 +104,15 @@
   
   ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
   
-  cell.textLabel.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
+  cell.name.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
   
-  //if ([self.selectedContacts containsObject:[self.filteredContacts objectAtIndex:indexPath.row]]){
   if ([self.selectedContacts containsObject:user]){
-      
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_sel.png"];
+    [cell.selected_image setImage:image];
+    
   } else {
-    cell.accessoryType = UITableViewCellAccessoryNone;
+    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_unsel.png"];
+    [cell.selected_image setImage:image];
   }
   
   return cell;

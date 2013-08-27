@@ -19,6 +19,10 @@
 		113937BC17CC239F0061CF3E /* SRIContactPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */; };
 		113937BE17CC2CB20061CF3E /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113937BD17CC2CB20061CF3E /* AddressBook.framework */; };
 		113937C017CC32950061CF3E /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 113937BF17CC32950061CF3E /* AddressBookUI.framework */; };
+		113937C317CC411E0061CF3E /* ContactPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 113937C217CC411E0061CF3E /* ContactPickerCell.xib */; };
+		113937C617CC42370061CF3E /* SRIContactPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 113937C517CC42360061CF3E /* SRIContactPickerCell.m */; };
+		113937C917CC47630061CF3E /* contact_picker_cell_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 113937C717CC47630061CF3E /* contact_picker_cell_sel.png */; };
+		113937CA17CC47630061CF3E /* contact_picker_cell_unsel.png in Resources */ = {isa = PBXBuildFile; fileRef = 113937C817CC47630061CF3E /* contact_picker_cell_unsel.png */; };
 		1139D8F317BDC04900564087 /* SRIConversationEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F217BDC04800564087 /* SRIConversationEntity.m */; };
 		1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F517BDC04900564087 /* SRIUserEntity.m */; };
 		1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F817BDC04A00564087 /* SRIMessageEntity.m */; };
@@ -164,6 +168,11 @@
 		113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIContactPickerViewController.m; sourceTree = "<group>"; };
 		113937BD17CC2CB20061CF3E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		113937BF17CC32950061CF3E /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		113937C217CC411E0061CF3E /* ContactPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactPickerCell.xib; sourceTree = "<group>"; };
+		113937C417CC42360061CF3E /* SRIContactPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIContactPickerCell.h; sourceTree = "<group>"; };
+		113937C517CC42360061CF3E /* SRIContactPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIContactPickerCell.m; sourceTree = "<group>"; };
+		113937C717CC47630061CF3E /* contact_picker_cell_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_picker_cell_sel.png; sourceTree = "<group>"; };
+		113937C817CC47630061CF3E /* contact_picker_cell_unsel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_picker_cell_unsel.png; sourceTree = "<group>"; };
 		1139D8F117BDC04800564087 /* SRIConversationEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConversationEntity.h; sourceTree = "<group>"; };
 		1139D8F217BDC04800564087 /* SRIConversationEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConversationEntity.m; sourceTree = "<group>"; };
 		1139D8F417BDC04900564087 /* SRIUserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUserEntity.h; sourceTree = "<group>"; };
@@ -351,8 +360,19 @@
 				113937B817CC223A0061CF3E /* SRIContactPickerView.m */,
 				113937BA17CC239F0061CF3E /* SRIContactPickerViewController.h */,
 				113937BB17CC239F0061CF3E /* SRIContactPickerViewController.m */,
+				113937C417CC42360061CF3E /* SRIContactPickerCell.h */,
+				113937C517CC42360061CF3E /* SRIContactPickerCell.m */,
 			);
 			name = contactpicker;
+			sourceTree = "<group>";
+		};
+		113937C117CC40E80061CF3E /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				115D779A17B68C05009A09F6 /* MainStoryboard.storyboard */,
+				113937C217CC411E0061CF3E /* ContactPickerCell.xib */,
+			);
+			name = gui;
 			sourceTree = "<group>";
 		};
 		115D777617B68C05009A09F6 = {
@@ -395,6 +415,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				113937C117CC40E80061CF3E /* gui */,
 				113937AA17CC1FEF0061CF3E /* contactpicker */,
 				1181044C17C940DE00F2B3CB /* UIColor+FlatUI.h */,
 				1181044D17C940DE00F2B3CB /* UIColor+FlatUI.m */,
@@ -411,7 +432,6 @@
 				11BC549E17C2C272001CCDD7 /* SRICredentialsManager.h */,
 				11BC549F17C2C272001CCDD7 /* SRICredentialsManager.m */,
 				11BC549C17C2C187001CCDD7 /* SRISingleton.m */,
-				115D779A17B68C05009A09F6 /* MainStoryboard.storyboard */,
 				115D779D17B68C05009A09F6 /* SRIViewController.h */,
 				115D77F217B68C73009A09F6 /* MosquittoClient.h */,
 				115D77F317B68C73009A09F6 /* MosquittoClient.m */,
@@ -430,6 +450,8 @@
 			children = (
 				1181045217CA3EE400F2B3CB /* CountryCodes.plist */,
 				1181044A17C93E2800F2B3CB /* plus_btn.png */,
+				113937C717CC47630061CF3E /* contact_picker_cell_sel.png */,
+				113937C817CC47630061CF3E /* contact_picker_cell_unsel.png */,
 				1181042C17C9328D00F2B3CB /* Assets */,
 				115D778A17B68C05009A09F6 /* narad-Info.plist */,
 				1181044817C93A5000F2B3CB /* menu_btn.png */,
@@ -751,6 +773,9 @@
 				1181044B17C93E2900F2B3CB /* plus_btn.png in Resources */,
 				1181045317CA3EE400F2B3CB /* CountryCodes.plist in Resources */,
 				1181045E17CA49F200F2B3CB /* back_btn.png in Resources */,
+				113937C317CC411E0061CF3E /* ContactPickerCell.xib in Resources */,
+				113937C917CC47630061CF3E /* contact_picker_cell_sel.png in Resources */,
+				113937CA17CC47630061CF3E /* contact_picker_cell_unsel.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,6 +901,7 @@
 				113937B317CC206D0061CF3E /* SRIContactBubble.m in Sources */,
 				113937B917CC223A0061CF3E /* SRIContactPickerView.m in Sources */,
 				113937BC17CC239F0061CF3E /* SRIContactPickerViewController.m in Sources */,
+				113937C617CC42370061CF3E /* SRIContactPickerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
