@@ -26,7 +26,7 @@
   [super viewWillAppear:animated];
   
     // Custom initialization
-    self.title = @"Contacts";
+    self.title = @"Select Contact(s)";
   
     self.selectedContacts = [NSMutableArray array];
   
@@ -45,8 +45,13 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
   //    UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleBordered target:self action:@selector(removeAllContacts:)];
-  UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithTitle:@"Remove All" style:UIBarButtonItemStylePlain target:self action:@selector(removeAllContacts:)];
-  self.navigationItem.rightBarButtonItem = barButton;
+  
+  UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneSelecting:)];
+  
+  UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelSelecting:)];
+  
+  self.navigationItem.leftBarButtonItem = cancelButton;
+  self.navigationItem.rightBarButtonItem = doneButton;
   
   // Initialize and add Contact Picker View
   self.contactPickerView = [[SRIContactPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
@@ -205,12 +210,26 @@
   cell.accessoryType = UITableViewCellAccessoryNone;
 }
 
-- (void)removeAllContacts:(id)sender
+- (void)cancelSelecting:(id)sender
 {
-  [self.contactPickerView removeAllContacts];
+  [self doneSelecting:sender];
+}
+- (void)doneSelecting:(id)sender
+{
+  /*[self.contactPickerView removeAllContacts];
   [self.selectedContacts removeAllObjects];
   [self copyContactsToFiltered];
   [self.tableView reloadData];
+   */
+  if ([self.delegate respondsToSelector:@selector(selectedContacts:)])
+  {
+   NSLog(@"CALLING DELEGATE SELECTING");
+    [self.delegate selectedContacts:self.selectedContacts];
+  }
+   NSLog(@"DONE SELECTING");
+  [self.view endEditing:YES];
+  [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 

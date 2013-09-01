@@ -8,8 +8,9 @@
 
 #import "AMBubbleTableViewController.h"
 #import <ECSlidingViewController/ECSlidingViewController.h>
+#import "SRIContactPickerViewController.h"
 
-@interface SRIChatViewController : AMBubbleTableViewController
+@interface SRIChatViewController : AMBubbleTableViewController <SRIPickedContacts>
 
 @property (nonatomic, retain) NSNumber * topic_id;
 

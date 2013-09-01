@@ -8,6 +8,7 @@
 
 #import "SRIChatViewController.h"
 #import "SRIRightViewController.h"
+#import "SRIContactPickerViewController.h"
 
 @interface SRIChatViewController ()<AMBubbleTableDataSource, AMBubbleTableDelegate>
 
@@ -27,9 +28,33 @@
 }
 - (IBAction)revealUnderRight:(id)sender
 {
-  self.slidingViewController.anchorRightRevealAmount = 100.0f;
+ /* self.slidingViewController.anchorRightRevealAmount = 100.0f;
   [self.slidingViewController anchorTopViewTo:ECLeft];
+  */
   
+  [self performSegueWithIdentifier:@"ContactsPicker" sender:self];
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"ContactsPicker"]) {
+    
+    // Get destination view
+    SRIContactPickerViewController *vc = [segue destinationViewController];
+    vc.delegate = self;
+
+  }
+}
+-(void) viewDidDisappear:(BOOL)animated {
+  [super viewDidDisappear:animated];
+
+  if ([self isMovingToParentViewController]){
+    NSLog(@"IS MOVING TO PARENT VIEW CONTROLLER");
+  }else{
+    NSLog(@" ---- IS NOT MOVING TO PARENT VIEW CONTROLLER");
+
+  }
 }
 
 - (void)viewDidLoad
@@ -105,6 +130,11 @@
     [super viewDidLoad];
 }
 
+#pragma mark - SRIPickedContacts
+- (void)selectedContacts:(NSArray *)contacts{
+  NSLog(@"selectedContacts called.");
+  NSLog(@" contacts: %@", contacts);
+}
 #pragma mark - AMBubbleTableDataSource
 
 - (NSInteger)numberOfRows
