@@ -54,11 +54,26 @@
 -(void) viewDidAppear:(BOOL)animated{
   [super viewDidAppear:animated];
   
-  if (self.needsToShowContactPicker){
+  if (self.needsContacts){
     NSLog(@"SHOW CONtACTS PICKER");
     [self showContactsPicker];
   }else{
     NSLog(@" --- DONT SHOW CONTACTS PICKER");
+    if (self.justCreated){
+      if([self.addedContacts count] > 0){
+        NSLog(@"New topic and contacts are added.");
+        NSLog(@"TODO: create group");
+      }else{
+        NSLog(@"New topic and contacts are NOT added.");
+        [self.navigationController popViewControllerAnimated:NO];
+      }
+    }else{
+      if([self.addedContacts count] > 0){
+        NSLog(@"TODO: Need to add contacts");
+      }else{
+        NSLog(@"not just creted, no need to create group or add contacts");
+      }
+    }
   }
 }
 -(void) viewDidDisappear:(BOOL)animated {
@@ -81,9 +96,12 @@
   
   if ([self.topic_id isEqualToNumber:@-1]){
     NSLog(@"SHOW CONtACTS PICKER");
-    self.needsToShowContactPicker = TRUE;
+    self.needsContacts = TRUE;
+    self.justCreated = TRUE;
   }else{
     NSLog(@" --- DONT SHOW CONTACTS PICKER");
+    self.needsContacts = FALSE;
+    self.justCreated = FALSE;
   }
 
   [self setDataSource:self]; // Weird, uh?
@@ -157,8 +175,9 @@
 
 #pragma mark - SRIPickedContacts
 - (void)selectedContacts:(NSArray *)contacts{
-  self.needsToShowContactPicker = FALSE;
+  self.needsContacts = FALSE;
   NSLog(@"selectedContacts called.");
+  self.addedContacts = contacts;
   NSLog(@" contacts: %@", contacts);
 }
 #pragma mark - AMBubbleTableDataSource

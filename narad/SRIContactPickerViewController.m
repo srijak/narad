@@ -221,14 +221,15 @@
   [self copyContactsToFiltered];
   [self.tableView reloadData];
    */
-  if ([self.delegate respondsToSelector:@selector(selectedContacts:)])
-  {
-   NSLog(@"CALLING DELEGATE SELECTING");
-    [self.delegate selectedContacts:self.selectedContacts];
-  }
+
    NSLog(@"DONE SELECTING");
   [self.view endEditing:YES];
   [self.navigationController popViewControllerAnimated:YES];
+  if ([self.delegate respondsToSelector:@selector(selectedContacts:)])
+  {
+    NSLog(@"CALLING DELEGATE SELECTING");
+    [self.delegate selectedContacts:self.selectedContacts];
+  }
 
 }
 
