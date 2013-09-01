@@ -13,6 +13,7 @@
 @interface SRIChatViewController : AMBubbleTableViewController <SRIPickedContacts>
 
 @property (nonatomic, retain) NSNumber * topic_id;
+@property (nonatomic) BOOL needsToShowContactPicker;
 
 - (IBAction)revealUnderRight:(id)sender;
 @end

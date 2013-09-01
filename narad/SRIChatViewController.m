@@ -36,6 +36,10 @@
 
 }
 
+-(void) showContactsPicker{
+  [self performSegueWithIdentifier:@"ContactsPicker" sender:self];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
   if ([[segue identifier] isEqualToString:@"ContactsPicker"]) {
@@ -44,6 +48,17 @@
     SRIContactPickerViewController *vc = [segue destinationViewController];
     vc.delegate = self;
 
+  }
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+  [super viewDidAppear:animated];
+  
+  if (self.needsToShowContactPicker){
+    NSLog(@"SHOW CONtACTS PICKER");
+    [self showContactsPicker];
+  }else{
+    NSLog(@" --- DONT SHOW CONTACTS PICKER");
   }
 }
 -(void) viewDidDisappear:(BOOL)animated {
@@ -63,15 +78,24 @@
  if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIRightViewController class]]) {
    self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Right"];
    }
+  
+  if ([self.topic_id isEqualToNumber:@-1]){
+    NSLog(@"SHOW CONtACTS PICKER");
+    self.needsToShowContactPicker = TRUE;
+  }else{
+    NSLog(@" --- DONT SHOW CONTACTS PICKER");
+  }
+
+  [self setDataSource:self]; // Weird, uh?
+  [self setDelegate:self];
 
   // Bubble Table setup
    NSLog(@"Loading conversation with topid_id: %@", self.topic_id);
   
     //TODO: Load conversation from id. If id == -1, that means it's a new conversation.
-  
-  
-    [self setDataSource:self]; // Weird, uh?
-    [self setDelegate:self];
+
+    
+    NSLog(@"--- DONT SHOW CONtACTS PICKER");
     
     // Dummy data
     self.data = [[NSMutableArray alloc] initWithArray:@[
@@ -122,16 +146,18 @@
                  },
                  ]
                  ];
-    
+  
     // Set a style
     [self setTableStyle:AMBubbleTableStyleFlat];
     
     // Call super after setting up the options
     [super viewDidLoad];
+
 }
 
 #pragma mark - SRIPickedContacts
 - (void)selectedContacts:(NSArray *)contacts{
+  self.needsToShowContactPicker = FALSE;
   NSLog(@"selectedContacts called.");
   NSLog(@" contacts: %@", contacts);
 }

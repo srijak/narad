@@ -719,6 +719,98 @@ coloured comic supplement.</string>
         <image name="menu_btn.png" width="50" height="30"/>
         <image name="plus_btn.png" width="50" height="30"/>
     </resources>
+    <classes>
+        <class className="AMBubbleTableViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AMBubbleTableViewController.h"/>
+        </class>
+        <class className="DirectMsgsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DirectMsgsViewController.h"/>
+        </class>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RHCoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RHCoreDataTableViewController.h"/>
+        </class>
+        <class className="SRIChatViewController" superclassName="AMBubbleTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIChatViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealUnderRight:"/>
+            </relationships>
+        </class>
+        <class className="SRIContactPickerView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+        <class className="SRIContactPickerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="contactPickerView" candidateClass="SRIContactPickerView"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SRIConversationTopCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIConversationTopCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="groupImg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastMessageSentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="lastMessageTextLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SRIInitialSlidingViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIInitialSlidingViewController.h"/>
+        </class>
+        <class className="SRIMenuViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIMenuViewController.h"/>
+        </class>
+        <class className="SRIMessagesViewController" superclassName="RHCoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIMessagesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="revealMenu:"/>
+                <relationship kind="action" name="revealUnderRight:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SRINavigationTopViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRINavigationTopViewController.h"/>
+        </class>
+        <class className="SRIRightViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIRightViewController.h"/>
+        </class>
+        <class className="SRIRoot" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIRoot.h"/>
+        </class>
+        <class className="SRIVerificationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIVerificationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendVerificationAndGotoWaiting:"/>
+                <relationship kind="outlet" name="phone_number_text" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SRIViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activation_code" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwd" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="toPublish" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="topics" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SRIWaitingVerificationCodeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIWaitingVerificationCodeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="activateRegistration:"/>
+                <relationship kind="outlet" name="activation_code" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
