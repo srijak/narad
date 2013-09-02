@@ -9,6 +9,7 @@
 #import "SRIChatViewController.h"
 #import "SRIChatInfoViewController.h"
 #import "SRIContactPickerViewController.h"
+#import "SRIMessage.h"
 
 @interface SRIChatViewController ()<AMBubbleTableDataSource, AMBubbleTableDelegate>
 
@@ -76,6 +77,22 @@
   }
 }
 -(void) showMessages {
+  NSArray *messages = [SRIMessage fetchWithPredicate:[NSPredicate predicateWithFormat:@"topic_id=%@", self.topic_id]];
+  
+  self.data = [[NSMutableArray alloc] init];
+  for (id m in messages){
+    SRIMessage* t = (SRIMessage *) m;
+    [self.data addObject:   @{
+     @"text": t.text,
+     @"date": t.timestamp,
+     @"type": @(AMBubbleCellReceived),
+     @"username": [NSString stringWithFormat: @"%@", t.user_id],
+     @"color": [UIColor redColor]
+     }];
+  }
+  
+  /*
+
   self.data = [[NSMutableArray alloc] initWithArray:@[
    @{
    @"text": @"He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.",
@@ -124,7 +141,7 @@
    },
    ]
    ];
-
+*/
   [self reloadTableScrollingToBottom:TRUE];
 }
 -(void) viewDidDisappear:(BOOL)animated {
