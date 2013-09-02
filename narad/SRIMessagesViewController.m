@@ -46,13 +46,17 @@
 
 - (IBAction)revealMenu:(id)sender
 {
+  
+  self.slidingViewController.anchorRightRevealAmount = 100.0f;
   [self.slidingViewController anchorTopViewTo:ECRight];
+
 }
 
 
 - (IBAction)revealUnderRight:(id)sender
 {
-
+  
+  NSLog(@"HHIIII");
  /* self.slidingViewController.anchorRightRevealAmount = 100.0f;
   [self.slidingViewController anchorTopViewTo:ECLeft];
 */

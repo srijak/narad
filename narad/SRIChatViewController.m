@@ -7,7 +7,7 @@
 //
 
 #import "SRIChatViewController.h"
-#import "SRIRightViewController.h"
+#import "SRIChatInfoViewController.h"
 #import "SRIContactPickerViewController.h"
 
 @interface SRIChatViewController ()<AMBubbleTableDataSource, AMBubbleTableDelegate>
@@ -28,12 +28,15 @@
 }
 - (IBAction)revealUnderRight:(id)sender
 {
- /* self.slidingViewController.anchorRightRevealAmount = 100.0f;
+  self.slidingViewController.anchorLeftPeekAmount = 30.0f;
+  //anchorLeftRevealAmount = 100.0f;
   [self.slidingViewController anchorTopViewTo:ECLeft];
-  */
   
+  
+  
+  /*
   [self performSegueWithIdentifier:@"ContactsPicker" sender:self];
-
+   */
 }
 
 -(void) showContactsPicker{
@@ -53,7 +56,7 @@
 
 -(void) viewDidAppear:(BOOL)animated{
   [super viewDidAppear:animated];
-  
+
   if (self.needsContacts){
     NSLog(@"SHOW CONtACTS PICKER");
     [self showContactsPicker];
@@ -89,10 +92,10 @@
 
 - (void)viewDidLoad
 {
-  // cliding menu setup
- if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIRightViewController class]]) {
-   self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"Right"];
-   }
+  // sliding menu setup
+  if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIChatInfoViewController class]]) {
+    self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatInfoView"];
+  }
   
   if ([self.topic_id isEqualToNumber:@-1]){
     NSLog(@"SHOW CONtACTS PICKER");
@@ -103,6 +106,8 @@
     self.needsContacts = FALSE;
     self.justCreated = FALSE;
   }
+  
+  
 
   [self setDataSource:self]; // Weird, uh?
   [self setDelegate:self];

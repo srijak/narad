@@ -134,6 +134,15 @@
 		11BCF1C917C2EF4E00CC2324 /* DirectMsgsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BCF1C817C2EF4E00CC2324 /* DirectMsgsViewController.m */; };
 		11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28C17B8618900550B9D /* SRIMessage.m */; };
 		11EBF29017B861AC00550B9D /* SRIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28F17B861AC00550B9D /* SRIUser.m */; };
+		11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */; };
+		11F895EB17D3E42C00005D11 /* MHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895EA17D3E42C00005D11 /* MHTabBarController.m */; };
+		11F895F217D3E44500005D11 /* MHTabBarActiveTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895EC17D3E44500005D11 /* MHTabBarActiveTab.png */; };
+		11F895F317D3E44500005D11 /* MHTabBarActiveTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895ED17D3E44500005D11 /* MHTabBarActiveTab@2x.png */; };
+		11F895F417D3E44500005D11 /* MHTabBarInactiveTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895EE17D3E44500005D11 /* MHTabBarInactiveTab.png */; };
+		11F895F517D3E44500005D11 /* MHTabBarInactiveTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895EF17D3E44500005D11 /* MHTabBarInactiveTab@2x.png */; };
+		11F895F617D3E44500005D11 /* MHTabBarIndicator.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895F017D3E44500005D11 /* MHTabBarIndicator.png */; };
+		11F895F717D3E44500005D11 /* MHTabBarIndicator@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F895F117D3E44500005D11 /* MHTabBarIndicator@2x.png */; };
+		11F895FA17D3F13400005D11 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895F917D3F13300005D11 /* ListViewController.m */; };
 		EB70A5D1F5A543A888FAE002 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7D065FAF8E48B18C41F163 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -317,6 +326,18 @@
 		11EBF28C17B8618900550B9D /* SRIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessage.m; sourceTree = "<group>"; };
 		11EBF28E17B861AC00550B9D /* SRIUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUser.h; sourceTree = "<group>"; };
 		11EBF28F17B861AC00550B9D /* SRIUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIUser.m; sourceTree = "<group>"; };
+		11F895E517D3DB6C00005D11 /* SRIChatInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIChatInfoViewController.h; sourceTree = "<group>"; };
+		11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIChatInfoViewController.m; sourceTree = "<group>"; };
+		11F895E917D3E42C00005D11 /* MHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHTabBarController.h; sourceTree = "<group>"; };
+		11F895EA17D3E42C00005D11 /* MHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHTabBarController.m; sourceTree = "<group>"; };
+		11F895EC17D3E44500005D11 /* MHTabBarActiveTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MHTabBarActiveTab.png; sourceTree = "<group>"; };
+		11F895ED17D3E44500005D11 /* MHTabBarActiveTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MHTabBarActiveTab@2x.png"; sourceTree = "<group>"; };
+		11F895EE17D3E44500005D11 /* MHTabBarInactiveTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MHTabBarInactiveTab.png; sourceTree = "<group>"; };
+		11F895EF17D3E44500005D11 /* MHTabBarInactiveTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MHTabBarInactiveTab@2x.png"; sourceTree = "<group>"; };
+		11F895F017D3E44500005D11 /* MHTabBarIndicator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MHTabBarIndicator.png; sourceTree = "<group>"; };
+		11F895F117D3E44500005D11 /* MHTabBarIndicator@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MHTabBarIndicator@2x.png"; sourceTree = "<group>"; };
+		11F895F817D3F13300005D11 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		11F895F917D3F13300005D11 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		EB0718EE79BE4CFFB782C541 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		FE7D065FAF8E48B18C41F163 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -417,6 +438,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				11F895E817D3E41C00005D11 /* MHTabBar */,
 				113937C117CC40E80061CF3E /* gui */,
 				113937AA17CC1FEF0061CF3E /* contactpicker */,
 				1181044C17C940DE00F2B3CB /* UIColor+FlatUI.h */,
@@ -612,11 +634,15 @@
 				1181045417CA405600F2B3CB /* SRIVerificationViewController.h */,
 				1181045517CA405600F2B3CB /* SRIVerificationViewController.m */,
 				1181045A17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.h */,
+				11F895F817D3F13300005D11 /* ListViewController.h */,
+				11F895F917D3F13300005D11 /* ListViewController.m */,
 				1181045B17CA469E00F2B3CB /* SRIWaitingVerificationCodeViewController.m */,
 				1181045F17CA593D00F2B3CB /* SRIRoot.h */,
 				1181046017CA593E00F2B3CB /* SRIRoot.m */,
 				1181046A17CAB13A00F2B3CB /* SRIChatViewController.h */,
 				1181046B17CAB13A00F2B3CB /* SRIChatViewController.m */,
+				11F895E517D3DB6C00005D11 /* SRIChatInfoViewController.h */,
+				11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -680,6 +706,21 @@
 				11A5984517B85FBD00BF7647 /* SRIConversation.m */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		11F895E817D3E41C00005D11 /* MHTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				11F895EC17D3E44500005D11 /* MHTabBarActiveTab.png */,
+				11F895ED17D3E44500005D11 /* MHTabBarActiveTab@2x.png */,
+				11F895EE17D3E44500005D11 /* MHTabBarInactiveTab.png */,
+				11F895EF17D3E44500005D11 /* MHTabBarInactiveTab@2x.png */,
+				11F895F017D3E44500005D11 /* MHTabBarIndicator.png */,
+				11F895F117D3E44500005D11 /* MHTabBarIndicator@2x.png */,
+				11F895E917D3E42C00005D11 /* MHTabBarController.h */,
+				11F895EA17D3E42C00005D11 /* MHTabBarController.m */,
+			);
+			name = MHTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -780,6 +821,12 @@
 				113937C917CC47630061CF3E /* contact_picker_cell_sel.png in Resources */,
 				113937CA17CC47630061CF3E /* contact_picker_cell_unsel.png in Resources */,
 				113937CC17CC4C790061CF3E /* contact_picker_cell_def_avatar.png in Resources */,
+				11F895F217D3E44500005D11 /* MHTabBarActiveTab.png in Resources */,
+				11F895F317D3E44500005D11 /* MHTabBarActiveTab@2x.png in Resources */,
+				11F895F417D3E44500005D11 /* MHTabBarInactiveTab.png in Resources */,
+				11F895F517D3E44500005D11 /* MHTabBarInactiveTab@2x.png in Resources */,
+				11F895F617D3E44500005D11 /* MHTabBarIndicator.png in Resources */,
+				11F895F717D3E44500005D11 /* MHTabBarIndicator@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +953,9 @@
 				113937B917CC223A0061CF3E /* SRIContactPickerView.m in Sources */,
 				113937BC17CC239F0061CF3E /* SRIContactPickerViewController.m in Sources */,
 				113937C617CC42370061CF3E /* SRIContactPickerCell.m in Sources */,
+				11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */,
+				11F895EB17D3E42C00005D11 /* MHTabBarController.m in Sources */,
+				11F895FA17D3F13400005D11 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
