@@ -169,7 +169,7 @@
     NSLog(@"--- DONT SHOW CONtACTS PICKER");
   
     
-  self.data = nil;
+  self.data = [[NSMutableArray alloc] init];
     
     // Set a style
     [self setTableStyle:AMBubbleTableStyleFlat];
