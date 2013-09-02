@@ -28,15 +28,8 @@
 }
 - (IBAction)revealUnderRight:(id)sender
 {
-  self.slidingViewController.anchorLeftPeekAmount = 30.0f;
-  //anchorLeftRevealAmount = 100.0f;
+  self.slidingViewController.anchorLeftPeekAmount = 29.0f;
   [self.slidingViewController anchorTopViewTo:ECLeft];
-  
-  
-  
-  /*
-  [self performSegueWithIdentifier:@"ContactsPicker" sender:self];
-   */
 }
 
 -(void) showContactsPicker{
@@ -53,7 +46,9 @@
 
   }
 }
-
+-(void) viewWillAppear:(BOOL)animated{
+  [super viewWillAppear:animated];
+}
 -(void) viewDidAppear:(BOOL)animated{
   [super viewDidAppear:animated];
 
@@ -75,9 +70,62 @@
         NSLog(@"TODO: Need to add contacts");
       }else{
         NSLog(@"not just creted, no need to create group or add contacts");
+        [self showMessages];
       }
     }
   }
+}
+-(void) showMessages {
+  self.data = [[NSMutableArray alloc] initWithArray:@[
+   @{
+   @"text": @"He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellReceived),
+   @"username": @"Stevie",
+   @"color": [UIColor redColor]
+   },
+   @{
+   @"text": @"My dad isn’t famous. My dad plays jazz. You can’t get famous playing jazz",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellSent)
+   },
+   @{
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellTimestamp)
+   },
+   @{
+   @"text": @"I'd far rather be happy than right any day.",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellReceived),
+   @"username": @"John",
+   @"color": [UIColor orangeColor]
+   },
+   @{
+   @"text": @"The only reason for walking into the jaws of Death is so's you can steal His gold teeth.",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellSent)
+   },
+   @{
+   @"text": @"The gods had a habit of going round to atheists' houses and smashing their windows.",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellReceived),
+   @"username": @"Jimi",
+   @"color": [UIColor blueColor]
+   },
+   @{
+   @"text": @"you are lucky. Your friend is going to meet Bel-Shamharoth. You will only die.",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellSent)
+   },
+   @{
+   @"text": @"Guess the quotes!",
+   @"date": [NSDate date],
+   @"type": @(AMBubbleCellSent)
+   },
+   ]
+   ];
+
+  [self reloadTableScrollingToBottom:TRUE];
 }
 -(void) viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
@@ -96,6 +144,7 @@
   if (![self.slidingViewController.underRightViewController isKindOfClass:[SRIChatInfoViewController class]]) {
     self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatInfoView"];
   }
+ 
   
   if ([self.topic_id isEqualToNumber:@-1]){
     NSLog(@"SHOW CONtACTS PICKER");
@@ -106,7 +155,6 @@
     self.needsContacts = FALSE;
     self.justCreated = FALSE;
   }
-  
   
 
   [self setDataSource:self]; // Weird, uh?
@@ -119,57 +167,10 @@
 
     
     NSLog(@"--- DONT SHOW CONtACTS PICKER");
-    
-    // Dummy data
-    self.data = [[NSMutableArray alloc] initWithArray:@[
-                 @{
-                 @"text": @"He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellReceived),
-                 @"username": @"Stevie",
-                 @"color": [UIColor redColor]
-                 },
-                 @{
-                 @"text": @"My dad isn’t famous. My dad plays jazz. You can’t get famous playing jazz",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellSent)
-                 },
-                 @{
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellTimestamp)
-                 },
-                 @{
-                 @"text": @"I'd far rather be happy than right any day.",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellReceived),
-                 @"username": @"John",
-                 @"color": [UIColor orangeColor]
-                 },
-                 @{
-                 @"text": @"The only reason for walking into the jaws of Death is so's you can steal His gold teeth.",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellSent)
-                 },
-                 @{
-                 @"text": @"The gods had a habit of going round to atheists' houses and smashing their windows.",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellReceived),
-                 @"username": @"Jimi",
-                 @"color": [UIColor blueColor]
-                 },
-                 @{
-                 @"text": @"you are lucky. Your friend is going to meet Bel-Shamharoth. You will only die.",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellSent)
-                 },
-                 @{
-                 @"text": @"Guess the quotes!",
-                 @"date": [NSDate date],
-                 @"type": @(AMBubbleCellSent)
-                 },
-                 ]
-                 ];
   
+    
+  self.data = nil;
+    
     // Set a style
     [self setTableStyle:AMBubbleTableStyleFlat];
     

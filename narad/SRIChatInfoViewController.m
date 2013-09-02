@@ -8,6 +8,7 @@
 
 #import "SRIChatInfoViewController.h"
 #import "ListViewController.h"
+#import "SRIChatInfoSummaryViewController.h"
 
 @interface SRIChatInfoViewController ()
 
@@ -44,17 +45,13 @@
 {
 	// Do any additional setup after loading the view.
 
-  ListViewController *listViewController1 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
+  SRIChatInfoSummaryViewController *listViewController1 = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatInfoSummary"];
 	ListViewController *listViewController2 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
 	ListViewController *listViewController3 = [[ListViewController alloc] initWithStyle:UITableViewStylePlain];
 	
-	listViewController1.title = @"Tab 1";
-	listViewController2.title = @"Tab 2";
-	listViewController3.title = @"Tab 3";
-  
-	listViewController2.tabBarItem.image = [UIImage imageNamed:@"Taijitu"];
-	listViewController2.tabBarItem.imageInsets = UIEdgeInsetsMake(0.0f, -4.0f, 0.0f, 0.0f);
-	listViewController2.tabBarItem.titlePositionAdjustment = UIOffsetMake(4.0f, 0.0f);
+	listViewController1.title = @"Users";
+	listViewController2.title = @"Media";
+	listViewController3.title = @"Search";
   
 	NSArray *viewControllers = @[listViewController1, listViewController2, listViewController3];
   self.delegate = self;

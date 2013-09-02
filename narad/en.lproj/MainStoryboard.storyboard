@@ -452,7 +452,6 @@
         <!--Chat Info View Controller-->
         <scene sceneID="Ihq-hS-XVz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-Mw-KvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ChatInfoView" id="8ei-Gs-rJ5" customClass="SRIChatInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Caj-Vh-H4J">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
@@ -460,8 +459,38 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnR-Mw-KvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1616" y="-822"/>
+        </scene>
+        <!--Chat Info Summary View Controller-->
+        <scene sceneID="q9c-hq-Zb3">
+            <objects>
+                <tableViewController storyboardIdentifier="ChatInfoSummary" id="0J4-Cl-AO5" customClass="SRIChatInfoSummaryViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FRu-dN-GsF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="ChatInfoSummaryCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="KGn-bS-ObA">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0J4-Cl-AO5" id="5CA-Mt-nD7"/>
+                            <outlet property="delegate" destination="0J4-Cl-AO5" id="gJ5-X4-gK3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RF-9l-vWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952" y="-1313"/>
         </scene>
         <!--Messages View Controller - Messages-->
         <scene sceneID="5Yx-Ir-XVG">
@@ -733,101 +762,6 @@ coloured comic supplement.</string>
         <image name="menu_btn.png" width="50" height="30"/>
         <image name="plus_btn.png" width="50" height="30"/>
     </resources>
-    <classes>
-        <class className="AMBubbleTableViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AMBubbleTableViewController.h"/>
-        </class>
-        <class className="DirectMsgsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DirectMsgsViewController.h"/>
-        </class>
-        <class className="ECSlidingViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RHCoreDataTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RHCoreDataTableViewController.h"/>
-        </class>
-        <class className="SRIChatInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIChatInfoViewController.h"/>
-        </class>
-        <class className="SRIChatViewController" superclassName="AMBubbleTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIChatViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealUnderRight:"/>
-            </relationships>
-        </class>
-        <class className="SRIContactPickerView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
-        </class>
-        <class className="SRIContactPickerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIContactPickerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="contactPickerView" candidateClass="SRIContactPickerView"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SRIConversationTopCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIConversationTopCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="groupImg" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="lastMessageSentLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="lastMessageTextLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="SRIInitialSlidingViewController" superclassName="ECSlidingViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIInitialSlidingViewController.h"/>
-        </class>
-        <class className="SRIMenuViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIMenuViewController.h"/>
-        </class>
-        <class className="SRIMessagesViewController" superclassName="RHCoreDataTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIMessagesViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="revealMenu:"/>
-                <relationship kind="action" name="revealUnderRight:"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="SRINavigationTopViewController" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRINavigationTopViewController.h"/>
-        </class>
-        <class className="SRIRightViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIRightViewController.h"/>
-        </class>
-        <class className="SRIRoot" superclassName="UINavigationController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIRoot.h"/>
-        </class>
-        <class className="SRIVerificationViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIVerificationViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="sendVerificationAndGotoWaiting:"/>
-                <relationship kind="outlet" name="phone_number_text" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SRIViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activation_code" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="passwd" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="toPublish" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="topics" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SRIWaitingVerificationCodeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SRIWaitingVerificationCodeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="activateRegistration:"/>
-                <relationship kind="outlet" name="activation_code" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="username" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
