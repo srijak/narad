@@ -38,7 +38,9 @@
   
   NSString* verification_state = [[NSUserDefaults standardUserDefaults] stringForKey:@"verified_state"];
   
-  
+ 
+  [self loadApplication];
+ /*  UNCOMMENT TO ACTUALLYVERFIFY.
   if ([verification_state isEqualToString:@"verified"]){
     // load add normally
     [self loadApplication];
@@ -53,6 +55,7 @@
     // show the number input screen
     [self performSegueWithIdentifier:@"LoadVerification" sender:self];
   }
+  */
 
 }
 

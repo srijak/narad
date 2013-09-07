@@ -13,5 +13,6 @@
   #import <Foundation/Foundation.h>
 	#import <CoreData/CoreData.h>
 
+  #import "UIColor+FlatUI.h"
   #import "RHManagedObject.h"
 #endif

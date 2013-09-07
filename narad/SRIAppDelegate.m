@@ -14,7 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-  UIImage *navBackgroundImage = [UIImage imageNamed:@"nav_bg"];
+  //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+  UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
   [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
 
   

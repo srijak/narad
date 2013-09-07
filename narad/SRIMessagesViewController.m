@@ -109,11 +109,16 @@
   
 	SRIConversation *conv = [self.fetchedResultsController objectAtIndexPath:indexPath];
   
-  cell.groupImg.image = [self imageFromText:@"?"];
+  cell.groupImg.image =[UIImage imageNamed:@"sample"];
   cell.titleLabel.text = conv.title;
   cell.lastMessageSentLabel.text = [NSString stringWithFormat:@"%@",conv.lastMessageSent];
   cell.lastMessageTextLabel.text = conv.lastMessageText;
   cell.conversation_id = [conv.topic_id integerValue];
+  if ([conv.topic_id intValue] % 2){
+    [cell setComplete ];
+  }else{
+    [cell setPending];
+  }
   
 }
 

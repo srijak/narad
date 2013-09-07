@@ -7,6 +7,7 @@
 //
 
 #import "SRIConversationTopCell.h"
+#import "UIColor+FlatUI.h"
 
 @implementation SRIConversationTopCell
 
@@ -26,4 +27,11 @@
     // Configure the view for the selected state
 }
 
+-(void) setPending{
+  [self.leftBorder setBackgroundColor:[UIColor alizarinColor]];
+}
+
+-(void) setComplete{
+  [self.leftBorder setBackgroundColor:[UIColor colorWithWhite:0.0 alpha:0.0]];
+}
 @end

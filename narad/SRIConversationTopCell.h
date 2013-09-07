@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGMedallionView.h"
 
 @interface SRIConversationTopCell : UITableViewCell
 
@@ -14,6 +15,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *titleLabel;
 @property (nonatomic, strong) IBOutlet UILabel *lastMessageSentLabel;
 @property (nonatomic, strong) IBOutlet UILabel *lastMessageTextLabel;
-@property (nonatomic, strong) IBOutlet UIImageView *groupImg;
+@property (nonatomic, strong) IBOutlet AGMedallionView *groupImg;
+@property (nonatomic, strong) IBOutlet UIView *leftBorder;
 
+-(void) setPending;
+-(void) setComplete;
 @end
