@@ -51,6 +51,10 @@ static const NSInteger TagOffset = 1000;
 	[self.view addSubview:contentContainerView];
 
 	indicatorImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MHTabBarIndicator"]];
+  CGRect indicatorFrame = indicatorImageView.frame;
+  
+  indicatorFrame.size.width = (self.view.bounds.size.width)/3;
+  indicatorImageView.frame = indicatorFrame;
 	[self.view addSubview:indicatorImageView];
 
 	[self reloadTabButtons];
@@ -160,7 +164,7 @@ static const NSInteger TagOffset = 1000;
 - (void)centerIndicatorOnButton:(UIButton *)button
 {
 	CGRect rect = indicatorImageView.frame;
-	rect.origin.x = button.center.x - floorf(indicatorImageView.frame.size.width/2.0f);
+	rect.origin.x = button.center.x - floorf(indicatorImageView.frame.size.width/4.0f);
 	rect.origin.y = self.tabBarHeight - indicatorImageView.frame.size.height;
 	indicatorImageView.frame = rect;
 	indicatorImageView.hidden = NO;
@@ -342,7 +346,7 @@ static const NSInteger TagOffset = 1000;
 	[button setBackgroundImage:image forState:UIControlStateNormal];
 	[button setBackgroundImage:image forState:UIControlStateHighlighted];
 	
-	[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 	[button setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.5f] forState:UIControlStateNormal];
 }
 
@@ -356,7 +360,7 @@ static const NSInteger TagOffset = 1000;
 
 	//[button setTitleColor:[UIColor colorWithRed:175/255.0f green:85/255.0f blue:58/255.0f alpha:1.0f] forState:UIControlStateNormal];
 	
-  [button setTitleColor:[UIColor midnightBlueColor] forState:UIControlStateNormal];
+  [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 	
   [button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }

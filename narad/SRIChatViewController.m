@@ -27,6 +27,11 @@
     }
     return self;
 }
+- (IBAction)back:(id)sender
+{
+
+  [self.navigationController popViewControllerAnimated:YES];
+}
 - (IBAction)revealUnderRight:(id)sender
 {
   self.slidingViewController.anchorLeftPeekAmount = 29.0f;

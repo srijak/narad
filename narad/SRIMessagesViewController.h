@@ -10,9 +10,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <ECSlidingViewController/ECSlidingViewController.h>
 #import "RHCoreDataTableViewController.h"
+#import "RNFrostedSidebar.h"
 
-
-@interface SRIMessagesViewController : RHCoreDataTableViewController
+@interface SRIMessagesViewController : RHCoreDataTableViewController <RNFrostedSidebarDelegate>
 
 @property (nonatomic, strong) NSArray *groups;
 

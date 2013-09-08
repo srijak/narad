@@ -18,4 +18,5 @@
 @property (nonatomic) BOOL justCreated;
 
 - (IBAction)revealUnderRight:(id)sender;
+- (IBAction)back:(id)sender;
 @end

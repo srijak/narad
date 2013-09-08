@@ -13,11 +13,14 @@
 #import "SRIConversationTopCell.h"
 #import "RHCoreDataTableViewController.h"
 #import "SRIChatViewController.h"
+#import "RNFrostedSidebar.h"
 
 @interface SRIMessagesViewController ()
 
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic) NSInteger selected_convo;
+
+@property (nonatomic, strong) NSMutableIndexSet *optionIndices;
 @end
 
 @implementation SRIMessagesViewController
@@ -36,20 +39,40 @@
   self.view.layer.shadowRadius = 10.0f;
   self.view.layer.shadowColor = [UIColor blackColor].CGColor;
   
-  if (![self.slidingViewController.underLeftViewController isKindOfClass:[SRIMenuViewController class]]) {
+  /*if (![self.slidingViewController.underLeftViewController isKindOfClass:[SRIMenuViewController class]]) {
     self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
-  }
+  }*/
+ 
+  self.slidingViewController.underLeftViewController  = nil;
   self.slidingViewController.underRightViewController = nil;
   
-  [self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
+  //[self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
 
 - (IBAction)revealMenu:(id)sender
 {
   
-  self.slidingViewController.anchorRightRevealAmount = 100.0f;
-  [self.slidingViewController anchorTopViewTo:ECRight];
+  //self.slidingViewController.anchorRightRevealAmount = 100.0f;
+  //[self.slidingViewController anchorTopViewTo:ECRight];
 
+  NSArray *images = @[
+                      [UIImage imageNamed:@"profile"],
+                      [UIImage imageNamed:@"star"],
+                      [UIImage imageNamed:@"globe"],
+                      [UIImage imageNamed:@"gear"],
+                      ];
+  NSArray *colors = @[
+                      [UIColor peterRiverColor],
+                      [UIColor alizarinColor],
+                      [UIColor nephritisColor],
+                      [UIColor concreteColor],
+                      ];
+  
+  RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images selectedIndices:self.optionIndices borderColors:colors];
+  //    RNFrostedSidebar *callout = [[RNFrostedSidebar alloc] initWithImages:images];
+  callout.delegate = self;
+  //    callout.showFromRight = YES;
+  [callout show];
 }
 
 
@@ -180,6 +203,7 @@
 
 -(void) viewDidLoad{
   [super viewDidLoad];
+      self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
   [self addSearchBarWithPlaceHolder:@"Search conversation names"];
 }
 
