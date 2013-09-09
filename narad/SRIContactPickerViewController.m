@@ -54,7 +54,7 @@
   self.navigationItem.rightBarButtonItem = doneButton;
   
   // Initialize and add Contact Picker View
-  self.contactPickerView = [[SRIContactPickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 100)];
+  self.contactPickerView = [[SRIContactPickerView alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 100)];
   self.contactPickerView.delegate = self;
   [self.contactPickerView setPlaceholderString:@"Enter name or number"];
   [self.view addSubview:self.contactPickerView];

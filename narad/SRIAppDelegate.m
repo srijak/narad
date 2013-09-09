@@ -8,12 +8,18 @@
 
 #import "SRIAppDelegate.h"
 #import "SRIConversation.h"
+#import "MZFormSheetBackgroundWindow.h"
 
 @implementation SRIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+  
+  [[MZFormSheetBackgroundWindow appearance] setBackgroundBlurEffect:YES];
+  [[MZFormSheetBackgroundWindow appearance] setBlurRadius:5.0];
+  [[MZFormSheetBackgroundWindow appearance] setBackgroundColor:[UIColor clearColor]];
+  
   //[[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
   UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg"];
   [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
@@ -29,6 +35,8 @@
   UIImage *backButtonImage = [[UIImage imageNamed:@"back_btn"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
   [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, -1000) forBarMetrics:UIBarMetricsDefault];
+  [self initializeApp];
+  
   [self connectToApi];
   
   

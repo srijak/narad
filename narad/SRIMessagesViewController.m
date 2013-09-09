@@ -14,6 +14,7 @@
 #import "RHCoreDataTableViewController.h"
 #import "SRIChatViewController.h"
 #import "RNFrostedSidebar.h"
+#import "MZFormSheetController.h"
 
 @interface SRIMessagesViewController ()
 
@@ -47,6 +48,23 @@
   self.slidingViewController.underRightViewController = nil;
   
   //[self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
+}
+
+- (IBAction)startNewMessage:(id)sender{
+  
+  UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewConvoViewNav"];
+  
+  MZFormSheetController *formSheet = [[MZFormSheetController alloc] initWithViewController:vc];
+  
+  formSheet.transitionStyle = MZFormSheetTransitionStyleSlideFromBottom;
+  formSheet.shadowRadius = 2.0;
+  formSheet.shadowOpacity = 0.3;
+  formSheet.shouldDismissOnBackgroundViewTap = YES;
+  formSheet.shouldCenterVerticallyWhenKeyboardAppears = YES;
+  
+  [formSheet presentAnimated:YES completionHandler:^(UIViewController *presentedFSViewController) {
+    
+  }];
 }
 
 - (IBAction)revealMenu:(id)sender
@@ -203,6 +221,10 @@
 
 -(void) viewDidLoad{
   [super viewDidLoad];
+  
+  [[MZFormSheetBackgroundWindow appearance] setBackgroundBlurEffect:YES];
+  [[MZFormSheetBackgroundWindow appearance] setBlurRadius:5.0];
+  [[MZFormSheetBackgroundWindow appearance] setBackgroundColor:[UIColor clearColor]];
       self.optionIndices = [NSMutableIndexSet indexSetWithIndex:1];
   [self addSearchBarWithPlaceHolder:@"Search conversation names"];
 }

@@ -13,13 +13,22 @@
 #define kHorizontalPadding 10
 #define kVerticalPadding 2
 
-#define kColorGradientTop [UIColor colorWithRed:219.0/255.0 green:229.0/255.0 blue:249.0/255.0 alpha:1.0]
+/*#define kColorGradientTop [UIColor colorWithRed:219.0/255.0 green:229.0/255.0 blue:249.0/255.0 alpha:1.0]
 #define kColorGradientBottom [UIColor colorWithRed:188.0/255.0 green:205.0/255.0 blue:242.0/255.0 alpha:1.0]
 #define kColorBorder [UIColor colorWithRed:127.0/255.0 green:127.0/255.0 blue:218.0/255.0 alpha:1.0]
 
 #define kColorSelectedGradientTop [UIColor colorWithRed:79.0/255.0 green:132.0/255.0 blue:255.0/255.0 alpha:1.0]
 #define kColorSelectedGradientBottom [UIColor colorWithRed:73.0/255.0 green:58.0/255.0 blue:242.0/255.0 alpha:1.0]
 #define kColorSelectedBorder [UIColor colorWithRed:56.0/255.0 green:0/255.0 blue:233.0/255.0 alpha:1.0]
+*/
+
+#define kColorGradientTop [UIColor clearColor]
+#define kColorGradientBottom [UIColor clearColor]
+#define kColorBorder [UIColor clearColor]
+
+#define kColorSelectedGradientTop [UIColor cloudsColor]
+#define kColorSelectedGradientBottom [UIColor cloudsColor]
+#define kColorSelectedBorder [UIColor concreteColor]
 
 - (id)initWithName:(NSString *)name {
   if ([self initWithName:name color:nil selectedColor:nil]) {
@@ -119,7 +128,7 @@
   
   self.gradientLayer.colors = [NSArray arrayWithObjects:(id)[self.selectedColor.gradientTop CGColor], (id)[self.selectedColor.gradientBottom CGColor], nil];
   
-  self.label.textColor = [UIColor whiteColor];
+  self.label.textColor = [UIColor alizarinColor];
   
   self.isSelected = YES;
   

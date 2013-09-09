@@ -1,0 +1,9 @@
+Today:
+
+Chat view with support for new chat and continuing old chats.
+Current idea:
+Have to "To: " bar on top to hold the user avatar. When in editing mode (ie users being added/removed) 
+  this looks like the Messages app view. When not in editing mode, the avatars show up.
+
+Creating a conversation is special case (start off with users being added.)
+

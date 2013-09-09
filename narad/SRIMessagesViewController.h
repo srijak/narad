@@ -20,5 +20,5 @@
 
 - (IBAction)revealMenu:(id)sender;
 - (IBAction)revealUnderRight:(id)sender;
-
+- (IBAction)startNewMessage:(id)sender;
 @end

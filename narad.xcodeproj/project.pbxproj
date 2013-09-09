@@ -28,6 +28,15 @@
 		1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F517BDC04900564087 /* SRIUserEntity.m */; };
 		1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1139D8F817BDC04A00564087 /* SRIMessageEntity.m */; };
 		113DD1FF17D4278B008738CB /* contact_status_def.png in Resources */ = {isa = PBXBuildFile; fileRef = 113DD1FE17D4278B008738CB /* contact_status_def.png */; };
+		1157D0DF17DC0C80006BD0D2 /* SRIConvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0DE17DC0C80006BD0D2 /* SRIConvoViewController.m */; };
+		1157D0E217DC1F6E006BD0D2 /* SRIConvoMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0E117DC1F6E006BD0D2 /* SRIConvoMessageCell.m */; };
+		1157D0EC17DD4A09006BD0D2 /* UIImage+Additional.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0E517DD4A09006BD0D2 /* UIImage+Additional.m */; };
+		1157D0ED17DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0E617DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.m */; };
+		1157D0EE17DD4A09006BD0D2 /* MZFormSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0E917DD4A09006BD0D2 /* MZFormSheetController.m */; };
+		1157D0EF17DD4A09006BD0D2 /* MZFormSheetSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0EB17DD4A09006BD0D2 /* MZFormSheetSegue.m */; };
+		1157D0F417DD4A14006BD0D2 /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F117DD4A14006BD0D2 /* MZAppearance.m */; };
+		1157D0F517DD4A14006BD0D2 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F317DD4A14006BD0D2 /* NSInvocation+Copy.m */; };
+		1157D0F817DD50CE006BD0D2 /* SRINewConvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */; };
 		115D778317B68C05009A09F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778217B68C05009A09F6 /* UIKit.framework */; };
 		115D778517B68C05009A09F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778417B68C05009A09F6 /* Foundation.framework */; };
 		115D778717B68C05009A09F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778617B68C05009A09F6 /* CoreGraphics.framework */; };
@@ -208,6 +217,24 @@
 		1139D8F717BDC04A00564087 /* SRIMessageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessageEntity.h; sourceTree = "<group>"; };
 		1139D8F817BDC04A00564087 /* SRIMessageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessageEntity.m; sourceTree = "<group>"; };
 		113DD1FE17D4278B008738CB /* contact_status_def.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_status_def.png; sourceTree = "<group>"; };
+		1157D0DD17DC0C80006BD0D2 /* SRIConvoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConvoViewController.h; sourceTree = "<group>"; };
+		1157D0DE17DC0C80006BD0D2 /* SRIConvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConvoViewController.m; sourceTree = "<group>"; };
+		1157D0E017DC1F6E006BD0D2 /* SRIConvoMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIConvoMessageCell.h; sourceTree = "<group>"; };
+		1157D0E117DC1F6E006BD0D2 /* SRIConvoMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIConvoMessageCell.m; sourceTree = "<group>"; };
+		1157D0E417DD4A09006BD0D2 /* UIImage+Additional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additional.h"; sourceTree = "<group>"; };
+		1157D0E517DD4A09006BD0D2 /* UIImage+Additional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additional.m"; sourceTree = "<group>"; };
+		1157D0E617DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetBackgroundWindow.m; sourceTree = "<group>"; };
+		1157D0E717DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetBackgroundWindow.h; sourceTree = "<group>"; };
+		1157D0E817DD4A09006BD0D2 /* MZFormSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetController.h; sourceTree = "<group>"; };
+		1157D0E917DD4A09006BD0D2 /* MZFormSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetController.m; sourceTree = "<group>"; };
+		1157D0EA17DD4A09006BD0D2 /* MZFormSheetSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZFormSheetSegue.h; sourceTree = "<group>"; };
+		1157D0EB17DD4A09006BD0D2 /* MZFormSheetSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZFormSheetSegue.m; sourceTree = "<group>"; };
+		1157D0F017DD4A14006BD0D2 /* MZAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZAppearance.h; sourceTree = "<group>"; };
+		1157D0F117DD4A14006BD0D2 /* MZAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZAppearance.m; sourceTree = "<group>"; };
+		1157D0F217DD4A14006BD0D2 /* NSInvocation+Copy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Copy.h"; sourceTree = "<group>"; };
+		1157D0F317DD4A14006BD0D2 /* NSInvocation+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Copy.m"; sourceTree = "<group>"; };
+		1157D0F617DD50CE006BD0D2 /* SRINewConvoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRINewConvoViewController.h; sourceTree = "<group>"; };
+		1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINewConvoViewController.m; sourceTree = "<group>"; };
 		115D777F17B68C05009A09F6 /* narad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = narad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115D778217B68C05009A09F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		115D778417B68C05009A09F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -434,6 +461,25 @@
 			name = gui;
 			sourceTree = "<group>";
 		};
+		1157D0E317DD49D9006BD0D2 /* MZFormSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1157D0E417DD4A09006BD0D2 /* UIImage+Additional.h */,
+				1157D0E517DD4A09006BD0D2 /* UIImage+Additional.m */,
+				1157D0E617DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.m */,
+				1157D0F017DD4A14006BD0D2 /* MZAppearance.h */,
+				1157D0F117DD4A14006BD0D2 /* MZAppearance.m */,
+				1157D0F217DD4A14006BD0D2 /* NSInvocation+Copy.h */,
+				1157D0F317DD4A14006BD0D2 /* NSInvocation+Copy.m */,
+				1157D0E717DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.h */,
+				1157D0E817DD4A09006BD0D2 /* MZFormSheetController.h */,
+				1157D0E917DD4A09006BD0D2 /* MZFormSheetController.m */,
+				1157D0EA17DD4A09006BD0D2 /* MZFormSheetSegue.h */,
+				1157D0EB17DD4A09006BD0D2 /* MZFormSheetSegue.m */,
+			);
+			name = MZFormSheet;
+			sourceTree = "<group>";
+		};
 		115D777617B68C05009A09F6 = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +520,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				1157D0E317DD49D9006BD0D2 /* MZFormSheet */,
 				11C2232A17DB5C970050A286 /* AGMedallionView */,
 				11F895E817D3E41C00005D11 /* MHTabBar */,
 				113937C117CC40E80061CF3E /* gui */,
@@ -486,6 +533,8 @@
 				115D783917B73C4F009A09F6 /* thrift */,
 				115D77BD17B68C24009A09F6 /* libmosquitto */,
 				115D779217B68C05009A09F6 /* SRIAppDelegate.m */,
+				1157D0E017DC1F6E006BD0D2 /* SRIConvoMessageCell.h */,
+				1157D0E117DC1F6E006BD0D2 /* SRIConvoMessageCell.m */,
 				115D779117B68C05009A09F6 /* SRIAppDelegate.h */,
 				11BC549B17C2C187001CCDD7 /* SRISingleton.h */,
 				11BCF1C717C2EF4E00CC2324 /* DirectMsgsViewController.h */,
@@ -685,6 +734,8 @@
 				1107F48717C8096300A09128 /* SRIInitialSlidingViewController.m */,
 				1107F48917C80ABD00A09128 /* SRIMessagesViewController.h */,
 				1107F48A17C80ABD00A09128 /* SRIMessagesViewController.m */,
+				1157D0DD17DC0C80006BD0D2 /* SRIConvoViewController.h */,
+				1157D0DE17DC0C80006BD0D2 /* SRIConvoViewController.m */,
 				1107F48C17C80B5C00A09128 /* SRIMenuViewController.h */,
 				1107F48D17C80B5C00A09128 /* SRIMenuViewController.m */,
 				1107F48F17C80C7200A09128 /* SRIRightViewController.h */,
@@ -705,6 +756,8 @@
 				11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */,
 				11F895FB17D4155E00005D11 /* SRIChatInfoSummaryViewController.h */,
 				11F895FC17D4155F00005D11 /* SRIChatInfoSummaryViewController.m */,
+				1157D0F617DD50CE006BD0D2 /* SRINewConvoViewController.h */,
+				1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -995,9 +1048,11 @@
 				115D77E617B68C59009A09F6 /* read_handle.c in Sources */,
 				115D77E817B68C59009A09F6 /* send_client_mosq.c in Sources */,
 				115D77EA17B68C59009A09F6 /* send_mosq.c in Sources */,
+				1157D0EF17DD4A09006BD0D2 /* MZFormSheetSegue.m in Sources */,
 				115D77EC17B68C59009A09F6 /* thread_mosq.c in Sources */,
 				115D77EE17B68C59009A09F6 /* util_mosq.c in Sources */,
 				115D77F017B68C59009A09F6 /* will_mosq.c in Sources */,
+				1157D0F517DD4A14006BD0D2 /* NSInvocation+Copy.m in Sources */,
 				115D77F617B68C73009A09F6 /* MosquittoClient.m in Sources */,
 				115D77F817B68C73009A09F6 /* MosquittoMessage.m in Sources */,
 				115D785D17B73C4F009A09F6 /* TBinaryProtocol.m in Sources */,
@@ -1007,6 +1062,8 @@
 				115D786517B73C4F009A09F6 /* TApplicationException.m in Sources */,
 				115D786717B73C4F009A09F6 /* TException.m in Sources */,
 				115D786917B73C4F009A09F6 /* THTTPClient.m in Sources */,
+				1157D0DF17DC0C80006BD0D2 /* SRIConvoViewController.m in Sources */,
+				1157D0EE17DD4A09006BD0D2 /* MZFormSheetController.m in Sources */,
 				115D786B17B73C4F009A09F6 /* TMemoryBuffer.m in Sources */,
 				115D786D17B73C4F009A09F6 /* TNSFileHandleTransport.m in Sources */,
 				115D786F17B73C4F009A09F6 /* TNSStreamTransport.m in Sources */,
@@ -1016,6 +1073,7 @@
 				11A5981E17B859EA00BF7647 /* RHCoreDataCollectionViewController.m in Sources */,
 				11A5981F17B859EA00BF7647 /* RHCoreDataTableViewController.m in Sources */,
 				11A5982017B859EA00BF7647 /* RHManagedObject.m in Sources */,
+				1157D0F817DD50CE006BD0D2 /* SRINewConvoViewController.m in Sources */,
 				11A5982117B859EA00BF7647 /* RHManagedObjectContextManager.m in Sources */,
 				11A5983117B85B8900BF7647 /* Narad.xcdatamodel in Sources */,
 				11A5984617B85FBD00BF7647 /* SRIConversation.m in Sources */,
@@ -1025,6 +1083,7 @@
 				1139D8F617BDC04A00564087 /* SRIUserEntity.m in Sources */,
 				1139D8F917BDC04A00564087 /* SRIMessageEntity.m in Sources */,
 				11BC549D17C2C187001CCDD7 /* SRISingleton.m in Sources */,
+				1157D0E217DC1F6E006BD0D2 /* SRIConvoMessageCell.m in Sources */,
 				11BC54A017C2C272001CCDD7 /* SRICredentialsManager.m in Sources */,
 				11BCF1C917C2EF4E00CC2324 /* DirectMsgsViewController.m in Sources */,
 				1107F48817C8096300A09128 /* SRIInitialSlidingViewController.m in Sources */,
@@ -1032,6 +1091,7 @@
 				1107F48E17C80B5C00A09128 /* SRIMenuViewController.m in Sources */,
 				1107F49117C80C7300A09128 /* SRIRightViewController.m in Sources */,
 				1107F49417C8107C00A09128 /* SRINavigationTopViewController.m in Sources */,
+				1157D0EC17DD4A09006BD0D2 /* UIImage+Additional.m in Sources */,
 				1181044E17C940DF00F2B3CB /* UIColor+FlatUI.m in Sources */,
 				1181045617CA405700F2B3CB /* SRIVerificationViewController.m in Sources */,
 				1181045C17CA469F00F2B3CB /* SRIWaitingVerificationCodeViewController.m in Sources */,
@@ -1047,7 +1107,9 @@
 				11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */,
 				11F895EB17D3E42C00005D11 /* MHTabBarController.m in Sources */,
 				11F895FA17D3F13400005D11 /* ListViewController.m in Sources */,
+				1157D0ED17DD4A09006BD0D2 /* MZFormSheetBackgroundWindow.m in Sources */,
 				11F895FD17D4155F00005D11 /* SRIChatInfoSummaryViewController.m in Sources */,
+				1157D0F417DD4A14006BD0D2 /* MZAppearance.m in Sources */,
 				11C2232D17DB5CB40050A286 /* AGMedallionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
