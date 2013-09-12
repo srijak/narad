@@ -52,19 +52,24 @@
 
 - (IBAction)startNewMessage:(id)sender{
   
-  UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewConvoViewNav"];
+  UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewConvoView"];
+  
+  //[self.navigationController pushViewController:vc animated:YES];
+
   
   MZFormSheetController *formSheet = [[MZFormSheetController alloc] initWithViewController:vc];
   
-  formSheet.transitionStyle = MZFormSheetTransitionStyleSlideFromBottom;
+  formSheet.transitionStyle = MZFormSheetTransitionStyleSlideFromTop;
   formSheet.shadowRadius = 2.0;
   formSheet.shadowOpacity = 0.3;
   formSheet.shouldDismissOnBackgroundViewTap = YES;
   formSheet.shouldCenterVerticallyWhenKeyboardAppears = YES;
+  formSheet.portraitTopInset = 10.0;
   
   [formSheet presentAnimated:YES completionHandler:^(UIViewController *presentedFSViewController) {
     
   }];
+  
 }
 
 - (IBAction)revealMenu:(id)sender

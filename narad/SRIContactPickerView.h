@@ -16,10 +16,11 @@
 - (void)contactPickerTextViewDidChange:(NSString *)textViewText;
 - (void)contactPickerDidRemoveContact:(id)contact;
 - (void)contactPickerDidResize:(SRIContactPickerView *)contactPickerView;
+- (NSArray *)completionsForString:(NSString *)myString;
 
 @end
 
-@interface SRIContactPickerView : UIView <UITextViewDelegate, SRIContactBubbleDelegate, UIScrollViewDelegate>
+@interface SRIContactPickerView : UIView <UITextFieldDelegate, SRIContactBubbleDelegate, UIScrollViewDelegate>
 
 @property (nonatomic, strong) SRIContactBubble *selectedContactBubble;
 @property (nonatomic, assign) IBOutlet id <SRIContactPickerDelegate> delegate;

@@ -29,8 +29,8 @@
 @implementation SRIContactPickerView
 
 #define kViewPadding 5 // the amount of padding on top and bottom of the view
-#define kHorizontalPadding 2 // the amount of padding to the left and right of each contact bubble
-#define kVerticalPadding 4 // amount of padding above and below each contact bubble
+#define kHorizontalPadding 1 // the amount of padding to the left and right of each contact bubble
+#define kVerticalPadding 2 // amount of padding above and below each contact bubble
 #define kTextViewMinWidth 130
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -75,6 +75,7 @@
   self.textView.contentInset = UIEdgeInsetsMake(-11, -6, 0, 0);
   self.textView.scrollEnabled = NO;
   self.textView.scrollsToTop = NO;
+
   [self.textView becomeFirstResponder];
   
   // Add shadow to bottom border
@@ -299,7 +300,7 @@
       bubbleFrame.origin.y = kVerticalPadding + self.viewPadding;
     } else {
       // Check if contact bubble will fit on the current line
-      CGFloat width = bubbleFrame.size.width + 2 * kHorizontalPadding;
+      CGFloat width = bubbleFrame.size.width -3 + 2 * kHorizontalPadding;
       if (self.frame.size.width - frameOfLastBubble.origin.x - frameOfLastBubble.size.width - width >= 0){ // add to the same line
         // Place contact bubble just after last bubble on the same line
         bubbleFrame.origin.x = frameOfLastBubble.origin.x + frameOfLastBubble.size.width + kHorizontalPadding * 2;

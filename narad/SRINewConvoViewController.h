@@ -10,15 +10,18 @@
 #import "SRIContactPickerView.h"
 #import "SRIContactPickerViewController.h"
 
-@interface SRINewConvoViewController : UIViewController <SRIContactPickerDelegate,SRIPickedContacts>
+@interface SRINewConvoViewController : UIViewController <SRIContactPickerDelegate,
+                                                          SRIPickedContacts,
+                                                          UITableViewDelegate,
+                                                          UITableViewDataSource>
 
 @property (nonatomic, strong) IBOutlet SRIContactPickerView *contactPickerView;
-@property (nonatomic, strong) IBOutlet UIButton *addContact;
-@property (nonatomic, strong) IBOutlet UITextField  *name;
-@property (nonatomic, strong) IBOutlet UITextView  *message;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *contacts;
+@property (nonatomic, strong) NSMutableArray *selectedContacts;
+@property (nonatomic, strong) NSMutableArray *filteredContacts;
+@property (nonatomic, strong) NSObject<SRIPickedContacts> * delegate;
 
--(IBAction)showContactPicker:(id)sender;
--(IBAction) cancel:(id)sender;
--(IBAction) start:(id)sender;
-
+@property (nonatomic, strong) UITextField *subjectText;
+@property (nonatomic, strong) UITextView *messageText;
 @end

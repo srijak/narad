@@ -10,7 +10,7 @@
 
 @implementation SRIContactBubble
 
-#define kHorizontalPadding 10
+#define kHorizontalPadding 5
 #define kVerticalPadding 2
 
 /*#define kColorGradientTop [UIColor colorWithRed:219.0/255.0 green:229.0/255.0 blue:249.0/255.0 alpha:1.0]
@@ -69,6 +69,7 @@
   self.label = [[UILabel alloc] init];
   self.label.backgroundColor = [UIColor clearColor];
   self.label.text = self.name;
+  self.label.font = [UIFont systemFontOfSize:13];
   [self addSubview:self.label];
   
   self.textView = [[UITextView alloc] init];
@@ -107,7 +108,7 @@
   
   // Round the corners
   CALayer *viewLayer = [self layer];
-  viewLayer.cornerRadius = self.bounds.size.height / 2;
+  viewLayer.cornerRadius = self.bounds.size.height / 4 ;
   viewLayer.borderWidth = 1;
   viewLayer.masksToBounds = YES;
 }
