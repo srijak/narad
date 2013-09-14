@@ -425,7 +425,7 @@
   [self.textView resignFirstResponder];
   self.textView.text = @"";
   self.textView.hidden = YES;
-}
+ }
 
 - (void)contactBubbleWasUnSelected:(SRIContactBubble *)contactBubble {
   if (self.selectedContactBubble != nil){
@@ -451,6 +451,10 @@
   // Show textField
   self.textView.hidden = NO;
   [self.textView becomeFirstResponder];
+  if ([self.delegate respondsToSelector:@selector(contactPickerTextViewDidChange:)]){
+    [self.delegate contactPickerTextViewDidChange:self.textView.text];
+  }
+
   
   // Unselect contact bubble
   [self.selectedContactBubble unSelect];

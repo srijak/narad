@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AGMedallionView.h"
 
 @interface SRIContactPickerCell : UITableViewCell
 
-@property (nonatomic, assign) IBOutlet UIImageView* selected_image;
-@property (nonatomic, assign) IBOutlet UIImageView* avatar;
-@property (nonatomic, assign) IBOutlet UIImageView* in_network;
+@property (nonatomic, assign) IBOutlet AGMedallionView* avatar;
+@property (nonatomic, assign) IBOutlet UIImage* in_network;
 @property (nonatomic, assign) IBOutlet UILabel* name;
 
 @end

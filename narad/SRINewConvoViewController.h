@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "SRIContactPickerView.h"
+#import "PHFComposeBarView.h"
 #import "SRIContactPickerViewController.h"
 
 @interface SRINewConvoViewController : UIViewController <SRIContactPickerDelegate,
                                                           SRIPickedContacts,
+PHFComposeBarViewDelegate,
                                                           UITableViewDelegate,
                                                           UITableViewDataSource>
 
@@ -22,6 +24,5 @@
 @property (nonatomic, strong) NSMutableArray *filteredContacts;
 @property (nonatomic, strong) NSObject<SRIPickedContacts> * delegate;
 
-@property (nonatomic, strong) UITextField *subjectText;
 @property (nonatomic, strong) UITextView *messageText;
 @end

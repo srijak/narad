@@ -119,14 +119,6 @@
     [cell.avatar setImage:[UIImage imageNamed: @"contact_picker_cell_def_avatar.png"]];
   }
   
-  if ([self.selectedContacts containsObject:user]){
-    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_sel.png"];
-    [cell.selected_image setImage:image];
-    
-  } else {
-    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_unsel.png"];
-    [cell.selected_image setImage:image];
-  }
   
   return cell;
 }

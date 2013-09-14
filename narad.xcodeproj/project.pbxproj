@@ -37,6 +37,23 @@
 		1157D0F417DD4A14006BD0D2 /* MZAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F117DD4A14006BD0D2 /* MZAppearance.m */; };
 		1157D0F517DD4A14006BD0D2 /* NSInvocation+Copy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F317DD4A14006BD0D2 /* NSInvocation+Copy.m */; };
 		1157D0F817DD50CE006BD0D2 /* SRINewConvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */; };
+		1157D0FC17E200BD006BD0D2 /* navbar_bg_modal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */; };
+		1158E4BC17E20B3900E5A188 /* PHFComposeBarView_TextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1158E4B917E20B3900E5A188 /* PHFComposeBarView_TextView.m */; };
+		1158E4BD17E20B3900E5A188 /* PHFComposeBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1158E4BB17E20B3900E5A188 /* PHFComposeBarView.m */; };
+		1158E4C917E20B6800E5A188 /* PHFComposeBarView-Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4BF17E20B6700E5A188 /* PHFComposeBarView-Background.png */; };
+		1158E4CA17E20B6800E5A188 /* PHFComposeBarView-Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C017E20B6700E5A188 /* PHFComposeBarView-Background@2x.png */; };
+		1158E4CB17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C117E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay.png */; };
+		1158E4CC17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C217E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay@2x.png */; };
+		1158E4CD17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlayPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C317E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed.png */; };
+		1158E4CE17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlayPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C417E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed@2x.png */; };
+		1158E4CF17E20B6800E5A188 /* PHFComposeBarView-TextField.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C517E20B6700E5A188 /* PHFComposeBarView-TextField.png */; };
+		1158E4D017E20B6800E5A188 /* PHFComposeBarView-TextField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C617E20B6700E5A188 /* PHFComposeBarView-TextField@2x.png */; };
+		1158E4D117E20B6800E5A188 /* PHFComposeBarView-UtilityButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C717E20B6800E5A188 /* PHFComposeBarView-UtilityButton.png */; };
+		1158E4D217E20B6800E5A188 /* PHFComposeBarView-UtilityButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4C817E20B6800E5A188 /* PHFComposeBarView-UtilityButton@2x.png */; };
+		1158E4D517E20BF600E5A188 /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D317E20BF600E5A188 /* Camera.png */; };
+		1158E4D617E20BF600E5A188 /* Camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D417E20BF600E5A188 /* Camera@2x.png */; };
+		1158E4D817E2922200E5A188 /* contact_cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D717E2922200E5A188 /* contact_cell_bg.png */; };
+		1158E4DA17E2947300E5A188 /* contact_cell_bg_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */; };
 		115D778317B68C05009A09F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778217B68C05009A09F6 /* UIKit.framework */; };
 		115D778517B68C05009A09F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778417B68C05009A09F6 /* Foundation.framework */; };
 		115D778717B68C05009A09F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778617B68C05009A09F6 /* CoreGraphics.framework */; };
@@ -235,6 +252,25 @@
 		1157D0F317DD4A14006BD0D2 /* NSInvocation+Copy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Copy.m"; sourceTree = "<group>"; };
 		1157D0F617DD50CE006BD0D2 /* SRINewConvoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRINewConvoViewController.h; sourceTree = "<group>"; };
 		1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINewConvoViewController.m; sourceTree = "<group>"; };
+		1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg_modal.png; sourceTree = "<group>"; };
+		1158E4B817E20B3900E5A188 /* PHFComposeBarView_TextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHFComposeBarView_TextView.h; sourceTree = "<group>"; };
+		1158E4B917E20B3900E5A188 /* PHFComposeBarView_TextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHFComposeBarView_TextView.m; sourceTree = "<group>"; };
+		1158E4BA17E20B3900E5A188 /* PHFComposeBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHFComposeBarView.h; sourceTree = "<group>"; };
+		1158E4BB17E20B3900E5A188 /* PHFComposeBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHFComposeBarView.m; sourceTree = "<group>"; };
+		1158E4BF17E20B6700E5A188 /* PHFComposeBarView-Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-Background.png"; sourceTree = "<group>"; };
+		1158E4C017E20B6700E5A188 /* PHFComposeBarView-Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-Background@2x.png"; sourceTree = "<group>"; };
+		1158E4C117E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-ButtonOverlay.png"; sourceTree = "<group>"; };
+		1158E4C217E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-ButtonOverlay@2x.png"; sourceTree = "<group>"; };
+		1158E4C317E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-ButtonOverlayPressed.png"; sourceTree = "<group>"; };
+		1158E4C417E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-ButtonOverlayPressed@2x.png"; sourceTree = "<group>"; };
+		1158E4C517E20B6700E5A188 /* PHFComposeBarView-TextField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-TextField.png"; sourceTree = "<group>"; };
+		1158E4C617E20B6700E5A188 /* PHFComposeBarView-TextField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-TextField@2x.png"; sourceTree = "<group>"; };
+		1158E4C717E20B6800E5A188 /* PHFComposeBarView-UtilityButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-UtilityButton.png"; sourceTree = "<group>"; };
+		1158E4C817E20B6800E5A188 /* PHFComposeBarView-UtilityButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PHFComposeBarView-UtilityButton@2x.png"; sourceTree = "<group>"; };
+		1158E4D317E20BF600E5A188 /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
+		1158E4D417E20BF600E5A188 /* Camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera@2x.png"; sourceTree = "<group>"; };
+		1158E4D717E2922200E5A188 /* contact_cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_cell_bg.png; sourceTree = "<group>"; };
+		1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contact_cell_bg_sel.png; path = ../Pods/contact_cell_bg_sel.png; sourceTree = "<group>"; };
 		115D777F17B68C05009A09F6 /* narad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = narad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115D778217B68C05009A09F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		115D778417B68C05009A09F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -480,6 +516,38 @@
 			name = MZFormSheet;
 			sourceTree = "<group>";
 		};
+		1158E4B117E20A4200E5A188 /* PHFComposeBarView */ = {
+			isa = PBXGroup;
+			children = (
+				1158E4BE17E20B6000E5A188 /* Resources */,
+				1158E4B817E20B3900E5A188 /* PHFComposeBarView_TextView.h */,
+				1158E4B917E20B3900E5A188 /* PHFComposeBarView_TextView.m */,
+				1158E4BA17E20B3900E5A188 /* PHFComposeBarView.h */,
+				1158E4BB17E20B3900E5A188 /* PHFComposeBarView.m */,
+			);
+			name = PHFComposeBarView;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		1158E4BE17E20B6000E5A188 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1158E4BF17E20B6700E5A188 /* PHFComposeBarView-Background.png */,
+				1158E4D317E20BF600E5A188 /* Camera.png */,
+				1158E4D417E20BF600E5A188 /* Camera@2x.png */,
+				1158E4C017E20B6700E5A188 /* PHFComposeBarView-Background@2x.png */,
+				1158E4C117E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay.png */,
+				1158E4C217E20B6700E5A188 /* PHFComposeBarView-ButtonOverlay@2x.png */,
+				1158E4C317E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed.png */,
+				1158E4C417E20B6700E5A188 /* PHFComposeBarView-ButtonOverlayPressed@2x.png */,
+				1158E4C517E20B6700E5A188 /* PHFComposeBarView-TextField.png */,
+				1158E4C617E20B6700E5A188 /* PHFComposeBarView-TextField@2x.png */,
+				1158E4C717E20B6800E5A188 /* PHFComposeBarView-UtilityButton.png */,
+				1158E4C817E20B6800E5A188 /* PHFComposeBarView-UtilityButton@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		115D777617B68C05009A09F6 = {
 			isa = PBXGroup;
 			children = (
@@ -551,6 +619,7 @@
 				115D778917B68C05009A09F6 /* Supporting Files */,
 				1181046517CA884800F2B3CB /* SRIConversationTopCell.h */,
 				1181046617CA884A00F2B3CB /* SRIConversationTopCell.m */,
+				1158E4B117E20A4200E5A188 /* PHFComposeBarView */,
 			);
 			path = narad;
 			sourceTree = "<group>";
@@ -558,6 +627,7 @@
 		115D778917B68C05009A09F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */,
 				1176DF1E17DB70CE003C5351 /* RNFrostedSidebar */,
 				1181045217CA3EE400F2B3CB /* CountryCodes.plist */,
 				1176DF2F17DB7D96003C5351 /* menu_gear@2x.png */,
@@ -565,12 +635,14 @@
 				11C2234017DB65A40050A286 /* menu_btn.png */,
 				1176DF3117DB9174003C5351 /* back_btn.png */,
 				11C2233117DB62E40050A286 /* burger@2x.png */,
+				1158E4D717E2922200E5A188 /* contact_cell_bg.png */,
 				1181044A17C93E2800F2B3CB /* plus_btn.png */,
 				11C2232217DAD13D0050A286 /* navbar_bg.png */,
 				11C2232E17DB5E250050A286 /* sample.png */,
 				11C2232817DAD3970050A286 /* new_convo_btn.png */,
 				113937C717CC47630061CF3E /* contact_picker_cell_sel.png */,
 				113937C817CC47630061CF3E /* contact_picker_cell_unsel.png */,
+				1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */,
 				1181042C17C9328D00F2B3CB /* Assets */,
 				115D778A17B68C05009A09F6 /* narad-Info.plist */,
 				1181044217C9340500F2B3CB /* nav_bg.png */,
@@ -933,25 +1005,37 @@
 				115D779517B68C05009A09F6 /* Default.png in Resources */,
 				115D779717B68C05009A09F6 /* Default@2x.png in Resources */,
 				1176DF2D17DB70E8003C5351 /* star.png in Resources */,
+				1158E4D617E20BF600E5A188 /* Camera@2x.png in Resources */,
 				115D779917B68C05009A09F6 /* Default-568h@2x.png in Resources */,
 				1176DF2B17DB70E8003C5351 /* profile.png in Resources */,
 				115D779C17B68C05009A09F6 /* MainStoryboard.storyboard in Resources */,
+				1158E4CD17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlayPressed.png in Resources */,
 				1176DF2517DB70DA003C5351 /* globe.png in Resources */,
+				1158E4D217E20B6800E5A188 /* PHFComposeBarView-UtilityButton@2x.png in Resources */,
 				1181043817C932A600F2B3CB /* OpenSans-SemiboldItalic.ttf in Resources */,
 				1181043917C932A600F2B3CB /* OpenSans-Semibold.ttf in Resources */,
 				1181043A17C932A600F2B3CB /* OpenSans-Regular.ttf in Resources */,
+				1158E4CE17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlayPressed@2x.png in Resources */,
+				1158E4C917E20B6800E5A188 /* PHFComposeBarView-Background.png in Resources */,
+				1158E4CF17E20B6800E5A188 /* PHFComposeBarView-TextField.png in Resources */,
+				1158E4DA17E2947300E5A188 /* contact_cell_bg_sel.png in Resources */,
+				1157D0FC17E200BD006BD0D2 /* navbar_bg_modal.png in Resources */,
 				1181043B17C932A600F2B3CB /* OpenSans-LightItalic.ttf in Resources */,
 				1181043C17C932A600F2B3CB /* OpenSans-Light.ttf in Resources */,
 				1181043D17C932A600F2B3CB /* OpenSans-Italic.ttf in Resources */,
 				1181043E17C932A600F2B3CB /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				1158E4CC17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlay@2x.png in Resources */,
 				1181043F17C932A600F2B3CB /* OpenSans-ExtraBold.ttf in Resources */,
 				1181044017C932A600F2B3CB /* OpenSans-BoldItalic.ttf in Resources */,
 				1181044117C932A600F2B3CB /* OpenSans-Bold.ttf in Resources */,
 				1181044317C9340500F2B3CB /* nav_bg.png in Resources */,
 				1176DF2E17DB70E8003C5351 /* star@2x.png in Resources */,
+				1158E4CA17E20B6800E5A188 /* PHFComposeBarView-Background@2x.png in Resources */,
 				1181044B17C93E2900F2B3CB /* plus_btn.png in Resources */,
 				1181045317CA3EE400F2B3CB /* CountryCodes.plist in Resources */,
 				113937C317CC411E0061CF3E /* ContactPickerCell.xib in Resources */,
+				1158E4D517E20BF600E5A188 /* Camera.png in Resources */,
+				1158E4D017E20B6800E5A188 /* PHFComposeBarView-TextField@2x.png in Resources */,
 				113937C917CC47630061CF3E /* contact_picker_cell_sel.png in Resources */,
 				1176DF2317DB70DA003C5351 /* gear.png in Resources */,
 				1176DF3017DB7D96003C5351 /* menu_gear@2x.png in Resources */,
@@ -962,12 +1046,15 @@
 				11F895F417D3E44500005D11 /* MHTabBarInactiveTab.png in Resources */,
 				11F895F517D3E44500005D11 /* MHTabBarInactiveTab@2x.png in Resources */,
 				11F895F617D3E44500005D11 /* MHTabBarIndicator.png in Resources */,
+				1158E4D117E20B6800E5A188 /* PHFComposeBarView-UtilityButton.png in Resources */,
 				11F895F717D3E44500005D11 /* MHTabBarIndicator@2x.png in Resources */,
 				1176DF3217DB9174003C5351 /* back_btn.png in Resources */,
 				113DD1FF17D4278B008738CB /* contact_status_def.png in Resources */,
+				1158E4CB17E20B6800E5A188 /* PHFComposeBarView-ButtonOverlay.png in Resources */,
 				11C2232317DAD13D0050A286 /* navbar_bg.png in Resources */,
 				11C2232917DAD3970050A286 /* new_convo_btn.png in Resources */,
 				11C2232F17DB5E250050A286 /* sample.png in Resources */,
+				1158E4D817E2922200E5A188 /* contact_cell_bg.png in Resources */,
 				11C2233217DB62E40050A286 /* burger.png in Resources */,
 				11C2233317DB62E40050A286 /* burger@2x.png in Resources */,
 				11C2234117DB65A50050A286 /* menu_btn.png in Resources */,
@@ -1037,6 +1124,7 @@
 			files = (
 				115D778F17B68C05009A09F6 /* main.m in Sources */,
 				115D779317B68C05009A09F6 /* SRIAppDelegate.m in Sources */,
+				1158E4BD17E20B3900E5A188 /* PHFComposeBarView.m in Sources */,
 				115D779F17B68C05009A09F6 /* SRIViewController.m in Sources */,
 				115D77D817B68C59009A09F6 /* logging_mosq.c in Sources */,
 				115D77DA17B68C59009A09F6 /* memory_mosq.c in Sources */,
@@ -1051,6 +1139,7 @@
 				1157D0EF17DD4A09006BD0D2 /* MZFormSheetSegue.m in Sources */,
 				115D77EC17B68C59009A09F6 /* thread_mosq.c in Sources */,
 				115D77EE17B68C59009A09F6 /* util_mosq.c in Sources */,
+				1158E4BC17E20B3900E5A188 /* PHFComposeBarView_TextView.m in Sources */,
 				115D77F017B68C59009A09F6 /* will_mosq.c in Sources */,
 				1157D0F517DD4A14006BD0D2 /* NSInvocation+Copy.m in Sources */,
 				115D77F617B68C73009A09F6 /* MosquittoClient.m in Sources */,

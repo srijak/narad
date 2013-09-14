@@ -10,16 +10,24 @@
 #import "SRIContactPickerViewController.h"
 #import "SRIContactPickerCell.h"
 
-#define kKeyboardHeight 0.0
-#define kTopOffset 5.0
+/*#define kKeyboardHeight 0.0
+#define kTopOffset 44.0
 #define kLeftOffset 10.0
 #define kRightOffset (kLeftOffset * 6)
 #define kTopPadding 15.0
+ */
+
+#define kKeyboardHeight 0.0
+#define kTopOffset 42.0
+#define kLeftOffset 0.0
+#define kRightOffset (kLeftOffset * 6)
+#define kTopPadding 3.0
 
 @interface SRINewConvoViewController ()
 
 @property (strong, nonatomic) NSMutableArray* autocompleteUrls;
 @property (strong, nonatomic) NSArray* pastUrls;
+
 
 @end
 
@@ -31,20 +39,13 @@
 - (void)viewWillAppear:(BOOL)animated
 {
   [super viewWillAppear:animated];
-  UIGraphicsBeginImageContextWithOptions(CGSizeMake(36, 36), NO, 0.0);
-  UIImage *blank = UIGraphicsGetImageFromCurrentImageContext();
-  UIGraphicsEndImageContext();
-  [self.navigationController.navigationBar setBackgroundImage:blank forBarMetrics:UIBarMetricsDefault];
-  
-  
   // Custom initialization
-  self.title = @"Select Contact(s)";
+  self.title = @"Compose";
   
   self.selectedContacts = [NSMutableArray array];
   
   [self adjustTableViewFrame];
   [self tableVisible:NO];
-  
   
   addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
   
@@ -63,7 +64,7 @@
 */
   [self setViewHidden:!v view:self.tableView];
  
-  [self setViewHidden:v view:self.subjectText];
+//  [self setViewHidden:v view:self.subjectText];
   [self setViewHidden:v view:self.messageText];
   
   }
@@ -91,15 +92,35 @@
   // Do any additional setup after loading the view from its nib.
   //    UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleBordered target:self action:@selector(removeAllContacts:)];
  /*
-  UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneSelecting:)];
-  
-  UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelSelecting:)];
+ 
   
   self.navigationItem.leftBarButtonItem = cancelButton;
   self.navigationItem.rightBarButtonItem = doneButton;
 */
-  UINavigationBar *naviBarObj = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
-  [naviBarObj setBackgroundImage:nil forBarMetrics:UIBarMetricsDefault];
+  UINavigationBar *naviBarObj = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width-(35), 40)];
+  /*UIGraphicsBeginImageContextWithOptions(CGSizeMake(36, 36), NO, 0.0);
+  UIImage *blank = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+   */
+  [naviBarObj setBackgroundImage:[UIImage imageNamed:@"navbar_bg_modal"] forBarMetrics:UIBarMetricsDefault];
+  
+  UINavigationItem *navigItem = [[UINavigationItem alloc] initWithTitle:@"Compose"];
+ 
+  /*
+  UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:@"ok" style:UIBarButtonItemStylePlain target:self action:@selector(doneSelecting:)];
+  navigItem.rightBarButtonItem = doneButton;
+  
+ // UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelSelecting:)];
+ // navigItem.leftBarButtonItem = cancelButton;
+  */
+  
+  naviBarObj.items = [NSArray arrayWithObjects: navigItem,nil];
+  [naviBarObj setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                         [UIColor blackColor], UITextAttributeTextColor,
+                                                         [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2],UITextAttributeTextShadowColor,
+                                                         [NSValue valueWithUIOffset:UIOffsetMake(0, 1)],
+                                       UITextAttributeTextShadowOffset, [UIFont fontWithName:@"OpenSans" size:21.0], UITextAttributeFont, nil]];
+
   [self.view addSubview:naviBarObj];
   
   
@@ -107,7 +128,7 @@
   // Initialize and add Contact Picker View
   float width = self.view.frame.size.width - kRightOffset;
   
-  self.contactPickerView = [[SRIContactPickerView alloc] initWithFrame:CGRectMake(kLeftOffset, kTopOffset*3, width, 100)];
+  self.contactPickerView = [[SRIContactPickerView alloc] initWithFrame:CGRectMake(kLeftOffset, kTopOffset, width, 100)];
   self.contactPickerView.delegate = self;
   [self.contactPickerView setPlaceholderString:@"To:"];
   [self.view addSubview:self.contactPickerView];
@@ -120,19 +141,28 @@
   self.tableView.dataSource = self;
   [self.tableView setAllowsSelection:YES];
   [self.tableView registerNib:[UINib nibWithNibName:@"ContactPickerCell" bundle:nil] forCellReuseIdentifier:@"ContactPickerCell"];
+  self.tableView.separatorColor = [UIColor clearColor];
+
   [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
   
-  self.subjectText = [[UITextField alloc] initWithFrame:CGRectMake(kLeftOffset, kTopPadding, width, 40)];
+  /*self.subjectText = [[UITextField alloc] initWithFrame:CGRectMake(kLeftOffset, kTopPadding, width, 40)];
   [self.subjectText setPlaceholder:@"Subject:"];
+  self.subjectText.backgroundColor = [UIColor whiteColor];
+  [self.subjectText setBorderStyle:UITextBorderStyleNone];
+  
   [self.view insertSubview:self.subjectText belowSubview:self.contactPickerView];
-
+*/
   
   
   //TODO make the message text view appear nicely.
-  self.messageText = [[UITextView alloc] initWithFrame:CGRectMake(kLeftOffset, self.subjectText.frame.origin.y + self.subjectText.frame.size.height+ kTopPadding, width, 100)];
+  
+  // Top border
+ 
+  self.messageText = [[UITextView alloc] initWithFrame:CGRectMake(kLeftOffset, self.contactPickerView.frame.origin.y + self.contactPickerView.frame.size.height+ kTopPadding, width, 100)];
   [self.messageText setText:@"Hi, "];
-  [self.messageText setBackgroundColor:[UIColor alizarinColor]];
-  [self.view insertSubview:self.messageText belowSubview:self.subjectText];
+  [self.messageText setBackgroundColor:[UIColor whiteColor]];
+  
+  [self.view insertSubview:self.messageText belowSubview:self.contactPickerView];
   [self.view addSubview:self.messageText];
   
 }
@@ -150,12 +180,13 @@
   frame.size.height = self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight;
   self.tableView.frame = frame;
   
-  frame = self.subjectText.frame;
+  /*frame = self.subjectText.frame;
   frame.origin.y = self.contactPickerView.frame.size.height + self.contactPickerView.frame.origin.y;
   self.subjectText.frame = frame;
+  */
   
   frame = self.messageText.frame;
-  frame.origin.y = self.subjectText.frame.size.height + self.subjectText.frame.origin.y;
+  frame.origin.y = self.contactPickerView.frame.size.height + self.contactPickerView.frame.origin.y + kTopPadding;
 
   frame.size.height = [self.messageText contentSize].height + 40;
   self.messageText.frame = frame;
@@ -193,19 +224,30 @@
   cell.name.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
   // TODO: VERIFY IMAGE SETTING WORKS.
   if (imageData != nil){
-    [cell.avatar setImage: [UIImage imageWithData:CFBridgingRelease(imageData)]];
+    cell.avatar.image= [UIImage imageWithData:CFBridgingRelease(imageData)];
   }else{
-    [cell.avatar setImage:[UIImage imageNamed: @"contact_picker_cell_def_avatar.png"]];
+    cell.avatar.image= [UIImage imageNamed: @"contact_picker_cell_def_avatar"];
   }
   
+  
+  UIImage * background = [UIImage imageNamed: @"contact_cell_bg"];
+  
   if ([self.selectedContacts containsObject:user]){
-    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_sel.png"];
-    [cell.selected_image setImage:image];
-    
-  } else {
-    UIImage *image = [UIImage imageNamed: @"contact_picker_cell_unsel.png"];
-    [cell.selected_image setImage:image];
+    background = [UIImage imageNamed: @"contact_cell_bg_sel"];
+    [cell.name setTextColor:[UIColor whiteColor]];
+  }else{
+    [cell.name setTextColor:[UIColor blackColor]];
+
   }
+  CGRect frame = cell.frame;
+  frame.size.width = self.tableView.frame.size.width - 60;
+  cell.frame = frame;
+  
+  
+  
+  UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:background];
+  cellBackgroundView.image = background;
+  cell.backgroundView = cellBackgroundView;
   
   return cell;
 }
@@ -234,6 +276,7 @@
   }
   
   [self copyContactsToFiltered];
+  //[self.tableView reloadData];
   [self tableVisible:NO];
 }
 
@@ -386,6 +429,7 @@
 	self.contacts = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeople(addressBook);
   // Create a filtered list that will contain people for the search results table.
   [self copyContactsToFiltered];
+  [self tableVisible:YES];
 }
 
 
