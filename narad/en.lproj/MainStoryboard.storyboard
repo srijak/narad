@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="743" y="1117"/>
         </scene>
-        <!--New Convo View Controller - New Message-->
+        <!--New Chat View Controller - New Message-->
         <scene sceneID="lbU-dd-6Pb">
             <objects>
-                <viewController storyboardIdentifier="NewConvoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bX9-3K-U2b" customClass="SRINewConvoViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewConvoView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bX9-3K-U2b" customClass="SRINewChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFU-xe-qIK">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

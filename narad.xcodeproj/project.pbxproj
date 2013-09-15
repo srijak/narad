@@ -174,6 +174,9 @@
 		11C2233217DB62E40050A286 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C2233017DB62E30050A286 /* burger.png */; };
 		11C2233317DB62E40050A286 /* burger@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C2233117DB62E40050A286 /* burger@2x.png */; };
 		11C2234117DB65A50050A286 /* menu_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 11C2234017DB65A40050A286 /* menu_btn.png */; };
+		11EAF00F17E5197400A96603 /* TITokenField.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF00C17E5197400A96603 /* TITokenField.m */; };
+		11EAF01017E5197400A96603 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF00E17E5197400A96603 /* Names.m */; };
+		11EAF01317E51A4F00A96603 /* SRINewChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF01217E51A4F00A96603 /* SRINewChatViewController.m */; };
 		11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28C17B8618900550B9D /* SRIMessage.m */; };
 		11EBF29017B861AC00550B9D /* SRIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28F17B861AC00550B9D /* SRIUser.m */; };
 		11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */; };
@@ -419,6 +422,12 @@
 		11C2233017DB62E30050A286 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
 		11C2233117DB62E40050A286 /* burger@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "burger@2x.png"; sourceTree = "<group>"; };
 		11C2234017DB65A40050A286 /* menu_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_btn.png; sourceTree = "<group>"; };
+		11EAF00B17E5197400A96603 /* TITokenField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TITokenField.h; sourceTree = "<group>"; };
+		11EAF00C17E5197400A96603 /* TITokenField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TITokenField.m; sourceTree = "<group>"; };
+		11EAF00D17E5197400A96603 /* Names.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Names.h; sourceTree = "<group>"; };
+		11EAF00E17E5197400A96603 /* Names.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Names.m; sourceTree = "<group>"; };
+		11EAF01117E51A4F00A96603 /* SRINewChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRINewChatViewController.h; sourceTree = "<group>"; };
+		11EAF01217E51A4F00A96603 /* SRINewChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINewChatViewController.m; sourceTree = "<group>"; };
 		11EBF28B17B8618900550B9D /* SRIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessage.h; sourceTree = "<group>"; };
 		11EBF28C17B8618900550B9D /* SRIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessage.m; sourceTree = "<group>"; };
 		11EBF28E17B861AC00550B9D /* SRIUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUser.h; sourceTree = "<group>"; };
@@ -588,6 +597,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				11EAF00A17E5195C00A96603 /* TITokenFeild */,
 				1157D0E317DD49D9006BD0D2 /* MZFormSheet */,
 				11C2232A17DB5C970050A286 /* AGMedallionView */,
 				11F895E817D3E41C00005D11 /* MHTabBar */,
@@ -830,6 +840,8 @@
 				11F895FC17D4155F00005D11 /* SRIChatInfoSummaryViewController.m */,
 				1157D0F617DD50CE006BD0D2 /* SRINewConvoViewController.h */,
 				1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */,
+				11EAF01117E51A4F00A96603 /* SRINewChatViewController.h */,
+				11EAF01217E51A4F00A96603 /* SRINewChatViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -902,6 +914,17 @@
 				11C2232C17DB5CB40050A286 /* AGMedallionView.m */,
 			);
 			name = AGMedallionView;
+			sourceTree = "<group>";
+		};
+		11EAF00A17E5195C00A96603 /* TITokenFeild */ = {
+			isa = PBXGroup;
+			children = (
+				11EAF00B17E5197400A96603 /* TITokenField.h */,
+				11EAF00C17E5197400A96603 /* TITokenField.m */,
+				11EAF00D17E5197400A96603 /* Names.h */,
+				11EAF00E17E5197400A96603 /* Names.m */,
+			);
+			name = TITokenFeild;
 			sourceTree = "<group>";
 		};
 		11F895E817D3E41C00005D11 /* MHTabBar */ = {
@@ -1125,9 +1148,11 @@
 				115D778F17B68C05009A09F6 /* main.m in Sources */,
 				115D779317B68C05009A09F6 /* SRIAppDelegate.m in Sources */,
 				1158E4BD17E20B3900E5A188 /* PHFComposeBarView.m in Sources */,
+				11EAF01317E51A4F00A96603 /* SRINewChatViewController.m in Sources */,
 				115D779F17B68C05009A09F6 /* SRIViewController.m in Sources */,
 				115D77D817B68C59009A09F6 /* logging_mosq.c in Sources */,
 				115D77DA17B68C59009A09F6 /* memory_mosq.c in Sources */,
+				11EAF01017E5197400A96603 /* Names.m in Sources */,
 				115D77DC17B68C59009A09F6 /* messages_mosq.c in Sources */,
 				115D77DE17B68C59009A09F6 /* mosquitto.c in Sources */,
 				115D77E017B68C59009A09F6 /* net_mosq.c in Sources */,
@@ -1185,6 +1210,7 @@
 				1181045617CA405700F2B3CB /* SRIVerificationViewController.m in Sources */,
 				1181045C17CA469F00F2B3CB /* SRIWaitingVerificationCodeViewController.m in Sources */,
 				1181046117CA593F00F2B3CB /* SRIRoot.m in Sources */,
+				11EAF00F17E5197400A96603 /* TITokenField.m in Sources */,
 				1181046417CA6D5800F2B3CB /* services.m in Sources */,
 				1181046717CA884D00F2B3CB /* SRIConversationTopCell.m in Sources */,
 				1181046C17CAB13B00F2B3CB /* SRIChatViewController.m in Sources */,

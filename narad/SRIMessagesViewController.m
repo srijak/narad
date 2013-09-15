@@ -64,7 +64,7 @@
   formSheet.shadowOpacity = 0.3;
   formSheet.shouldDismissOnBackgroundViewTap = YES;
   formSheet.shouldCenterVerticallyWhenKeyboardAppears = YES;
-  formSheet.portraitTopInset = 10.0;
+  formSheet.portraitTopInset = 50.0;
   
   [formSheet presentAnimated:YES completionHandler:^(UIViewController *presentedFSViewController) {
     

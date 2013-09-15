@@ -17,11 +17,16 @@
 #define kTopPadding 15.0
  */
 
+
 #define kKeyboardHeight 0.0
 #define kTopOffset 42.0
 #define kLeftOffset 0.0
 #define kRightOffset (kLeftOffset * 6)
 #define kTopPadding 3.0
+
+
+
+
 
 @interface SRINewConvoViewController ()
 
