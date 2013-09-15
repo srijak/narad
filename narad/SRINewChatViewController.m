@@ -67,9 +67,12 @@ CGFloat _keyboardHeight;
 	cancelBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
   [cancelBtn setBackgroundColor:[UIColor colorFromHexCode:@"FF5B37"]];
   [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-  
   cancelBtn.frame=CGRectMake(0, bottomY , btnWidth, 40);
   [cancelBtn setTitle:@"Discard" forState:UIControlStateNormal];
+  [cancelBtn addTarget:self
+             action:@selector(discardClicked:)
+   forControlEvents:UIControlEventTouchUpInside];
+  
   
   postBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
   [postBtn setBackgroundColor:[UIColor colorFromHexCode:@"5AD427"]];
@@ -77,7 +80,9 @@ CGFloat _keyboardHeight;
   
   postBtn.frame=CGRectMake(btnWidth, bottomY , btnWidth, 40);
   [postBtn setTitle:@"Send" forState:UIControlStateNormal];
-  
+  [cancelBtn addTarget:self
+                action:@selector(sendClicked:)
+      forControlEvents:UIControlEventTouchUpInside];
   
   [self.view addSubview:cancelBtn];
   [self.view addSubview:postBtn];
@@ -85,7 +90,12 @@ CGFloat _keyboardHeight;
 
   
 }
-
+-(void) discardClicked:(id) obj{
+  [self dismissFormSheetControllerAnimated:YES completionHandler:nil];
+}
+-(void) sendClicked:(id) obj{
+  
+}
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
 	return (toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }

@@ -50,7 +50,7 @@
   // Do any additional setup after loading the view from its nib.
   //    UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleBordered target:self action:@selector(removeAllContacts:)];
   
-  self.view.backgroundColor = [UIColor cloudsColor];
+  self.view.backgroundColor = [UIColor blackColor];
 
 
   //Navigation bar
@@ -133,7 +133,7 @@
   
   ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
   CFDataRef imageData = ABPersonCopyImageData(abPerson);
-  //  CFRelease(imageData); <<-- TODO: is this required?
+//  CFRelease(imageData); // <<-- TODO: is this required?
   
   cell.name.text = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
   // TODO: VERIFY IMAGE SETTING WORKS.
