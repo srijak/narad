@@ -37,7 +37,7 @@ CGFloat _keyboardHeight;
 	[_tokenFieldView.tokenField addTarget:self action:@selector(tokenFieldFrameDidChange:) forControlEvents:TITokenFieldControlEventFrameDidChange];
 	[_tokenFieldView.tokenField setTokenizingCharacters:[NSCharacterSet characterSetWithCharactersInString:@",."]]; // Default is a comma
   [_tokenFieldView.tokenField setPromptText:@"To:"];
-	[_tokenFieldView.tokenField setPlaceholder:@"Type a name.."];
+	[_tokenFieldView.tokenField setPlaceholder:@"Type a name..."];
 	
 	UIButton * addButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
 	[addButton addTarget:self action:@selector(showContactsPicker:) forControlEvents:UIControlEventTouchUpInside];
@@ -50,7 +50,7 @@ CGFloat _keyboardHeight;
 	[_messageView setAutoresizingMask:UIViewAutoresizingNone];
 	[_messageView setDelegate:self];
 	[_messageView setFont:[UIFont systemFontOfSize:15]];
-	[_messageView setText:@"Some message. The whole view resizes as you type, not just the text view."];
+	[_messageView setText:@""];
 	[_tokenFieldView.contentView addSubview:_messageView];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
@@ -101,6 +101,8 @@ CGFloat _keyboardHeight;
 	// Show some kind of contacts picker in here.
 	// For now, here's how to add and customize tokens.
 	
+  
+  /*
 	NSArray * names = [Names listOfNames];
 	
 	TIToken * token = [_tokenFieldView.tokenField addTokenWithTitle:[names objectAtIndex:(arc4random() % names.count)]];
@@ -110,6 +112,7 @@ CGFloat _keyboardHeight;
 	
 	NSUInteger tokenCount = _tokenFieldView.tokenField.tokens.count;
 	[token setTintColor:((tokenCount % 3) == 0 ? [TIToken redTintColor] : ((tokenCount % 2) == 0 ? [TIToken greenTintColor] : [TIToken blueTintColor]))];
+   */
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
@@ -141,6 +144,7 @@ CGFloat _keyboardHeight;
    */
 	
 }
+
 
 - (BOOL)tokenField:(TITokenField *)tokenField willRemoveToken:(TIToken *)token {
 	return YES;

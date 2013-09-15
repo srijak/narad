@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SRIContactPickerView.h"
-#import "PHFComposeBarView.h"
 #import "SRIContactPickerViewController.h"
 
 @interface SRINewConvoViewController : UIViewController <SRIContactPickerDelegate,
                                                           SRIPickedContacts,
-PHFComposeBarViewDelegate,
                                                           UITableViewDelegate,
                                                           UITableViewDataSource>
 
