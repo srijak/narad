@@ -208,16 +208,20 @@
         <!--Pick Contacts View Controller-->
         <scene sceneID="KnK-Ig-WvW">
             <objects>
-                <viewController id="6QZ-nU-DGO" customClass="SRIPickContactsViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="PickContacts" storyboardIdentifier="PickContacts" id="6QZ-nU-DGO" customClass="SRIPickContactsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="II1-Xx-Kig">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="2cA-0r-zcq" kind="unwind" identifier="unwindPickContact" unwindAction="unwindFromConfirmationForm:" id="FeR-dz-VJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uF4-9S-mSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2cA-0r-zcq" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2035" y="1342"/>
+            <point key="canvasLocation" x="1963" y="1372"/>
         </scene>
         <!--View Controller - Group-->
         <scene sceneID="y4f-UN-SWK">
@@ -956,7 +960,6 @@ coloured comic supplement.</string>
         </scene>
     </scenes>
     <resources>
-        <image name="back_btn.png" width="34" height="34"/>
         <image name="back_btn.png" width="34" height="34"/>
         <image name="menu_btn.png" width="27" height="20"/>
         <image name="menu_gear.png" width="32" height="32"/>

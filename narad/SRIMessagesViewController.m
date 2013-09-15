@@ -40,14 +40,9 @@
   self.view.layer.shadowRadius = 10.0f;
   self.view.layer.shadowColor = [UIColor blackColor].CGColor;
   
-  /*if (![self.slidingViewController.underLeftViewController isKindOfClass:[SRIMenuViewController class]]) {
-    self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Menu"];
-  }*/
- 
   self.slidingViewController.underLeftViewController  = nil;
   self.slidingViewController.underRightViewController = nil;
   
-  //[self.navigationController.view addGestureRecognizer:self.slidingViewController.panGesture];
 }
 
 - (IBAction)startNewMessage:(id)sender{
@@ -66,8 +61,13 @@
   formSheet.shouldCenterVerticallyWhenKeyboardAppears = YES;
   formSheet.portraitTopInset = 50.0;
   formSheet.formSheetWindow.transparentTouchEnabled = NO;
+  //UIViewController *mod = [self.storyboard instantiateViewControllerWithIdentifier:@"PickContacts"];
+
   [formSheet presentAnimated:YES completionHandler:^(UIViewController *presentedFSViewController) {
-    
+    /*[presentedFSViewController presentViewController:mod animated:YES completion:^{
+      
+    }];*/
+
   }];
   
 }

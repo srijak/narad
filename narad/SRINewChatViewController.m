@@ -7,6 +7,7 @@
 //
 
 #import "SRINewChatViewController.h"
+#import "MZFormSheetController.h"
 
 #import "Names.h"
 
@@ -100,9 +101,11 @@ CGFloat _keyboardHeight;
 - (void)showContactsPicker:(id)sender {
 	
 	// Show some kind of contacts picker in here.
-	// For now, here's how to add and customize tokens.
-	
-  [self performSegueWithIdentifier:@"AddRecipientsSeque" sender:self];
+	SRIPickContactsViewController *modal = [self.storyboard instantiateViewControllerWithIdentifier:@"PickContacts"];
+  modal.delegate = self;
+  [self.formSheetController presentViewController:modal animated:YES completion:^{
+    
+  }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

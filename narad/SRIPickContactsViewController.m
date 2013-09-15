@@ -263,17 +263,26 @@
   NSLog(@"DONE SELECTING");
   NSLog(@"Selected contacts: %@", self.selectedContacts);
   [self.view endEditing:YES];
-  [self.navigationController popViewControllerAnimated:YES];
+  
   if ([self.delegate respondsToSelector:@selector(selectedContacts:)])
   {
     NSLog(@"CALLING DELEGATE SELECTING");
     [self.delegate selectedContacts:self.selectedContacts];
   }
-  [[self.presentingViewController presentingViewController] dismissViewControllerAnimated:YES completion:nil];
-
-
+  
+  //[[self.presentingViewController presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+  //[self performSegueWithIdentifier:@"unwindPickContact" sender:self];
+  [self dismissViewControllerAnimated:YES completion: nil];
   
 }
+
+- (IBAction)unwindFromConfirmationForm:(UIStoryboardSegue *)segue{
+  
+  //unwindPickContact
+
+}
+
+
 
 
 #pragma mark - Address Book access

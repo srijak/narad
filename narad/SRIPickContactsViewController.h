@@ -22,4 +22,5 @@
 @property (nonatomic, strong) NSMutableArray *filteredContacts;
 @property (nonatomic, strong) NSObject<SRISelectedContacts> * delegate;
 
+- (IBAction)unwindFromConfirmationForm:(UIStoryboardSegue *)segue;
 @end
