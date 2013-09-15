@@ -8,6 +8,7 @@
 
 #import "SRIPickContactsViewController.h"
 #import "SRIContactPickerCell.h"
+#import "NSString+FontAwesome.h"
 
 @interface SRIPickContactsViewController ()
 
@@ -39,25 +40,45 @@
   
 }
 
+-(void) setNavItemFontToAwesome:(UIBarButtonItem*) v size:(float)sz{
+  [v  setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"FontAwesome" size:sz], UITextAttributeFont,
+    [UIColor whiteColor], UITextAttributeTextColor,  nil] forState:UIControlStateNormal];
+}
 - (void)viewDidLoad
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
   //    UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleBordered target:self action:@selector(removeAllContacts:)];
   
-  UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(doneSelecting:)];
+  self.view.backgroundColor = [UIColor cloudsColor];
+
+
+  //Navigation bar
+  UIBarButtonItem * doneButton = [[UIBarButtonItem alloc] initWithTitle:[NSString fontAwesomeIconStringForEnum:FAIconOk] style:UIBarButtonItemStylePlain target:self action:@selector(doneSelecting:)];
+  [self setNavItemFontToAwesome:doneButton size:20];
   
-  UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelSelecting:)];
+  UIBarButtonItem * cancelButton = [[UIBarButtonItem alloc] initWithTitle:[NSString fontAwesomeIconStringForEnum:FAIconDoubleAngleLeft] style:UIBarButtonItemStylePlain target:self action:@selector(cancelSelecting:)];
+  [self setNavItemFontToAwesome:cancelButton size:24];
   
-  self.navigationItem.leftBarButtonItem = cancelButton;
-  self.navigationItem.rightBarButtonItem = doneButton;
+  UINavigationBar *naviBarObj = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 20, 320, 44)];
+  [self.view addSubview:naviBarObj];
+
+  UINavigationItem *navigItem = [[UINavigationItem alloc] initWithTitle:@"Add Recipient(s)"];
+
+
+  navigItem.rightBarButtonItem = doneButton;
+  navigItem.leftBarButtonItem = cancelButton;
+  naviBarObj.items = [NSArray arrayWithObjects: navigItem,nil];
+  [naviBarObj setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+  [naviBarObj setBackgroundColor:[UIColor peterRiverColor]];
+
   
   // Initialize and add Contact Picker View
-  self.contactPickerView = [[UILabel alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width, 20)];
+  self.contactPickerView = [[UILabel alloc] initWithFrame:CGRectMake(0, naviBarObj.frame.size.height+naviBarObj.frame.origin.y, self.view.frame.size.width, 0)];
   [self.view addSubview:self.contactPickerView];
   
   // Fill the rest of the view with the table view
-  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width+36, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight) style:UITableViewStylePlain];
+  self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height+self.contactPickerView.frame.origin.y , self.view.frame.size.width+36, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight) style:UITableViewStylePlain];
   
   //self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight) style:UITableViewStylePlain];
   /*self.tableView.frame = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight);
@@ -66,6 +87,7 @@
   self.tableView.dataSource = self;
   [self.tableView setAllowsSelection:YES];
   self.tableView.separatorColor = [UIColor clearColor];
+  self.tableView.backgroundColor = [UIColor cloudsColor];
   [self.tableView registerNib:[UINib nibWithNibName:@"ContactPickerCell" bundle:nil] forCellReuseIdentifier:@"ContactPickerCell"];
   [self.view insertSubview:self.tableView belowSubview:self.contactPickerView];
   
@@ -118,10 +140,29 @@
   if (imageData != nil){
     [cell.avatar setImage: [UIImage imageWithData:CFBridgingRelease(imageData)]];
   }else{
-    [cell.avatar setImage:[UIImage imageNamed: @"contact_picker_cell_def_avatar.png"]];
+    [cell.avatar setImage:[UIImage imageNamed: @"contact_picker_cell_def_avatar"]];
   }
   
+  UIImage * background = [UIImage imageNamed: @"contact_cell_bg"];
   
+  if ([self.selectedContacts containsObject:user]){
+    background = [UIImage imageNamed: @"contact_cell_bg_sel"];
+    [cell.name setTextColor:[UIColor blackColor]];
+  }else{
+    [cell.name setTextColor:[UIColor blackColor]];
+    
+  }
+  CGRect frame = cell.frame;
+  frame.size.width = self.tableView.frame.size.width - 60;
+  cell.frame = frame;
+  
+  
+  
+  UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:background];
+  cellBackgroundView.image = background;
+  cell.backgroundView = cellBackgroundView;
+  
+
   return cell;
 }
 
@@ -153,9 +194,11 @@
 }
 -(void) removeContact:(id)c{
   
+  NSLog(@"Remove contact.");
 }
 -(void) addContact:(id)c withName:(NSString*) name {
-  
+ 
+  NSLog(@"Add contact.");
 }
 
 #pragma mark - SRIContactPickerTextViewDelegate
@@ -165,9 +208,6 @@
   if ([textViewText isEqualToString:@""]){
     [self copyContactsToFiltered];
   } else {
-    
-    
-    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self contains[cd] %@", textViewText];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF beginswith[cd] %@)", textViewText];
     
@@ -209,6 +249,7 @@
 
 - (void)cancelSelecting:(id)sender
 {
+  [self.selectedContacts removeAllObjects];
   [self doneSelecting:sender];
 }
 - (void)doneSelecting:(id)sender
@@ -220,6 +261,7 @@
    */
   
   NSLog(@"DONE SELECTING");
+  NSLog(@"Selected contacts: %@", self.selectedContacts);
   [self.view endEditing:YES];
   [self.navigationController popViewControllerAnimated:YES];
   if ([self.delegate respondsToSelector:@selector(selectedContacts:)])
@@ -227,6 +269,9 @@
     NSLog(@"CALLING DELEGATE SELECTING");
     [self.delegate selectedContacts:self.selectedContacts];
   }
+  [[self.presentingViewController presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+
+
   
 }
 

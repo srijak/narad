@@ -25,6 +25,7 @@
 
     // Configure the view for the selected state
 }
+
 - (void)setFrame:(CGRect)frame {
   float inset = 10;
   frame.origin.x = inset;

@@ -39,7 +39,6 @@
 		1157D0F817DD50CE006BD0D2 /* SRINewConvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */; };
 		1157D0FC17E200BD006BD0D2 /* navbar_bg_modal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */; };
 		1158E4D817E2922200E5A188 /* contact_cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D717E2922200E5A188 /* contact_cell_bg.png */; };
-		1158E4DA17E2947300E5A188 /* contact_cell_bg_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */; };
 		115D778317B68C05009A09F6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778217B68C05009A09F6 /* UIKit.framework */; };
 		115D778517B68C05009A09F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778417B68C05009A09F6 /* Foundation.framework */; };
 		115D778717B68C05009A09F6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115D778617B68C05009A09F6 /* CoreGraphics.framework */; };
@@ -164,6 +163,8 @@
 		11EAF01017E5197400A96603 /* Names.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF00E17E5197400A96603 /* Names.m */; };
 		11EAF01317E51A4F00A96603 /* SRINewChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF01217E51A4F00A96603 /* SRINewChatViewController.m */; };
 		11EAF02017E5EE5E00A96603 /* SRIPickContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF01F17E5EE5E00A96603 /* SRIPickContactsViewController.m */; };
+		11EAF02217E60A8E00A96603 /* contact_cell_bg_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 11EAF02117E60A8E00A96603 /* contact_cell_bg_sel.png */; };
+		11EAF02617E6135000A96603 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11EAF02517E6135000A96603 /* FontAwesome.ttf */; };
 		11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28C17B8618900550B9D /* SRIMessage.m */; };
 		11EBF29017B861AC00550B9D /* SRIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28F17B861AC00550B9D /* SRIUser.m */; };
 		11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */; };
@@ -244,7 +245,6 @@
 		1157D0F717DD50CE006BD0D2 /* SRINewConvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINewConvoViewController.m; sourceTree = "<group>"; };
 		1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_bg_modal.png; sourceTree = "<group>"; };
 		1158E4D717E2922200E5A188 /* contact_cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_cell_bg.png; sourceTree = "<group>"; };
-		1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contact_cell_bg_sel.png; path = ../Pods/contact_cell_bg_sel.png; sourceTree = "<group>"; };
 		115D777F17B68C05009A09F6 /* narad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = narad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115D778217B68C05009A09F6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		115D778417B68C05009A09F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -401,6 +401,11 @@
 		11EAF01217E51A4F00A96603 /* SRINewChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRINewChatViewController.m; sourceTree = "<group>"; };
 		11EAF01E17E5EE5E00A96603 /* SRIPickContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIPickContactsViewController.h; sourceTree = "<group>"; };
 		11EAF01F17E5EE5E00A96603 /* SRIPickContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIPickContactsViewController.m; sourceTree = "<group>"; };
+		11EAF02117E60A8E00A96603 /* contact_cell_bg_sel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_cell_bg_sel.png; sourceTree = "<group>"; };
+		11EAF02517E6135000A96603 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		11EAF02817E61B3700A96603 /* Lato-Reg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Reg.ttf"; sourceTree = "<group>"; };
+		11EAF02917E61B4600A96603 /* Lato-Lig.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Lig.ttf"; sourceTree = "<group>"; };
+		11EAF02A17E61B5500A96603 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
 		11EBF28B17B8618900550B9D /* SRIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessage.h; sourceTree = "<group>"; };
 		11EBF28C17B8618900550B9D /* SRIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessage.m; sourceTree = "<group>"; };
 		11EBF28E17B861AC00550B9D /* SRIUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUser.h; sourceTree = "<group>"; };
@@ -578,6 +583,7 @@
 		115D778917B68C05009A09F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11EAF02717E61B2700A96603 /* Fonts */,
 				1157D0FB17E200BD006BD0D2 /* navbar_bg_modal.png */,
 				1176DF1E17DB70CE003C5351 /* RNFrostedSidebar */,
 				1181045217CA3EE400F2B3CB /* CountryCodes.plist */,
@@ -587,13 +593,13 @@
 				1176DF3117DB9174003C5351 /* back_btn.png */,
 				11C2233117DB62E40050A286 /* burger@2x.png */,
 				1158E4D717E2922200E5A188 /* contact_cell_bg.png */,
+				11EAF02117E60A8E00A96603 /* contact_cell_bg_sel.png */,
 				1181044A17C93E2800F2B3CB /* plus_btn.png */,
 				11C2232217DAD13D0050A286 /* navbar_bg.png */,
 				11C2232E17DB5E250050A286 /* sample.png */,
 				11C2232817DAD3970050A286 /* new_convo_btn.png */,
 				113937C717CC47630061CF3E /* contact_picker_cell_sel.png */,
 				113937C817CC47630061CF3E /* contact_picker_cell_unsel.png */,
-				1158E4D917E2947300E5A188 /* contact_cell_bg_sel.png */,
 				1181042C17C9328D00F2B3CB /* Assets */,
 				115D778A17B68C05009A09F6 /* narad-Info.plist */,
 				1181044217C9340500F2B3CB /* nav_bg.png */,
@@ -877,6 +883,17 @@
 			name = cp;
 			sourceTree = "<group>";
 		};
+		11EAF02717E61B2700A96603 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				11EAF02817E61B3700A96603 /* Lato-Reg.ttf */,
+				11EAF02A17E61B5500A96603 /* Lato-Bol.ttf */,
+				11EAF02917E61B4600A96603 /* Lato-Lig.ttf */,
+				11EAF02517E6135000A96603 /* FontAwesome.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
 		11F895E817D3E41C00005D11 /* MHTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,7 +1002,6 @@
 				1181043817C932A600F2B3CB /* OpenSans-SemiboldItalic.ttf in Resources */,
 				1181043917C932A600F2B3CB /* OpenSans-Semibold.ttf in Resources */,
 				1181043A17C932A600F2B3CB /* OpenSans-Regular.ttf in Resources */,
-				1158E4DA17E2947300E5A188 /* contact_cell_bg_sel.png in Resources */,
 				1157D0FC17E200BD006BD0D2 /* navbar_bg_modal.png in Resources */,
 				1181043B17C932A600F2B3CB /* OpenSans-LightItalic.ttf in Resources */,
 				1181043C17C932A600F2B3CB /* OpenSans-Light.ttf in Resources */,
@@ -996,6 +1012,7 @@
 				1181044117C932A600F2B3CB /* OpenSans-Bold.ttf in Resources */,
 				1181044317C9340500F2B3CB /* nav_bg.png in Resources */,
 				1176DF2E17DB70E8003C5351 /* star@2x.png in Resources */,
+				11EAF02217E60A8E00A96603 /* contact_cell_bg_sel.png in Resources */,
 				1181044B17C93E2900F2B3CB /* plus_btn.png in Resources */,
 				1181045317CA3EE400F2B3CB /* CountryCodes.plist in Resources */,
 				113937C317CC411E0061CF3E /* ContactPickerCell.xib in Resources */,
@@ -1011,6 +1028,7 @@
 				11F895F617D3E44500005D11 /* MHTabBarIndicator.png in Resources */,
 				11F895F717D3E44500005D11 /* MHTabBarIndicator@2x.png in Resources */,
 				1176DF3217DB9174003C5351 /* back_btn.png in Resources */,
+				11EAF02617E6135000A96603 /* FontAwesome.ttf in Resources */,
 				113DD1FF17D4278B008738CB /* contact_status_def.png in Resources */,
 				11C2232317DAD13D0050A286 /* navbar_bg.png in Resources */,
 				11C2232917DAD3970050A286 /* new_convo_btn.png in Resources */,

@@ -8,6 +8,13 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FontAwesome.ttf</string>
+		<string>Lato-Reg.ttf</string>
+		<string>Lato-Bol.ttf</string>
+		<string>Lato-Lig.ttf</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.srjk.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>

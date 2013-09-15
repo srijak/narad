@@ -7,6 +7,7 @@
 //
 
 #import "SRINewChatViewController.h"
+
 #import "Names.h"
 
 @interface SRINewChatViewController (Private)
@@ -101,7 +102,25 @@ CGFloat _keyboardHeight;
 	// Show some kind of contacts picker in here.
 	// For now, here's how to add and customize tokens.
 	
-  
+  [self performSegueWithIdentifier:@"AddRecipientsSeque" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+  if ([[segue identifier] isEqualToString:@"AddRecipientsSeque"]) {
+    
+    // Get destination view
+    SRIPickContactsViewController *vc = [segue destinationViewController];
+    vc.delegate = self;
+    
+  }
+}
+
+- (void)selectedContacts:(NSArray *)contacts{
+  NSLog(@"Selected contacts: %@", contacts);
+}
+
+
   /*
 	NSArray * names = [Names listOfNames];
 	
@@ -113,7 +132,7 @@ CGFloat _keyboardHeight;
 	NSUInteger tokenCount = _tokenFieldView.tokenField.tokens.count;
 	[token setTintColor:((tokenCount % 3) == 0 ? [TIToken redTintColor] : ((tokenCount % 2) == 0 ? [TIToken greenTintColor] : [TIToken blueTintColor]))];
    */
-}
+
 
 - (void)keyboardWillShow:(NSNotification *)notification {
 	

@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "TITokenField.h"
+#import "SRIPickContactsViewController.h"
 
-@interface SRINewChatViewController : UIViewController <TITokenFieldDelegate, UITextViewDelegate>
+@interface SRINewChatViewController : UIViewController <TITokenFieldDelegate,SRISelectedContacts,  UITextViewDelegate>
 
+
+- (void)selectedContacts:(NSArray *)contacts;
 
 @end

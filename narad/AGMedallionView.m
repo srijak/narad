@@ -177,7 +177,10 @@
     // Create main mask shape
     CGContextMoveToPoint(mainMaskContextRef, 0, 0);
     CGContextAddEllipseInRect(mainMaskContextRef, imageRect);
+  //CGContextAddRect(mainMaskContextRef, imageRect);
+  
     CGContextFillPath(mainMaskContextRef);
+  
     // Create shine mask shape
     CGContextTranslateCTM(shineMaskContextRef, -(rect.size.width / 4), rect.size.height / 4 * 3);
     CGContextRotateCTM(shineMaskContextRef, -45.f);
@@ -225,7 +228,9 @@
     CGContextSetLineWidth(contextRef, self.borderWidth);
     CGContextSetStrokeColorWithColor(contextRef, self.borderColor.CGColor);
     CGContextMoveToPoint(contextRef, 0, 0);
+  //  CGContextAddRect(contextRef, imageRect);
     CGContextAddEllipseInRect(contextRef, imageRect);
+  
     // Drop shadow
     CGContextSetShadowWithColor(contextRef, 
                                 self.shadowOffset, 
