@@ -27,8 +27,7 @@ CGFloat _keyboardHeight;
 	
 	[self.view setBackgroundColor:[UIColor clearColor]];
 	
-  CGRect frame = self.view.frame;
-  frame.size.height = 500;
+  CGRect frame = self.view.bounds;
 	_tokenFieldView = [[TITokenFieldView alloc] initWithFrame:frame];
   [_tokenFieldView setSourceArray:[Names listOfNames]];
   
@@ -50,7 +49,7 @@ CGFloat _keyboardHeight;
 	[_messageView setScrollEnabled:NO];
 	[_messageView setAutoresizingMask:UIViewAutoresizingNone];
 	[_messageView setDelegate:self];
-	[_messageView setFont:[UIFont systemFontOfSize:13]];
+	[_messageView setFont:[UIFont systemFontOfSize:15]];
 	[_messageView setText:@"Some message. The whole view resizes as you type, not just the text view."];
 	[_tokenFieldView.contentView addSubview:_messageView];
 	
@@ -64,14 +63,14 @@ CGFloat _keyboardHeight;
   float bottomY = 200;//self.view.frame.size.height - 40;
  
 	cancelBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [cancelBtn setBackgroundColor:[UIColor alizarinColor]];
+  [cancelBtn setBackgroundColor:[UIColor colorFromHexCode:@"FF5B37"]];
   [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   
   cancelBtn.frame=CGRectMake(0, bottomY , btnWidth, 40);
   [cancelBtn setTitle:@"Discard" forState:UIControlStateNormal];
   
   postBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-  [postBtn setBackgroundColor:[UIColor greenSeaColor]];
+  [postBtn setBackgroundColor:[UIColor colorFromHexCode:@"5AD427"]];
   [postBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
   
   postBtn.frame=CGRectMake(btnWidth, bottomY , btnWidth, 40);

@@ -1023,9 +1023,9 @@ CGPathRef CGPathCreateDisclosureIndicatorPath(CGPoint arrowPointFront, CGFloat h
 		_representedObject = object;
 		
 		_font = aFont;
-		_tintColor = [TIToken blueTintColor];
+		_tintColor = [UIColor colorFromHexCode:@"5AD427"];
 		_textColor = [UIColor blackColor];
-		_highlightedTextColor = [UIColor whiteColor];
+		_highlightedTextColor = [UIColor blackColor];
 		
 		_accessoryType = TITokenAccessoryTypeNone;
 		_maxWidth = 200;
@@ -1300,7 +1300,7 @@ CGPathRef CGPathCreateDisclosureIndicatorPath(CGPoint arrowPointFront, CGFloat h
 
 #pragma mark Other
 - (NSString *)description {
-	return [NSString stringWithFormat:@"<TIToken %p; title = \"%@\"; representedObject = \"%@\">", self, _title, _representedObject];
+	return [NSString stringWithFormat:@"<%p; title = \"%@\"; representedObject = \"%@\">", self, _title, _representedObject];
 }
 
 
