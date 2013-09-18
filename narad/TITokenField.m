@@ -320,6 +320,7 @@
 	[_resultsArray removeAllObjects];
 	[_resultsTable reloadData];
 	
+  
 	searchString = [searchString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	
 	if (searchString.length || _forcePickSearchResult){
@@ -591,10 +592,10 @@ NSString * const kTextHidden = @"\u200D"; // Zero-Width Joiner
 - (TIToken *)addTokenWithTitle:(NSString *)title representedObject:(id)object {
 	
 	if (title.length){
-		TIToken * token = [[TIToken alloc] initWithTitle:title representedObject:object font:self.font];
-		[self addToken:token];
-		return token;
-	}
+	    TIToken * token = [[TIToken alloc] initWithTitle:title representedObject:object font:self.font];
+      [self addToken:token];
+      return token;
+  }
 	
 	return nil;
 }

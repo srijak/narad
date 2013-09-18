@@ -17,9 +17,6 @@
 #define kKeyboardHeight 0.0
 
 @implementation SRIPickContactsViewController
-{
-  ABAddressBookRef addressBook;
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -32,13 +29,10 @@
   
   [self adjustTableViewFrame];
   
-  
-  addressBook = ABAddressBookCreateWithOptions(NULL, NULL);
-  
-  // Check whether we are authorized to access the user's address book data
-  [self checkAddressBookAccess];
-  
+  self.abWrapper = [[SRIABWrapper alloc] init];
+  [self.abWrapper requestAccess:self];
 }
+
 
 -(void) setNavItemFontToAwesome:(UIBarButtonItem*) v size:(float)sz{
   [v  setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"FontAwesome" size:sz], UITextAttributeFont,
@@ -80,9 +74,7 @@
   // Fill the rest of the view with the table view
   self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height+self.contactPickerView.frame.origin.y , self.view.frame.size.width+36, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight) style:UITableViewStylePlain];
   
-  //self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight) style:UITableViewStylePlain];
-  /*self.tableView.frame = [[UITableView alloc] initWithFrame:CGRectMake(0, self.contactPickerView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.contactPickerView.frame.size.height - kKeyboardHeight);
-   */
+
   self.tableView.delegate = self;
   self.tableView.dataSource = self;
   [self.tableView setAllowsSelection:YES];
@@ -131,7 +123,7 @@
   
   ABRecordID abRecordID = [user intValue];
   
-  ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
+  ABRecordRef abPerson = [self.abWrapper getContact:abRecordID];
   CFDataRef imageData = ABPersonCopyImageData(abPerson);
 //  CFRelease(imageData); // <<-- TODO: is this required?
   
@@ -183,14 +175,14 @@
     
     ABRecordID abRecordID = [user intValue];
     
-    ABRecordRef abPerson = ABAddressBookGetPersonWithRecordID(addressBook, abRecordID);
+    ABRecordRef abPerson = [self.abWrapper getContact:abRecordID];
     
     NSString * username = (__bridge_transfer NSString *)ABRecordCopyCompositeName(abPerson);
     [self addContact:user withName:username];
   }
   
   [self copyContactsToFiltered];
-  [self.tableView reloadData];
+  [self customReloadTable];
 }
 -(void) removeContact:(id)c{
   
@@ -199,6 +191,11 @@
 -(void) addContact:(id)c withName:(NSString*) name {
  
   NSLog(@"Add contact.");
+}
+
+-(void) customReloadTable {
+ // animate here.
+  [self.tableView reloadData];
 }
 
 #pragma mark - SRIContactPickerTextViewDelegate
@@ -235,7 +232,7 @@
     
     
   }
-  [self.tableView reloadData];
+  [self customReloadTable];
 }
 
 
@@ -286,52 +283,18 @@
 
 
 #pragma mark - Address Book access
-
-// Check the authorization status of our application for Address Book
-- (void)checkAddressBookAccess
-{
-  switch (ABAddressBookGetAuthorizationStatus())
-  {
-      // Update our UI if the user has granted access to their Contacts
-    case kABAuthorizationStatusAuthorized:
-      [self accessGrantedForAddressBook];
-      break;
-      // Prompt the user for access to Contacts if there is no definitive answer
-    case kABAuthorizationStatusNotDetermined :
-      [self requestAddressBookAccess];
-      break;
-      // Display a message if the user has denied or restricted access to Contacts
-    case kABAuthorizationStatusDenied:
-    case kABAuthorizationStatusRestricted:
-    {
-      UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Privacy Warning", @"Privacy Warning")
-                                                      message:NSLocalizedString(@"Permission was not granted for Contacts.", @"Permission was not granted for Contacts.")
-                                                     delegate:nil
-                                            cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
-                                            otherButtonTitles:nil];
-      [alert show];
-    }
-      break;
-    default:
-      break;
-  }
+-(void) ABRequestDenied {
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Contact access denied", @"Contact access denied")
+                                                  message:NSLocalizedString(@"Permission was not granted for Contacts.", @"Permission was not granted for Contacts.")
+                                                 delegate:nil
+                                        cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                                        otherButtonTitles:nil];
+  [alert show];
 }
-
-// Prompt the user for access to their Address Book data
-- (void)requestAddressBookAccess
-{
-  SRIPickContactsViewController* __weak weakSelf = self;
-  
-  ABAddressBookRequestAccessWithCompletion(addressBook, ^(bool granted, CFErrorRef error)
-                                           {
-                                             if (granted)
-                                             {
-                                               dispatch_async(dispatch_get_main_queue(), ^{
-                                                 [weakSelf accessGrantedForAddressBook];
-                                                 
-                                               });
-                                             }
-                                           });
+-(void) ABRequestGranted {
+  self.contacts = [self.abWrapper getContacts];
+    [self copyContactsToFiltered];
+    [self customReloadTable];
 }
 
 -(void) copyContactsToFiltered{
@@ -347,13 +310,6 @@
     [self.filteredContacts addObject:[NSNumber numberWithInt:abRecordID]];
   }
   
-}
-// This method is called when the user has granted access to their address book data.
-- (void)accessGrantedForAddressBook
-{
-	self.contacts = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeople(addressBook);
-  // Create a filtered list that will contain people for the search results table.
-  [self copyContactsToFiltered];
 }
 
 @end

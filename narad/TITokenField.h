@@ -27,6 +27,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 @class TITokenField, TIToken;
 

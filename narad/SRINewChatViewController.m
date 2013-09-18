@@ -8,8 +8,8 @@
 
 #import "SRINewChatViewController.h"
 #import "MZFormSheetController.h"
-
-#import "Names.h"
+#import "SRIABWrapper.h"
+#import "TITokenField.h"
 
 @interface SRINewChatViewController (Private)
 - (void)resizeViews;
@@ -21,6 +21,7 @@ UITextView * _messageView;
   UIButton * cancelBtn;
   UIButton * postBtn;
   
+  SRIABWrapper* abWrapper;
 
 CGFloat _keyboardHeight;
 }
@@ -28,14 +29,20 @@ CGFloat _keyboardHeight;
 - (void)viewDidLoad {
 	
 	[self.view setBackgroundColor:[UIColor clearColor]];
-	
+  
+  
   CGRect frame = self.view.bounds;
 	_tokenFieldView = [[TITokenFieldView alloc] initWithFrame:frame];
-  [_tokenFieldView setSourceArray:[Names listOfNames]];
+  [_tokenFieldView setSourceArray:@[]];
+  abWrapper = [[SRIABWrapper alloc] init];
+  [abWrapper requestAccess:self];
+	
   
 	[self.view addSubview:_tokenFieldView];
-	
+	//[_tokenFieldView setForcePickSearchResult:YES];
+  
 	[_tokenFieldView.tokenField setDelegate:self];
+  
 	[_tokenFieldView.tokenField addTarget:self action:@selector(tokenFieldFrameDidChange:) forControlEvents:TITokenFieldControlEventFrameDidChange];
 	[_tokenFieldView.tokenField setTokenizingCharacters:[NSCharacterSet characterSetWithCharactersInString:@",."]]; // Default is a comma
   [_tokenFieldView.tokenField setPromptText:@"To:"];
@@ -131,6 +138,13 @@ CGFloat _keyboardHeight;
 
 - (void)selectedContacts:(NSArray *)contacts{
   NSLog(@"Selected contacts: %@", contacts);
+  for (id object in contacts){
+    ABRecordID abRecordID = [object intValue];
+    ABRecordRef abPerson = [abWrapper getContact:abRecordID];
+    NSString* name =  (__bridge_transfer NSString *)ABRecordCopyCompositeName((ABRecordRef)(abPerson));
+    [_tokenFieldView.tokenField addTokenWithTitle:name representedObject:(__bridge id)(abPerson)];
+  }
+  
 }
 
 
@@ -212,5 +226,40 @@ CGFloat _keyboardHeight;
 	[textView setFrame:newTextFrame];
 	[_tokenFieldView updateContentSize];
 }
+
+
+-(void) ABRequestGranted {
+  NSArray* arr = [abWrapper getContacts];
+ // [_tokenFieldView setSourceArray:arr];
+  [_tokenFieldView setSourceArray:arr];
+  
+  
+}
+
+#pragma mark - TIToken Searching
+- (NSString *)tokenField:(TITokenField *)tokenField displayStringForRepresentedObject:(id)object{
+  //ABRecordID abRecordID = [object intValue];
+  
+  //ABRecordRef abPerson = [abWrapper getContact:abRecordID];
+  return (__bridge_transfer NSString *)ABRecordCopyCompositeName((__bridge ABRecordRef)(object));
+}
+
+- (NSString *)tokenField:(TITokenField *)tokenField searchResultStringForRepresentedObject:(id)object{
+  //ABRecordID abRecordID = [object intValue];
+  
+  //ABRecordRef abPerson = [abWrapper getContact:abRecordID];
+  return (__bridge_transfer NSString *)ABRecordCopyCompositeName((__bridge ABRecordRef)(object));}
+- (NSString *)tokenField:(TITokenField *)tokenField searchResultSubtitleForRepresentedObject:(id)object{
+  return nil;
+}
+
+/*- (BOOL)tokenField:(TITokenField *)tokenField willAddToken:(TIToken *)token{
+  for (id t in _tokenFieldView.tokenTitles ){
+    if ([(NSString*)t isEqualToString:token.title]){
+      return NO;
+    }
+  }
+        return YES;
+}*/
 
 @end
