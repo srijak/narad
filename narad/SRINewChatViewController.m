@@ -55,8 +55,10 @@ CGFloat _keyboardHeight;
 	[_tokenFieldView.tokenField addTarget:self action:@selector(tokenFieldChangedEditing:) forControlEvents:UIControlEventEditingDidBegin];
 	[_tokenFieldView.tokenField addTarget:self action:@selector(tokenFieldChangedEditing:) forControlEvents:UIControlEventEditingDidEnd];
 	
-	_messageView = [[UITextView alloc] initWithFrame:_tokenFieldView.contentView.bounds];
-	[_messageView setScrollEnabled:NO];
+  CGRect messageViewFrame = _tokenFieldView.contentView.bounds;
+  messageViewFrame.size.width -= 30;
+	_messageView = [[UITextView alloc] initWithFrame:messageViewFrame];
+	[_messageView setScrollEnabled:YES];
 	[_messageView setAutoresizingMask:UIViewAutoresizingNone];
 	[_messageView setDelegate:self];
 	[_messageView setFont:[UIFont systemFontOfSize:15]];
