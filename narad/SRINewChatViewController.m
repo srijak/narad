@@ -13,6 +13,7 @@
 
 @interface SRINewChatViewController (Private)
 - (void)resizeViews;
+
 @end
 
 @implementation SRINewChatViewController {
@@ -229,10 +230,9 @@ CGFloat _keyboardHeight;
 
 
 -(void) ABRequestGranted {
-  NSArray* arr = [abWrapper getContacts];
+  self.contacts = [abWrapper getContacts];
  // [_tokenFieldView setSourceArray:arr];
-  [_tokenFieldView setSourceArray:arr];
-  
+  [_tokenFieldView setSourceArray:self.contacts];
   
 }
 
@@ -253,13 +253,9 @@ CGFloat _keyboardHeight;
   return nil;
 }
 
-/*- (BOOL)tokenField:(TITokenField *)tokenField willAddToken:(TIToken *)token{
-  for (id t in _tokenFieldView.tokenTitles ){
-    if ([(NSString*)t isEqualToString:token.title]){
-      return NO;
-    }
-  }
-        return YES;
-}*/
+- (BOOL)tokenField:(TITokenField *)tokenField willAddToken:(TIToken *)token{
+  
+  return [self.contacts containsObject:token.representedObject];
+}
 
 @end

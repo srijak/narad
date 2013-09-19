@@ -13,6 +13,8 @@
 @interface SRINewChatViewController : UIViewController <TITokenFieldDelegate,SRISelectedContacts,  UITextViewDelegate>
 
 
+@property (strong, nonatomic) NSArray* contacts;
+
 - (void)selectedContacts:(NSArray *)contacts;
 
 @end
