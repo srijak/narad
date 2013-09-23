@@ -165,6 +165,7 @@
 		11EAF02217E60A8E00A96603 /* contact_cell_bg_sel.png in Resources */ = {isa = PBXBuildFile; fileRef = 11EAF02117E60A8E00A96603 /* contact_cell_bg_sel.png */; };
 		11EAF02617E6135000A96603 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11EAF02517E6135000A96603 /* FontAwesome.ttf */; };
 		11EAF02F17E9193700A96603 /* SRIABWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF02E17E9193700A96603 /* SRIABWrapper.m */; };
+		11EAF04317F0614400A96603 /* SRIPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EAF04217F0614400A96603 /* SRIPlaceholderTextView.m */; };
 		11EBF28D17B8618900550B9D /* SRIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28C17B8618900550B9D /* SRIMessage.m */; };
 		11EBF29017B861AC00550B9D /* SRIUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 11EBF28F17B861AC00550B9D /* SRIUser.m */; };
 		11F895E717D3DB6C00005D11 /* SRIChatInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F895E617D3DB6C00005D11 /* SRIChatInfoViewController.m */; };
@@ -406,6 +407,8 @@
 		11EAF02A17E61B5500A96603 /* Lato-Bol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bol.ttf"; sourceTree = "<group>"; };
 		11EAF02D17E9193700A96603 /* SRIABWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIABWrapper.h; sourceTree = "<group>"; };
 		11EAF02E17E9193700A96603 /* SRIABWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIABWrapper.m; sourceTree = "<group>"; };
+		11EAF04117F0614400A96603 /* SRIPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIPlaceholderTextView.h; sourceTree = "<group>"; };
+		11EAF04217F0614400A96603 /* SRIPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIPlaceholderTextView.m; sourceTree = "<group>"; };
 		11EBF28B17B8618900550B9D /* SRIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIMessage.h; sourceTree = "<group>"; };
 		11EBF28C17B8618900550B9D /* SRIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRIMessage.m; sourceTree = "<group>"; };
 		11EBF28E17B861AC00550B9D /* SRIUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRIUser.h; sourceTree = "<group>"; };
@@ -543,6 +546,7 @@
 		115D778817B68C05009A09F6 /* narad */ = {
 			isa = PBXGroup;
 			children = (
+				11EAF04017F0611B00A96603 /* PlaceholderTextView */,
 				11EAF01D17E5EDDD00A96603 /* cp */,
 				11EAF00A17E5195C00A96603 /* TITokenFeild */,
 				1157D0E317DD49D9006BD0D2 /* MZFormSheet */,
@@ -894,6 +898,15 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		11EAF04017F0611B00A96603 /* PlaceholderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				11EAF04117F0614400A96603 /* SRIPlaceholderTextView.h */,
+				11EAF04217F0614400A96603 /* SRIPlaceholderTextView.m */,
+			);
+			name = PlaceholderTextView;
+			sourceTree = "<group>";
+		};
 		11F895E817D3E41C00005D11 /* MHTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1169,6 +1182,7 @@
 				1181046417CA6D5800F2B3CB /* services.m in Sources */,
 				1181046717CA884D00F2B3CB /* SRIConversationTopCell.m in Sources */,
 				1181046C17CAB13B00F2B3CB /* SRIChatViewController.m in Sources */,
+				11EAF04317F0614400A96603 /* SRIPlaceholderTextView.m in Sources */,
 				113937B017CC20490061CF3E /* SRIBubbleColor.m in Sources */,
 				113937B317CC206D0061CF3E /* SRIContactBubble.m in Sources */,
 				113937B917CC223A0061CF3E /* SRIContactPickerView.m in Sources */,
