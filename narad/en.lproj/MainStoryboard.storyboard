@@ -415,7 +415,7 @@
             <objects>
                 <viewController storyboardIdentifier="ContactPickerView" title="Select Contact(s)" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nLv-MK-6eJ" customClass="SRIContactPickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YYC-Js-tdL">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="44" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -669,21 +669,6 @@ coloured comic supplement.</string>
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xmk-G9-gJA">
-                            <rect key="frame" x="96" y="-1" width="128" height="45"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="New Message">
-                                <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <state key="highlighted">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="startNewMessage:" destination="FQy-zJ-llg" eventType="touchUpInside" id="bRI-fl-xY6"/>
-                            </connections>
-                        </button>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="wTR-Ui-a05">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VTB-tQ-wCL">
                                 <rect key="frame" x="281" y="5" width="34" height="34"/>
@@ -696,16 +681,19 @@ coloured comic supplement.</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wuB-fu-3wi" kind="push" identifier="ChatView" id="ftK-g5-2ls"/>
+                                    <action selector="startNewMessage:" destination="FQy-zJ-llg" eventType="touchUpInside" id="4wm-Uz-LNC"/>
                                 </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <segue destination="wuB-fu-3wi" kind="push" identifier="ChatView" id="uMT-u0-dwj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVK-SC-VsW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="837" y="-166"/>
+            <point key="canvasLocation" x="818" y="-126"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="x7m-b7-DvU">
@@ -971,6 +959,6 @@ coloured comic supplement.</string>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OKq-e5-CLo"/>
+        <segue reference="Rfh-yQ-siT"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,11 +11,8 @@
 #import "SRIContactPickerViewController.h"
 
 @interface SRIChatViewController : AMBubbleTableViewController <SRIPickedContacts>
-
 @property (nonatomic, retain) NSNumber * topic_id;
 @property (nonatomic, retain) NSArray * addedContacts;
-@property (nonatomic) BOOL needsContacts;
-@property (nonatomic) BOOL justCreated;
 
 - (IBAction)revealUnderRight:(id)sender;
 - (IBAction)back:(id)sender;

@@ -10,6 +10,7 @@
 #import "MZFormSheetController.h"
 #import "SRIABWrapper.h"
 #import "TITokenField.h"
+#import "SRIPlaceholderTextView.h"
 
 @interface SRINewChatViewController (Private)
 - (void)resizeViews;
@@ -18,7 +19,7 @@
 
 @implementation SRINewChatViewController {
 TITokenFieldView * _tokenFieldView;
-UITextView * _messageView;
+SRIPlaceholderTextView * _messageView;
   UIButton * cancelBtn;
   UIButton * postBtn;
   
@@ -57,7 +58,8 @@ CGFloat _keyboardHeight;
 	
   CGRect messageViewFrame = _tokenFieldView.contentView.bounds;
   messageViewFrame.size.width -= 30;
-	_messageView = [[UITextView alloc] initWithFrame:messageViewFrame];
+	_messageView = [[SRIPlaceholderTextView alloc] initWithFrame:messageViewFrame];
+  _messageView.placeholder = @"Type a message ...";
 	[_messageView setScrollEnabled:YES];
 	[_messageView setAutoresizingMask:UIViewAutoresizingNone];
 	[_messageView setDelegate:self];

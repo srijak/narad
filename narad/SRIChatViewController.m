@@ -52,35 +52,7 @@
 
   }
 }
--(void) viewWillAppear:(BOOL)animated{
-  [super viewWillAppear:animated];
-}
--(void) viewDidAppear:(BOOL)animated{
-  [super viewDidAppear:animated];
 
-  if (self.needsContacts){
-    NSLog(@"SHOW CONtACTS PICKER");
-    [self showContactsPicker];
-  }else{
-    NSLog(@" --- DONT SHOW CONTACTS PICKER");
-    if (self.justCreated){
-      if([self.addedContacts count] > 0){
-        NSLog(@"New topic and contacts are added.");
-        NSLog(@"TODO: create group");
-      }else{
-        NSLog(@"New topic and contacts are NOT added.");
-        [self.navigationController popViewControllerAnimated:NO];
-      }
-    }else{
-      if([self.addedContacts count] > 0){
-        NSLog(@"TODO: Need to add contacts");
-      }else{
-        NSLog(@"not just creted, no need to create group or add contacts");
-        [self showMessages];
-      }
-    }
-  }
-}
 -(void) showMessages {
   NSArray *messages = [SRIMessage fetchWithPredicate:[NSPredicate predicateWithFormat:@"topic_id=%@", self.topic_id]];
   
@@ -96,59 +68,9 @@
      }];
   }
   
-  /*
-
-  self.data = [[NSMutableArray alloc] initWithArray:@[
-   @{
-   @"text": @"He felt that his whole life was some kind of dream and he sometimes wondered whose it was and whether they were enjoying it.",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellReceived),
-   @"username": @"Stevie",
-   @"color": [UIColor redColor]
-   },
-   @{
-   @"text": @"My dad isn’t famous. My dad plays jazz. You can’t get famous playing jazz",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellSent)
-   },
-   @{
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellTimestamp)
-   },
-   @{
-   @"text": @"I'd far rather be happy than right any day.",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellReceived),
-   @"username": @"John",
-   @"color": [UIColor orangeColor]
-   },
-   @{
-   @"text": @"The only reason for walking into the jaws of Death is so's you can steal His gold teeth.",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellSent)
-   },
-   @{
-   @"text": @"The gods had a habit of going round to atheists' houses and smashing their windows.",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellReceived),
-   @"username": @"Jimi",
-   @"color": [UIColor blueColor]
-   },
-   @{
-   @"text": @"you are lucky. Your friend is going to meet Bel-Shamharoth. You will only die.",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellSent)
-   },
-   @{
-   @"text": @"Guess the quotes!",
-   @"date": [NSDate date],
-   @"type": @(AMBubbleCellSent)
-   },
-   ]
-   ];
-*/
   [self reloadTableScrollingToBottom:TRUE];
 }
+
 -(void) viewDidDisappear:(BOOL)animated {
   [super viewDidDisappear:animated];
 
@@ -167,44 +89,54 @@
     self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ChatInfoView"];
   }
  
-  
-  if ([self.topic_id isEqualToNumber:@-1]){
-    NSLog(@"SHOW CONtACTS PICKER");
-    self.needsContacts = TRUE;
-    self.justCreated = TRUE;
-  }else{
-    NSLog(@" --- DONT SHOW CONTACTS PICKER");
-    self.needsContacts = FALSE;
-    self.justCreated = FALSE;
-  }
-  
-
   [self setDataSource:self]; // Weird, uh?
   [self setDelegate:self];
 
   // Bubble Table setup
    NSLog(@"Loading conversation with topid_id: %@", self.topic_id);
   
-    //TODO: Load conversation from id. If id == -1, that means it's a new conversation.
-
-    
-    NSLog(@"--- DONT SHOW CONtACTS PICKER");
-  
     
   self.data = [[NSMutableArray alloc] init];
     
     // Set a style
-    [self setTableStyle:AMBubbleTableStyleFlat];
-    
+  [self setOptions:[[self customAMStyle] mutableCopy]];
+  
+  [self showMessages];
     // Call super after setting up the options
     [super viewDidLoad];
 
 }
+- (NSDictionary*)customAMStyle
+{
+	return @{
+           AMOptionsImageIncoming: [[UIImage imageNamed:@"bubbleSquareIncoming"] stretchableImageWithLeftCapWidth:23 topCapHeight:15],
+           AMOptionsImageOutgoing: [[UIImage imageNamed:@"bubbleSquareOutgoing"] stretchableImageWithLeftCapWidth:15 topCapHeight:13],
+           AMOptionsImageBar: [[UIImage imageNamed:@"imageBar"] resizableImageWithCapInsets:UIEdgeInsetsMake(19.0f, 3.0f, 19.0f, 3.0f)],
+           AMOptionsImageInput: [[UIImage imageNamed:@"imageInput"] resizableImageWithCapInsets:UIEdgeInsetsMake(20.0f, 12.0f, 18.0f, 18.0f)],
+           AMOptionsImageButton: [[UIImage imageNamed:@"buttonSend"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 13.0f, 0.0f, 13.0f)],
+           AMOptionsImageButtonHighlight: [[UIImage imageNamed:@"buttonSendHighlighted"] resizableImageWithCapInsets:UIEdgeInsetsMake(0.0f, 13.0f, 0.0f, 13.0f)],
+           AMOptionsTextFieldBackground: [UIColor whiteColor],
+           AMOptionsTextFieldFont: [UIFont systemFontOfSize:15],
+           AMOptionsTextFieldFontColor: [UIColor blackColor],
+           AMOptionsBubbleTableBackground: [UIColor cloudsColor],
+           AMOptionsAccessoryPosition: @(AMBubbleAccessoryDown),
+           AMOptionsButtonOffset: @8,
+           AMOptionsBubbleTextColor: [UIColor blackColor],
+           AMOptionsBubbleTextFont: [UIFont systemFontOfSize:15],
+           AMOptionsUsernameFont: [UIFont boldSystemFontOfSize:9],
+           AMOptionsTimestampEachMessage : @YES,
+           AMOptionsAccessoryClass: @"AMBubbleAccessoryView",
+           AMOptionsTimestampShortFont: [UIFont boldSystemFontOfSize:10],
+           AMOptionsTimestampFont: [UIFont boldSystemFontOfSize:13],
+           AMOptionsAvatarSize: @34,
+           AMOptionsAccessorySize: @50,
+           AMOptionsAccessoryMargin: @5,
+           };
+}
+
 
 #pragma mark - SRIPickedContacts
 - (void)selectedContacts:(NSArray *)contacts{
-  self.needsContacts = FALSE;
-  NSLog(@"selectedContacts called.");
   self.addedContacts = contacts;
   NSLog(@" contacts: %@", contacts);
 }
@@ -232,7 +164,7 @@
 
 - (UIImage*)avatarForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return [UIImage imageNamed:@"avatar"];
+	return [UIImage imageNamed:@"sample"];
 }
 
 #pragma mark - AMBubbleTableDelegate
